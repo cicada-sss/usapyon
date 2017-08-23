@@ -14,7 +14,7 @@ var sH2 = window.innerHeight + 100;
 var stopfuya;
 var creimg;
 var ach1 = 0;
-usaran.push("usa (1).png", "usa (2).png", "usa (3).png", "usa (4).png", "usa (5).png", "usa (6).png", "usa (7).png");
+usaran.push("image/usa (1).png", "image/usa (2).png", "image/usa (3).png", "image/usa (4).png", "image/usa (5).png", "image/usa (6).png", "image/usa (7).png");
 
 document.getElementById("sound5").loop = true;
 document.getElementById("sound5").volume = 0.5;
@@ -108,7 +108,7 @@ setInterval(function() {
         $('#sound3').get(0).currentTime = 0;
         $('#sound3').get(0).play();
         var b = document.createElement("img");
-        b.setAttribute("src", "staff.png");
+        b.setAttribute("src", "image/staff.png");
         b.setAttribute("id", "staff");
         b.setAttribute("style", "text-align:center;position:fixed; bottom:-600px;opacity:0.8;");
         document.body.appendChild(b);
@@ -121,7 +121,7 @@ setInterval(function() {
         $('#sound5').get(0).pause();
         $('#sound1').get(0).currentTime = 0;
         $('#sound1').get(0).play();
-        creimg.setAttribute("src", "tairyou.png");
+        creimg.setAttribute("src", "image/tairyou.png");
         creimg.setAttribute("style", "position:fixed; bottom:10px; right:10px;");
         document.body.appendChild(creimg);
         n++;
@@ -212,11 +212,11 @@ function usafuya() {
     ran = Math.floor(Math.random() * 101);
     switch (ran) {
         case 0:
-            usasrc = "risu.png"
+            usasrc = "image/risu.png"
             risu++;
             break;
         case 1:
-            usasrc = "kuma.png";
+            usasrc = "image/kuma.png";
             kuma++;
             break;
         default:
