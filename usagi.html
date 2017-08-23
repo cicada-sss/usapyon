@@ -1,0 +1,70 @@
+<!doctype html>
+<!--（<●><●>）-->
+<html lang="ja">
+
+<head>
+<title>うさぴょん</title>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="js.cookie.js"></script>
+<style>
+* {margin, padding:0;}
+/*
+body {
+    background-image: url("kangoku.jpg");
+    color: white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+ */
+body {
+	background-image: url("sougen.png");
+}
+#wrap {
+	margin:5px;
+}
+#info {
+	background-color:black;
+	color:white;
+	font-family: sans-serif;
+	opacity:0.8;
+	padding:5px;
+	position:fixed;
+	bottom:0px;
+	right:0px;
+	z-index: 1;
+}
+</style>
+</head>
+
+<body>
+<!--<div>photo by Marco Cortese</div>-->
+<div id="wrap">
+<span style="color:red">音が出ます</span>楽曲をお借りしたサイト : <a href="https://mastodon.cloud/@hc85f">HCさん</a>、クラシック名曲サウンドライブラリー <a href="http://classical-sound.seesaa.net/">http://classical-sound.seesaa.net/</a>
+このゲームはcookieを使用します。パソコンでのプレイを推奨
+<div id="usa" style="font-size:500%;">0匹のうさぎがいます</div>
+<button id="1" style="font-size:500%;">うさぎを増やす</button>
+<div id="info" style=""></div>
+</div>
+<audio id="sound1" preload="auto">
+	<source src="carmen.mp3" type="audio/mp3">
+</audio>
+<audio id="sound2" preload="auto">
+	<source src="usa.mp3" type="audio/mp3">
+</audio>
+<audio id="sound3" preload="auto">
+	<source src="jupiter.mp3" type="audio/mp3">
+</audio>
+<audio id="sound4" preload="auto">
+	<source src="alert.mp3" type="audio/mp3">
+</audio>
+<audio id="sound5" preload="auto">
+	<source src="Коробейники.mp3" type="audio/mp3">
+</audio>
+<script src="u.js"></script>
+</body>
+</html>
+
+<!--2017/08/21~-->
