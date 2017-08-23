@@ -51,9 +51,7 @@ if (typeof Cookies.get("launch_times") === "undefined") {
     }, 5000);
 }
 
-$(window).on('pagehide', closesave);
-
-function closesave() {
+$(window).on('pagehide', function() {
     if (typeof Cookies.get("total_rabbits") === "undefined") {
         var CStrabbits = 0;
         CStrabbits = CStrabbits + usagi;
@@ -87,7 +85,7 @@ function closesave() {
     Cookies.set('total_risu', CStrisu, {
         expires: 3650
     });
-}
+})
 
 $(window).keydown(function() {
     return false;
@@ -204,7 +202,6 @@ $("button").click(function() {
 });
 
 function usafuya() {
-    console.log(u);
     $('#sound2').get(0).currentTime = 0;
     $('#sound2').get(0).play();
     sW = Math.floor(Math.random() * sW2) - 30;
