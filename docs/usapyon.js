@@ -1,4 +1,4 @@
-localStorage.foo="bar";
+
 foo = localStorage.foo;
 console.log(foo);
 
