@@ -1,4 +1,4 @@
-
+localStorage.foo="cat";
 foo = localStorage.foo;
 console.log(foo);
 
