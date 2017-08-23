@@ -1,3 +1,7 @@
+localStorage.foo="bar";
+foo = localStorage.foo;
+console.log(foo);
+
 var usagi = 0;
 var ran = 0;
 var sW = 0;
