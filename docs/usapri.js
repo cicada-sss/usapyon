@@ -17,7 +17,9 @@ for (var i = 0; i < 40; i++) {
 document.getElementById("sound5").loop = true;
     document.getElementById("sound5").volume = 0.5;
 $('#sound5').get(0).play();
-
+$("#version").click(function(){
+  $("#credit").fadeToggle();
+});
     document.getElementById("sound2").defaultPlaybackRate = 0.3;
         if (!localStorage.getItem("usapriTimes")) {
             var usapriTimes = 0;

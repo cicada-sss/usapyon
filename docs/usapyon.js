@@ -24,6 +24,9 @@ if (mute != 1) {
     document.getElementById("sound5").volume = 0.5;
 }
 $('#sound5').get(0).play();
+$("#version").click(function(){
+  $("#credit").fadeToggle();
+});
 //キー操作無効
 $(window).keydown(function() {
     return false;
