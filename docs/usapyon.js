@@ -1,8 +1,13 @@
 //初期化
+if (localStorage.usapri == 1)
+{
+    window.location.href = "usapri.html";
+}
 var usagi = 0;
 var kuma = 0;
 var risu = 0;
 var aja = 0;
+var tori = 0;
 var tairyou = 0;
 var n = 1;
 var n2 = 1;
@@ -59,6 +64,12 @@ $("#tori").click(function() {
     var totalTori = Number(localStorage.getItem("totalTori"));
     totalTori++;
     localStorage.setItem("totalTori", totalTori);
+}
+tori++;
+if (tori >= 5) {
+    alert("鳥になりすぎです")
+    window.location.href = "usapri.html";
+    localStorage.setItem("usapri", 1);
 }
 console.log(totalTori);
 });

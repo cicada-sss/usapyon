@@ -3,10 +3,19 @@
 <html lang="ja">
 
 <head>
-    <title>うさぴょん</title>
+    <title>うさプリ</title>
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+    body {
+    background-image: url("image/kangoku.jpg");
+    color: white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}</style>
 </head>
 
 <body>
@@ -31,14 +40,13 @@
             <img src="image/loading.gif">
         </div>
     </div>
-    <!--<div>photo by Marco Cortese</div>-->
+    <!--<div>/div>-->
     <div id="wrap">
-        <span style="color:red">音が出ます</span>楽曲をお借りしたサイト : <a href="https://mastodon.cloud/@hc85f">HCさん</a>、クラシック名曲サウンドライブラリー <a href="http://classical-sound.seesaa.net/">http://classical-sound.seesaa.net/</a> パソコンでのプレイを推奨 
+        <span style="color:red;font-size:250%;">ここはうさプリです。<u>1プレイで</u>1000匹うさぎを増やすまで出れません。音が出ます</span>音楽：<a href="https://mastodon.cloud/@hc85f">HCさん</a> photo by Marco Cortese
         <div id="usa" style="font-size:500%;">0匹のうさぎがいます</div>
-        <button id="1" style="font-size:500%;">うさぎを増やす</button>
+        <button id="1" style="font-size:400%;">うさぎを増やす</button>
         <button id="mute" style="font-size:100%;">音を消す（永遠に消えます）</button>
         <button id="de" style="font-size:100%;">データ消去（消えます）</button>
-        <button id="tori" style="font-size:100%;">Twitterで共有</button>
         <div id="info" style=""></div>
     </div>
     <audio id="sound1" preload="auto">
@@ -65,16 +73,9 @@
     <script src="loading.js"></script>
     <script src="usapyon_data.js"></script>
     <script src="usapyon_achievement.js"></script>
-    <script src="usapyon.js"></script>
+    <script src="usapri.js"></script>
 </body>
 
 </html>
 
 <!--2017/08/21~-->
-
-<!--
-●○○ ver0.4.0β うさプリを実装,うさプリ関連の実績を実装
-●○○ ver0.3.0β 鳥関連の実績を実装
-●○○ ver0.2.0β Twitterで共有ボタンを実装
-●○○ ~ver0.1.0β バージョン記録開始
--->

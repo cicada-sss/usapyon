@@ -116,6 +116,31 @@ function achievement() {
         localStorage.achievement5_3 = 1;
         achshow();
     }
+    if ((localStorage.usapriTimes) >= 1 && typeof localStorage.achievement6_1 === "undefined") {
+        infotext = '<span class="notice">うさプリ釈放🐰実績：うさプリブレイクLv.1解除</span><br>\n' + infotext
+        localStorage.achievement6_1 = 1;
+        achshow();
+    }
+    if ((localStorage.usapriTimes) >= 3 && typeof localStorage.achievement6_2 === "undefined") {
+        infotext = '<span class="notice">うさプリ釈放3回🐰実績：うさプリブレイクLv.2解除</span><br>\n' + infotext
+        localStorage.achievement6_2 = 1;
+        achshow();
+    }
+    if ((localStorage.usapriTimes) >= 5 && typeof localStorage.achievement6_3 === "undefined") {
+        infotext = '<span class="notice">うさプリ釈放5回🐰実績：うさプリブレイクLv.3解除</span><br>\n' + infotext
+        localStorage.achievement6_3 = 1;
+        achshow();
+    }
+    if ((localStorage.usapriTimes) >= 10 && typeof localStorage.achievement6_4 === "undefined") {
+        infotext = '<span class="notice">うさプリ釈放10回🐰実績：うさプリブレイクLv.4解除</span><br>\n' + infotext
+        localStorage.achievement6_4 = 1;
+        achshow();
+    }
+    if ((localStorage.usapriTimes) >= 30 && typeof localStorage.achievement6_5 === "undefined") {
+        infotext = '<span class="notice">うさプリ釈放30回🐰実績：うさプリブレイクLv.5解除</span><br>\n' + infotext
+        localStorage.achievement6_5 = 1;
+        achshow();
+    }
 }
 //実績表示
 function achshow() {
