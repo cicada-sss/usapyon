@@ -23,7 +23,7 @@ document.getElementById("sound3").volume = 0;
 document.getElementById("sound4").volume = 0;
 document.getElementById("sound5").volume = 0;
 }
-//
+
 //初期化
 var usagi = 0;
 var kuma = 0;
