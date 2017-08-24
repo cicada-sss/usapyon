@@ -30,6 +30,7 @@ $(window).keydown(function() {
 $("#de").click(function() {
     var del = confirm("全てのデータを初期化します。よろしいですか？");
     if (del) {
+        clearInterval(stopach);
         localStorage.clear();
         location.reload();
     }
@@ -152,3 +153,5 @@ setInterval(function() {
         n2++;
     }
 }, 100);
+
+var stopach = setInterval(achievement, 10);

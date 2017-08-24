@@ -8,12 +8,12 @@ if (!localStorage.getItem("launchTimes")) {
     localStorage.setItem("totalKuma", 0);
     localStorage.setItem("totalRisu", 0);
     localStorage.setItem("totalAja", 0);
-    var totalUsagi = Number(localStorage.getItem("totalUsagi"));
-    var totalKuma = Number(localStorage.getItem("totalKuma"));
-    var totalRisu = Number(localStorage.getItem("totalRisu"));
-    var totalAja = Number(localStorage.getItem("totalAja"));
+    var totalUsagi = 0;
+    var totalKuma = 0;
+    var totalRisu = 0;
+    var totalAja = 0;
     var infotext = "初回プレイです";
-    $("#info").html("初回プレイです");
+    $("#info").html(infotext);
     setTimeout(function() {
         $("#info").fadeOut("slow");
         infotext = "";
@@ -45,14 +45,6 @@ if (!localStorage.getItem("launchTimes")) {
 }
 //データ保存
 $(window).on('pagehide', function() {
-    console.log(launchTimes);
-    console.log(totalUsagi);
-    console.log(totalRisu);
-    console.log(totalKuma);
-    console.log(localStorage.getItem("launchTimes"));
-    console.log(localStorage.getItem("totalUsagi"));
-    console.log(localStorage.getItem("totalKuma"));
-    console.log(localStorage.getItem("totalRisu"));
     if (localStorage.getItem("launchTimes") == 1) {
         var totalUsagi = usagi;
         var totalKuma = kuma;
