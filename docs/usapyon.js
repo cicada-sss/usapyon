@@ -49,6 +49,7 @@ if (localStorage.getItem("mute") == 1) {
     document.getElementById("sound6").volume = 0;
 }
 $("#tori").click(function() {
+    $('#sound7').get(0).play();
     alert("できません");
 });
 //ボタンクリック
