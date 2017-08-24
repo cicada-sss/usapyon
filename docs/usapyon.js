@@ -6,8 +6,6 @@ var aja = 0;
 var tairyou = 0;
 var n = 1;
 var n2 = 1;
-var sW2 = window.innerWidth + 60;
-var sH2 = window.innerHeight + 100;
 var creimg;
 var stopach = setInterval(achievement, 10);
 var usaran = ["image/usa (1).png", "image/usa (2).png", "image/usa (3).png", "image/usa (4).png", "image/usa (5).png", "image/usa (6).png", "image/usa (7).png"];
@@ -58,6 +56,8 @@ $("#1").click(function() {
 function usafuya() {
     $('#sound2').get(0).currentTime = 0;
     $('#sound2').get(0).play();
+    var sW2 = window.innerWidth + 60;
+    var sH2 = window.innerHeight + 100;
     var sW = Math.floor(Math.random() * sW2) - 30;
     var sH = Math.floor(Math.random() * sH2) - 50;
     var ran = Math.floor(Math.random() * 101);
