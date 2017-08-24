@@ -14,19 +14,16 @@ for (var i = 0; i < 20; i++) {
     var key = localStorage.key(i); //0番目のキーを取得
     console.log(key + ":" + localStorage[key]);
 }
-
 //BGM流す
 document.getElementById("sound5").loop = true;
 if (mute != 1) {
     document.getElementById("sound5").volume = 0.5;
 }
 $('#sound5').get(0).play();
-
 //キー操作無効
 $(window).keydown(function() {
     return false;
 });
-
 $("#de").click(function() {
     var del = confirm("全てのデータを初期化します。よろしいですか？");
     if (del) {
@@ -50,7 +47,6 @@ if (localStorage.getItem("mute") == 1) {
     document.getElementById("sound4").volume = 0;
     document.getElementById("sound5").volume = 0;
 }
-
 //ボタンクリック
 $("#1").click(function() {
     usafuya();
@@ -153,5 +149,4 @@ setInterval(function() {
         n2++;
     }
 }, 100);
-
 var stopach = setInterval(achievement, 10);

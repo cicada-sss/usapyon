@@ -1,7 +1,5 @@
 //0.1秒毎に状態チェック
-
-
-function achievement() {    
+function achievement() {
     //実績解除
     if ((totalUsagi + usagi) >= 100 && typeof localStorage.achievement1_1 === "undefined") {
         infotext = '<span class="notice">累計うさぎ数100匹突破🐰実績：うさぴょんLv.1解除</span><br>\n' + infotext
