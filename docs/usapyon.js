@@ -39,6 +39,7 @@ $("#mute").click(function() {
     document.getElementById("sound3").volume = 0;
     document.getElementById("sound4").volume = 0;
     document.getElementById("sound5").volume = 0;
+    document.getElementById("sound6").volume = 0;
     localStorage.setItem("mute", 1);
 });
 if (localStorage.getItem("mute") == 1) {
@@ -47,6 +48,7 @@ if (localStorage.getItem("mute") == 1) {
     document.getElementById("sound3").volume = 0;
     document.getElementById("sound4").volume = 0;
     document.getElementById("sound5").volume = 0;
+    document.getElementById("sound6").volume = 0;
 }
 //ボタンクリック
 $("#1").click(function() {
