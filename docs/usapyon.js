@@ -1,28 +1,27 @@
 $("#de").click(function() {
-	var del = confirm( "全てのデータを初期化します。よろしいですか？" );
-if (del) {
-    localStorage.clear();
- location.reload();
-}
+    var del = confirm("全てのデータを初期化します。よろしいですか？");
+    if (del) {
+        localStorage.clear();
+        location.reload();
+    }
 });
 $("#mute").click(function() {
-document.getElementById("sound1").volume = 0;
-document.getElementById("sound2").volume = 0;
-document.getElementById("sound3").volume = 0;
-document.getElementById("sound4").volume = 0;
-document.getElementById("sound5").volume = 0;
-localStorage.setItem("mute",1);
+    document.getElementById("sound1").volume = 0;
+    document.getElementById("sound2").volume = 0;
+    document.getElementById("sound3").volume = 0;
+    document.getElementById("sound4").volume = 0;
+    document.getElementById("sound5").volume = 0;
+    localStorage.setItem("mute", 1);
 });
 mute = localStorage.getItem("mute");
 console.log(mute)
 if (mute == 1) {
-document.getElementById("sound1").volume = 0;
-document.getElementById("sound2").volume = 0;
-document.getElementById("sound3").volume = 0;
-document.getElementById("sound4").volume = 0;
-document.getElementById("sound5").volume = 0;
+    document.getElementById("sound1").volume = 0;
+    document.getElementById("sound2").volume = 0;
+    document.getElementById("sound3").volume = 0;
+    document.getElementById("sound4").volume = 0;
+    document.getElementById("sound5").volume = 0;
 }
-
 //初期化
 var usagi = 0;
 var kuma = 0;
@@ -35,35 +34,30 @@ var sW2 = window.innerWidth + 60;
 var sH2 = window.innerHeight + 100;
 var creimg;
 var usaran = ["image/usa (1).png", "image/usa (2).png", "image/usa (3).png", "image/usa (4).png", "image/usa (5).png", "image/usa (6).png", "image/usa (7).png"];
-
-for(var i=0;i<10;i++){
-var key=localStorage.key(i);	//0番目のキーを取得
-console.log("0番目のキーは"+key+"で　値は"+localStorage[key]+"です");
+for (var i = 0; i < 10; i++) {
+    var key = localStorage.key(i); //0番目のキーを取得
+    console.log("0番目のキーは" + key + "で　値は" + localStorage[key] + "です");
 }
-
 //BGM流す
 document.getElementById("sound5").loop = true;
-
 if (mute != 1) {
-document.getElementById("sound5").volume = 0.5;
+    document.getElementById("sound5").volume = 0.5;
 }
 $('#sound5').get(0).play();
-
 //キー操作無効
 $(window).keydown(function() {
     return false;
 });
-
 //データ読み込み
 var launchTimes = localStorage.getItem("launchTimes");
 console.log(launchTimes);
 ////初回プレイの場合
 if (!localStorage.getItem("launchTimes")) {
-    localStorage.setItem("launchTimes",1);
-    localStorage.setItem("totalUsagi",0);
-    localStorage.setItem("totalKuma",0);
-    localStorage.setItem("totalRisu",0);
-    localStorage.setItem("totalAja",0);
+    localStorage.setItem("launchTimes", 1);
+    localStorage.setItem("totalUsagi", 0);
+    localStorage.setItem("totalKuma", 0);
+    localStorage.setItem("totalRisu", 0);
+    localStorage.setItem("totalAja", 0);
     var totalUsagi = Number(localStorage.getItem("totalUsagi"));
     var totalKuma = Number(localStorage.getItem("totalKuma"));
     var totalRisu = Number(localStorage.getItem("totalRisu"));
@@ -75,13 +69,13 @@ if (!localStorage.getItem("launchTimes")) {
         infotext = "";
     }, 5000);
 } else {
-////二回目以降の場合
+    ////二回目以降の場合
     var totalUsagi = Number(localStorage.getItem("totalUsagi"));
     var totalKuma = Number(localStorage.getItem("totalKuma"));
     var totalRisu = Number(localStorage.getItem("totalRisu"));
     var totalAja = Number(localStorage.getItem("totalAja"));
     launchTimes++;
-    localStorage.setItem("launchTimes",launchTimes);
+    localStorage.setItem("launchTimes", launchTimes);
     var infotext = launchTimes + "回目のプレイです";
     infotext = infotext + "<br>\n今まで累計" + totalUsagi + "匹のうさぎを増やしました"
     if (totalKuma >= 1) {
@@ -99,39 +93,36 @@ if (!localStorage.getItem("launchTimes")) {
         infotext = "";
     }, 5000);
 }
-
 //データ保存
 $(window).on('pagehide', function() {
-	console.log(launchTimes);
-	console.log(totalUsagi);
-	console.log(totalRisu);
-	console.log(totalKuma);
-	console.log(localStorage.getItem("launchTimes"));
-	console.log(localStorage.getItem("totalUsagi"));
-	console.log(localStorage.getItem("totalKuma"));
-	console.log(localStorage.getItem("totalRisu"));
-if (localStorage.getItem("launchTimes") == 1) {
+    console.log(launchTimes);
+    console.log(totalUsagi);
+    console.log(totalRisu);
+    console.log(totalKuma);
+    console.log(localStorage.getItem("launchTimes"));
+    console.log(localStorage.getItem("totalUsagi"));
+    console.log(localStorage.getItem("totalKuma"));
+    console.log(localStorage.getItem("totalRisu"));
+    if (localStorage.getItem("launchTimes") == 1) {
         var totalUsagi = usagi;
         var totalKuma = kuma;
         var totalRisu = risu;
         var totalAja = aja;
-    }
-    else {
-    var totalUsagi = Number(localStorage.getItem("totalUsagi"));
-    var totalKuma = Number(localStorage.getItem("totalKuma"));
-    var totalRisu = Number(localStorage.getItem("totalRisu"));
-    var totalAja = Number(localStorage.getItem("totalAja"));
+    } else {
+        var totalUsagi = Number(localStorage.getItem("totalUsagi"));
+        var totalKuma = Number(localStorage.getItem("totalKuma"));
+        var totalRisu = Number(localStorage.getItem("totalRisu"));
+        var totalAja = Number(localStorage.getItem("totalAja"));
         totalUsagi = totalUsagi + usagi;
         totalKuma = totalKuma + kuma;
         totalRisu = totalRisu + risu;
         totalAja = totalAja + aja;
     }
-    localStorage.setItem("totalUsagi",totalUsagi);
-    localStorage.setItem("totalKuma",totalKuma);
-    localStorage.setItem("totalRisu",totalRisu);
-    localStorage.setItem("totalAja",totalAja);
+    localStorage.setItem("totalUsagi", totalUsagi);
+    localStorage.setItem("totalKuma", totalKuma);
+    localStorage.setItem("totalRisu", totalRisu);
+    localStorage.setItem("totalAja", totalAja);
 })
-
 //ボタンクリック
 $("#1").click(function() {
     usafuya();
@@ -153,20 +144,20 @@ function usafuya() {
             kuma++;
             break;
         case 2:
-    var ran = Math.floor(Math.random() * 11);
-    switch (ran) {
-    	case 0:
-    $('#sound6').get(0).currentTime = 0;
-    $('#sound6').get(0).play();
-    	usasrc = "image/aja.png";
-    	aja++;
-    	break;
-    	default:
-            usasrc = usaran[Math.floor(Math.random() * usaran.length)];
-            usagi++;
+            var ran = Math.floor(Math.random() * 11);
+            switch (ran) {
+                case 0:
+                    $('#sound6').get(0).currentTime = 0;
+                    $('#sound6').get(0).play();
+                    usasrc = "image/aja.png";
+                    aja++;
+                    break;
+                default:
+                    usasrc = usaran[Math.floor(Math.random() * usaran.length)];
+                    usagi++;
+                    break;
+            }
             break;
-        }
-        break;
         default:
             usasrc = usaran[Math.floor(Math.random() * usaran.length)];
             usagi++;
@@ -177,7 +168,6 @@ function usafuya() {
     creimg.setAttribute("style", "position:fixed; top:" + sH + "px; left:" + sW + "px;");
     document.body.appendChild(creimg);
 }
-
 //0.1秒毎に状態チェック
 setInterval(function() {
     u = usagi + '匹のうさぎがいます';
@@ -192,7 +182,7 @@ setInterval(function() {
     }
     u + '"';
     $("#usa").html(u);
-//うさぎが10000匹を超えた場合ジュピターを流してスタッフロールを表示
+    //うさぎが10000匹を超えた場合ジュピターを流してスタッフロールを表示
     if (usagi >= 10000) {
         $('#sound1').get(0).pause();
         $('#sound3').get(0).play();
@@ -205,7 +195,7 @@ setInterval(function() {
             "top": "50px"
         }, 20000);
         n++;
-//うさぎが1000匹を超える毎に大漁を表示しカルメン組曲を再生
+        //うさぎが1000匹を超える毎に大漁を表示しカルメン組曲を再生
     } else if (usagi >= 1000 * n) {
         $('#sound5').get(0).pause();
         $('#sound1').get(0).currentTime = 0;
@@ -216,7 +206,7 @@ setInterval(function() {
         document.body.appendChild(creimg);
         n++;
     }
-//うさぎが500匹を超える毎にボタン再描画
+    //うさぎが500匹を超える毎にボタン再描画
     if (usagi >= 500 * n2) {
         var bleft = $("#1").offset().left;
         var btop = $("#1").offset().top;

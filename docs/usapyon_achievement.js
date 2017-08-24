@@ -1,3 +1,4 @@
+//0.1秒毎に状態チェック
 setInterval(function() {
     //実績解除
     if ((totalUsagi + usagi) >= 100 && typeof localStorage.achievement1_1 === "undefined") {
