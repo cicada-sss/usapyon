@@ -13,11 +13,13 @@ if (!localStorage.getItem("launchTimes")) {
     var totalRisu = 0;
     var totalAja = 0;
     var infotext = "初回プレイです";
+    $(window).load(function () {
     $("#info").html(infotext);
     setTimeout(function() {
         $("#info").fadeOut("slow");
         infotext = "";
     }, 5000);
+});
 } else {
     ////二回目以降の場合
     var totalUsagi = Number(localStorage.getItem("totalUsagi"));
@@ -37,11 +39,14 @@ if (!localStorage.getItem("launchTimes")) {
     if (totalAja >= 1) {
         infotext = infotext + "<br>\n今まで累計" + totalAja + "匹のあじゃを見つけました"
     }
+    
+    $(window).load(function () {
     $("#info").html(infotext);
     setTimeout(function() {
         $("#info").fadeOut("slow");
         infotext = "";
     }, 5000);
+});
 }
 //データ保存
 $(window).on('pagehide', function() {
