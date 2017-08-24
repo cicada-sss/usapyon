@@ -8,6 +8,7 @@ if (!localStorage.getItem("launchTimes")) {
     localStorage.setItem("totalKuma", 0);
     localStorage.setItem("totalRisu", 0);
     localStorage.setItem("totalAja", 0);
+    localStorage.setItem("totalTori", 0);
     var totalUsagi = 0;
     var totalKuma = 0;
     var totalRisu = 0;

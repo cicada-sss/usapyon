@@ -51,6 +51,14 @@ if (localStorage.getItem("mute") == 1) {
 $("#tori").click(function() {
     $('#sound7').get(0).play();
     alert("できません");
+    if (typeof localStorage.totalTori === "undefined") {
+    localStorage.setItem("totalTori", 1);
+} else {
+    var totalTori = Number(localStorage.getItem("totalTori"));
+    totalTori++;
+    localStorage.setItem("totalTori", totalTori);
+}
+console.log(totalTori);
 });
 //ボタンクリック
 $("#1").click(function() {

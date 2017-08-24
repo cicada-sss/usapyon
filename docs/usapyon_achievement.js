@@ -101,6 +101,16 @@ function achievement() {
         localStorage.achievement4_4 = 1;
         achshow();
     }
+    if ((localStorage.totalTori) >= 5 && typeof localStorage.achievement5_1 === "undefined") {
+        infotext = '<span class="notice">鳥になった回数5回突破🐰実績：鳥貴族Lv.1解除</span><br>\n' + infotext
+        localStorage.achievement5_1 = 1;
+        achshow();
+    }
+    if ((localStorage.totalTori) >= 10 && typeof localStorage.achievement5_2 === "undefined") {
+        infotext = '<span class="notice">鳥になった回数10回突破🐰実績：鳥貴族Lv.2解除</span><br>\n' + infotext
+        localStorage.achievement5_2 = 1;
+        achshow();
+    }
 }
 //実績表示
 function achshow() {
