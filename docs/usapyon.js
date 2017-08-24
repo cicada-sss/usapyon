@@ -72,7 +72,7 @@ function usafuya() {
             kuma++;
             break;
         case 2:
-            var ran = Math.floor(Math.random() * 11);
+            var ran = Math.floor(Math.random() * 21);
             switch (ran) {
                 case 0:
                     $('#sound6').get(0).currentTime = 0;
