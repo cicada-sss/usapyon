@@ -48,6 +48,9 @@ if (localStorage.getItem("mute") == 1) {
     document.getElementById("sound5").volume = 0;
     document.getElementById("sound6").volume = 0;
 }
+$("#tori").click(function() {
+    alert("できません");
+});
 //ボタンクリック
 $("#1").click(function() {
     usafuya();
