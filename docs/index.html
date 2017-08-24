@@ -6,7 +6,6 @@
 <title>うさぴょん</title>
 <meta charset="UTF-8">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="js.cookie.js"></script>
 <style>
 * {margin, padding:0;}
 /*
@@ -36,6 +35,9 @@ body {
 	right:0px;
 	z-index: 1;
 }
+.notice {
+	color: orange;
+}
 </style>
 </head>
 
@@ -56,6 +58,8 @@ body {
 このゲームはcookieを使用します。パソコンでのプレイを推奨
 <div id="usa" style="font-size:500%;">0匹のうさぎがいます</div>
 <button id="1" style="font-size:500%;">うさぎを増やす</button>
+<button id="mute" style="font-size:100%;">音を消す（永遠に消えます）</button>
+<button id="de" style="font-size:100%;">データ消去（消えます）</button>
 <div id="info" style=""></div>
 </div>
 <audio id="sound1" preload="auto">
@@ -72,6 +76,9 @@ body {
 </audio>
 <audio id="sound5" preload="auto">
 	<source src="sound/Коробейники.mp3" type="audio/mp3">
+</audio>
+<audio id="sound6" preload="auto">
+	<source src="sound/trumpet.mp3" type="audio/mp3">
 </audio>
 <script src="usapyon.js"></script>
 </body>
