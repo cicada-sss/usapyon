@@ -111,6 +111,11 @@ function achievement() {
         localStorage.achievement5_2 = 1;
         achshow();
     }
+    if ((localStorage.totalTori) >= 50 && typeof localStorage.achievement5_3 === "undefined") {
+        infotext = '<span class="notice">鳥になった回数50回突破🐰実績：鳥貴族Lv.3解除</span><br>\n' + infotext
+        localStorage.achievement5_3 = 1;
+        achshow();
+    }
 }
 //実績表示
 function achshow() {
