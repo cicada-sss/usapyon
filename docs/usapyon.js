@@ -9,6 +9,7 @@ var n2 = 1;
 var sW2 = window.innerWidth + 60;
 var sH2 = window.innerHeight + 100;
 var creimg;
+var stopach = setInterval(achievement, 10);
 var usaran = ["image/usa (1).png", "image/usa (2).png", "image/usa (3).png", "image/usa (4).png", "image/usa (5).png", "image/usa (6).png", "image/usa (7).png"];
 for (var i = 0; i < 20; i++) {
     var key = localStorage.key(i); //0番目のキーを取得
@@ -149,4 +150,3 @@ setInterval(function() {
         n2++;
     }
 }, 100);
-var stopach = setInterval(achievement, 10);
