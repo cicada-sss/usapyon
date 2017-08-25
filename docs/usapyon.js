@@ -3,6 +3,9 @@ if (localStorage.usapri == 1)
 {
     window.location.href = "usapri.html";
 }
+if (localStorage.achievement1_1 == 1) {
+    console.log("aa");
+}
 var usagi = 0;
 var kuma = 0;
 var risu = 0;
