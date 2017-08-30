@@ -1,17 +1,42 @@
 //初期化
-document.getElementById("sound2").defaultPlaybackRate = 0.3;
-if (!localStorage.getItem("usapriTimes")) {
-    var usapriTimes = 0;
-} else {
-    var usapriTimes = Number(localStorage.getItem("usapriTimes"));
-    console.log(usapriTimes);
+var usagi = 0;
+var kuma = 0;
+var risu = 0;
+var aja = 0;
+var tori = 0;
+var tairyou = 0;
+var n = 1;
+var n2 = 1;
+var creimg;
+var usaran = ["image/usa (1).png", "image/usa (2).png", "image/usa (3).png", "image/usa (4).png", "image/usa (5).png", "image/usa (6).png", "image/usa (7).png"];
+for (var i = 0; i < 40; i++) {
+    var key = localStorage.key(i); //0番目のキーを取得
+    console.log(key + ":" + localStorage[key]);
 }
+//BGM流す
+document.getElementById("sound5").loop = true;
+    document.getElementById("sound5").volume = 0.5;
+$('#sound5').get(0).play();
+$("#version").click(function(){
+  $("#credit").fadeToggle();
+});
+    document.getElementById("sound2").defaultPlaybackRate = 0.3;
+        if (!localStorage.getItem("usapriTimes")) {
+            var usapriTimes = 0;
+        } else {
+            var usapriTimes = Number(localStorage.getItem("usapriTimes"));
+            console.log(usapriTimes);
+        }
 $(function() {
-    var buttonSize = 405 - (usapriTimes + 1) * 5
+var buttonSize = 405 - (usapriTimes+1)*5
     $("#1").css({
         "font-size": buttonSize + "%"
     });
     console.log(buttonSize);
+});
+//キー操作無効
+$(window).keydown(function() {
+    return false;
 });
 $("#de").click(function() {
     $('#sound7').get(0).play();
@@ -33,29 +58,8 @@ function usafuya() {
     var sH2 = window.innerHeight + 100;
     var sW = Math.floor(Math.random() * sW2) - 30;
     var sH = Math.floor(Math.random() * sH2) - 50;
-    var ran = Math.floor(Math.random() * 101);
-    switch (ran) {
-        case 0:
-            $('#sound6').get(0).currentTime = 0;
-            $('#sound6').get(0).play();
-            usasrc = "image/aja.png";
-            aja++;
-            localStorage.setItem("usapri", "0");
-            if (typeof localStorage.getItem("usapriTimes") === undefined) {
-                localStorage.setItem("usapriTimes", 1);
-            } else {
-                var usapriTimes = Number(localStorage.getItem("usapriTimes"));
-                usapriTimes++;
-            }
-            localStorage.setItem("usapriTimes", usapriTimes);
-            alert("あじゃが助け出してくれました");
-            window.location.href = "index.html";
-            break;
-        default:
             usasrc = usaran[Math.floor(Math.random() * usaran.length)];
             usagi++;
-            break;
-    }
     creimg = document.createElement("img");
     creimg.setAttribute("src", usasrc);
     creimg.setAttribute("style", "position:fixed; top:" + sH + "px; left:" + sW + "px;");
@@ -75,21 +79,17 @@ setInterval(function() {
     }
     u + '"';
     $("#usa").html(u);
-    achievement();
+ achievement();
     if (usagi >= 1000) {
-        usapriBreak();
+        localStorage.setItem("usapri", "0");
+        if (typeof localStorage.getItem("usapriTimes") === undefined) {
+            localStorage.setItem("usapriTimes", 1);
+        } else {
+            var usapriTimes = Number(localStorage.getItem("usapriTimes"));
+        usapriTimes++;
+        }
+        localStorage.setItem("usapriTimes", usapriTimes);
+        alert("釈放します。\nもう戻ってきちゃダメですよ");
+        window.location.href = "index.html";
     }
 }, 100);
-
-function usapriBreak() {
-    localStorage.setItem("usapri", "0");
-    if (typeof localStorage.getItem("usapriTimes") === undefined) {
-        localStorage.setItem("usapriTimes", 1);
-    } else {
-        var usapriTimes = Number(localStorage.getItem("usapriTimes"));
-        usapriTimes++;
-    }
-    localStorage.setItem("usapriTimes", usapriTimes);
-    alert("釈放します。\nもう戻ってきちゃダメですよ");
-    window.location.href = "index.html";
-}
