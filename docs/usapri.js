@@ -14,9 +14,9 @@ for (var i = 0; i < 40; i++) {
     console.log(key + ":" + localStorage[key]);
 }
 //BGM流す
-document.getElementById("sound5").loop = true;
-    document.getElementById("sound5").volume = 0.5;
-$('#sound5').get(0).play();
+document.getElementById("sound8").loop = true;
+    document.getElementById("sound8").volume = 0.5;
+$('#sound8').get(0).play();
 $("#version").click(function(){
   $("#credit").fadeToggle();
 });
@@ -58,8 +58,29 @@ function usafuya() {
     var sH2 = window.innerHeight + 100;
     var sW = Math.floor(Math.random() * sW2) - 30;
     var sH = Math.floor(Math.random() * sH2) - 50;
+    var ran = Math.floor(Math.random() * 101);
+    switch (ran) {
+        case 0:
+            $('#sound6').get(0).currentTime = 0;
+            $('#sound6').get(0).play();
+            usasrc = "image/aja.png";
+            aja++;
+            localStorage.setItem("usapri", "0");
+            if (typeof localStorage.getItem("usapriTimes") === undefined) {
+                localStorage.setItem("usapriTimes", 1);
+            } else {
+                var usapriTimes = Number(localStorage.getItem("usapriTimes"));
+                usapriTimes++;
+            }
+            localStorage.setItem("usapriTimes", usapriTimes);
+            alert("あじゃが助け出してくれました");
+            window.location.href = "index.html";
+            break;
+        default:
             usasrc = usaran[Math.floor(Math.random() * usaran.length)];
             usagi++;
+            break;
+    }
     creimg = document.createElement("img");
     creimg.setAttribute("src", usasrc);
     creimg.setAttribute("style", "position:fixed; top:" + sH + "px; left:" + sW + "px;");
@@ -79,17 +100,21 @@ setInterval(function() {
     }
     u + '"';
     $("#usa").html(u);
- achievement();
+    achievement();
     if (usagi >= 1000) {
-        localStorage.setItem("usapri", "0");
-        if (typeof localStorage.getItem("usapriTimes") === undefined) {
-            localStorage.setItem("usapriTimes", 1);
-        } else {
-            var usapriTimes = Number(localStorage.getItem("usapriTimes"));
-        usapriTimes++;
-        }
-        localStorage.setItem("usapriTimes", usapriTimes);
-        alert("釈放します。\nもう戻ってきちゃダメですよ");
-        window.location.href = "index.html";
+        usapriBreak();
     }
 }, 100);
+
+function usapriBreak() {
+    localStorage.setItem("usapri", "0");
+    if (typeof localStorage.getItem("usapriTimes") === undefined) {
+        localStorage.setItem("usapriTimes", 1);
+    } else {
+        var usapriTimes = Number(localStorage.getItem("usapriTimes"));
+        usapriTimes++;
+    }
+    localStorage.setItem("usapriTimes", usapriTimes);
+    alert("釈放します。\nもう戻ってきちゃダメですよ");
+    window.location.href = "index.html";
+}
