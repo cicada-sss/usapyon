@@ -3,45 +3,16 @@ if (localStorage.usapri == 1)
 {
     window.location.href = "usapri.html";
 }
-if (localStorage.achievement1_1 == 1) {
-    console.log("aa");
+var firstLaunchTime = Date.now();
+/*
+if (typeof localStorage.first_launch_time === "undefined"){
+firstLaunchTime = Math.floor(firstLaunchTime/1000);
+localStorage.first_launch_time = firstLaunchTime;
+console.log(localStorage.first_launch_time);
+} else {
+    var firstLaunchTime = localStorage.first_launch_time;
 }
-var usagi = 0;
-var kuma = 0;
-var risu = 0;
-var aja = 0;
-var tori = 0;
-var tairyou = 0;
-var n = 1;
-var n2 = 1;
-var creimg;
-var stopach = setInterval(achievement, 10);
-var usaran = ["image/usa (1).png", "image/usa (2).png", "image/usa (3).png", "image/usa (4).png", "image/usa (5).png", "image/usa (6).png", "image/usa (7).png"];
-for (var i = 0; i < 20; i++) {
-    var key = localStorage.key(i); //0番目のキーを取得
-    console.log(key + ":" + localStorage[key]);
-}
-//BGM流す
-document.getElementById("sound5").loop = true;
-if (mute != 1) {
-    document.getElementById("sound5").volume = 0.5;
-}
-$('#sound5').get(0).play();
-$("#version").click(function(){
-  $("#credit").fadeToggle();
-});
-//キー操作無効
-$(window).keydown(function() {
-    return false;
-});
-$("#de").click(function() {
-    var del = confirm("全てのデータを初期化します。よろしいですか？");
-    if (del) {
-        clearInterval(stopach);
-        localStorage.clear();
-        location.reload();
-    }
-});
+*/
 $("#mute").click(function() {
     document.getElementById("sound1").volume = 0;
     document.getElementById("sound2").volume = 0;
@@ -80,9 +51,7 @@ if (tori >= 5) {
 console.log(totalTori);
 });
 //ボタンクリック
-$("#1").click(function() {
-    usafuya();
-});
+
 
 function usafuya() {
     $('#sound2').get(0).currentTime = 0;
@@ -128,6 +97,7 @@ function usafuya() {
 }
 //0.1秒毎に状態チェック
 setInterval(function() {
+
     u = usagi + '匹のうさぎがいます';
     if (kuma >= 1) {
         u = u + '<br>\n' + kuma + '匹のくまがいます';
@@ -155,14 +125,17 @@ setInterval(function() {
         n++;
         //うさぎが1000匹を超える毎に大漁を表示しカルメン組曲を再生
     } else if (usagi >= 1000 * n) {
+        if (notCarmen != 1) {
         $('#sound5').get(0).pause();
         $('#sound1').get(0).currentTime = 0;
         $('#sound1').get(0).play();
+    }
         var creimg = document.createElement("img");
         creimg.setAttribute("src", "image/tairyou.png");
         creimg.setAttribute("style", "position:fixed; bottom:10px; right:10px;");
         document.body.appendChild(creimg);
         n++;
+        tairyou++;
     }
     //うさぎが500匹を超える毎にボタン再描画
     if (usagi >= 500 * n2) {

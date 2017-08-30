@@ -1,42 +1,17 @@
 //初期化
-var usagi = 0;
-var kuma = 0;
-var risu = 0;
-var aja = 0;
-var tori = 0;
-var tairyou = 0;
-var n = 1;
-var n2 = 1;
-var creimg;
-var usaran = ["image/usa (1).png", "image/usa (2).png", "image/usa (3).png", "image/usa (4).png", "image/usa (5).png", "image/usa (6).png", "image/usa (7).png"];
-for (var i = 0; i < 40; i++) {
-    var key = localStorage.key(i); //0番目のキーを取得
-    console.log(key + ":" + localStorage[key]);
+document.getElementById("sound2").defaultPlaybackRate = 0.3;
+if (!localStorage.getItem("usapriTimes")) {
+    var usapriTimes = 0;
+} else {
+    var usapriTimes = Number(localStorage.getItem("usapriTimes"));
+    console.log(usapriTimes);
 }
-//BGM流す
-document.getElementById("sound8").loop = true;
-    document.getElementById("sound8").volume = 0.5;
-$('#sound8').get(0).play();
-$("#version").click(function(){
-  $("#credit").fadeToggle();
-});
-    document.getElementById("sound2").defaultPlaybackRate = 0.3;
-        if (!localStorage.getItem("usapriTimes")) {
-            var usapriTimes = 0;
-        } else {
-            var usapriTimes = Number(localStorage.getItem("usapriTimes"));
-            console.log(usapriTimes);
-        }
 $(function() {
-var buttonSize = 405 - (usapriTimes+1)*5
+    var buttonSize = 405 - (usapriTimes + 1) * 5
     $("#1").css({
         "font-size": buttonSize + "%"
     });
     console.log(buttonSize);
-});
-//キー操作無効
-$(window).keydown(function() {
-    return false;
 });
 $("#de").click(function() {
     $('#sound7').get(0).play();
@@ -46,10 +21,6 @@ $("#mute").click(function() {
     $('#sound7').get(0).play();
     alert("消えません");
 });
-//ボタンクリック
-$("#1").click(function() {
-    usafuya();
-});
 
 function usafuya() {
     $('#sound2').get(0).currentTime = 0;
@@ -58,7 +29,7 @@ function usafuya() {
     var sH2 = window.innerHeight + 100;
     var sW = Math.floor(Math.random() * sW2) - 30;
     var sH = Math.floor(Math.random() * sH2) - 50;
-    var ran = Math.floor(Math.random() * 2001);
+    var ran = Math.floor(Math.random() * 101);
     switch (ran) {
         case 0:
             $('#sound6').get(0).currentTime = 0;

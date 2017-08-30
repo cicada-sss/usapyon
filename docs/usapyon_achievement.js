@@ -1,5 +1,9 @@
 //0.1秒毎に状態チェック
 function achievement() {
+    /*
+    var nowTime = Date.now();
+    nowTime = Math.floor(nowTime/1000);
+    */
     //実績解除
     if ((totalUsagi + usagi) >= 100 && typeof localStorage.achievement1_1 === "undefined") {
         infotext = '<span class="notice">累計うさぎ数100匹突破🐰実績：うさぴょんLv.1解除</span><br>\n' + infotext
@@ -141,6 +145,28 @@ function achievement() {
         localStorage.achievement6_5 = 1;
         achshow();
     }
+    /*
+    if (nowTime - firstLaunchTime >= 10 && typeof localStorage.achievement7_1 === "undefined") {
+        infotext = '<span class="notice">累計プレイ時間10秒突破🐰実績：うさぴょん中毒Lv.1解除</span><br>\n' + infotext
+        localStorage.achievement7_1 = 1;
+        achshow();
+    }
+    if (nowTime - firstLaunchTime >= 60 && typeof localStorage.achievement7_2 === "undefined") {
+        infotext = '<span class="notice">累計プレイ時間60秒突破🐰実績：うさぴょん中毒Lv.2解除</span><br>\n' + infotext
+        localStorage.achievement7_2 = 1;
+        achshow();
+    }
+    if (nowTime - firstLaunchTime >= 600 && typeof localStorage.achievement7_3 === "undefined") {
+        infotext = '<span class="notice">累計プレイ時間600秒突破🐰実績：うさぴょん中毒Lv.3解除</span><br>\n' + infotext
+        localStorage.achievement7_3 = 1;
+        achshow();
+    }
+    if (nowTime - firstLaunchTime >= 3600 && typeof localStorage.achievement7_4 === "undefined") {
+        infotext = '<span class="notice">累計プレイ時間3600秒突破🐰実績：うさぴょん中毒Lv.4解除</span><br>\n' + infotext
+        localStorage.achievement7_4 = 1;
+        achshow();
+    }
+    */
 }
 //実績表示
 function achshow() {

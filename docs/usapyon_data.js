@@ -1,8 +1,8 @@
 //データ読み込み
 var launchTimes = localStorage.getItem("launchTimes");
-console.log(launchTimes);
 ////初回プレイの場合
 if (!localStorage.getItem("launchTimes")) {
+    localStorage.clear();
     localStorage.setItem("launchTimes", 1);
     localStorage.setItem("totalUsagi", 0);
     localStorage.setItem("totalKuma", 0);
@@ -28,12 +28,12 @@ if (!localStorage.getItem("launchTimes")) {
     var totalRisu = Number(localStorage.getItem("totalRisu"));
     var totalAja = Number(localStorage.getItem("totalAja"));
     if (localStorage.usapri != 1) {
-    launchTimes++;
-    localStorage.setItem("launchTimes", launchTimes);
-    var infotext = launchTimes + "回目のプレイです";
-} else {
-    var infotext = "あなたはうさプリに入れられました";
-}
+        launchTimes++;
+        localStorage.setItem("launchTimes", launchTimes);
+        var infotext = launchTimes + "回目のプレイです";
+    } else {
+        var infotext = "あなたはうさプリに入れられました";
+    }
     infotext = infotext + "<br>\n今まで累計" + totalUsagi + "匹のうさぎを増やしました"
     if (totalKuma >= 1) {
         infotext = infotext + "<br>\n今まで累計" + totalKuma + "匹のくまを見つけました"
