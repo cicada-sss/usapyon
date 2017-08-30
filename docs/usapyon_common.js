@@ -4,6 +4,7 @@ var risu = 0;
 var aja = 0;
 var tori = 0;
 var tairyou = 0;
+var notCarmen = 0;
 var n = 1;
 var n2 = 1;
 var creimg;
