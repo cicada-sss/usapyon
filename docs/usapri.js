@@ -58,7 +58,7 @@ function usafuya() {
     var sH2 = window.innerHeight + 100;
     var sW = Math.floor(Math.random() * sW2) - 30;
     var sH = Math.floor(Math.random() * sH2) - 50;
-    var ran = Math.floor(Math.random() * 101);
+    var ran = Math.floor(Math.random() * 2001);
     switch (ran) {
         case 0:
             $('#sound6').get(0).currentTime = 0;
