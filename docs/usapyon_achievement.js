@@ -172,17 +172,17 @@ function achievement() {
         localStorage.achievement8_1 = 1;
         achshow();
     }
-        if ((totalTairyou + tairyou) >= 5 && typeof localStorage.achievement8_2 === "undefined") {
+    if ((totalTairyou + tairyou) >= 5 && typeof localStorage.achievement8_2 === "undefined") {
         infotext = '<span class="notice">大漁5回🐰実績：大漁Lv.2解除</span><br>\n' + infotext
         localStorage.achievement8_2 = 1;
         achshow();
     }
-        if ((totalTairyou + tairyou) >= 10 && typeof localStorage.achievement8_3 === "undefined") {
+    if ((totalTairyou + tairyou) >= 10 && typeof localStorage.achievement8_3 === "undefined") {
         infotext = '<span class="notice">大漁10回🐰実績：大漁Lv.3解除</span><br>\n' + infotext
         localStorage.achievement8_3 = 1;
         achshow();
     }
-        if ((totalTairyou + tairyou) >= 50 && typeof localStorage.achievement8_4 === "undefined") {
+    if ((totalTairyou + tairyou) >= 50 && typeof localStorage.achievement8_4 === "undefined") {
         infotext = '<span class="notice">大漁50回🐰実績：大漁Lv.4解除</span><br>\n' + infotext
         localStorage.achievement8_4 = 1;
         achshow();
