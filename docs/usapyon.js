@@ -1,6 +1,5 @@
 //初期化
-if (localStorage.usapri == 1)
-{
+if (localStorage.usapri == 1) {
     window.location.href = "usapri.html";
 }
 var firstLaunchTime = Date.now();
@@ -13,16 +12,6 @@ console.log(localStorage.first_launch_time);
     var firstLaunchTime = localStorage.first_launch_time;
 }
 */
-$("#mute").click(function() {
-    document.getElementById("sound1").volume = 0;
-    document.getElementById("sound2").volume = 0;
-    document.getElementById("sound3").volume = 0;
-    document.getElementById("sound4").volume = 0;
-    document.getElementById("sound5").volume = 0;
-    document.getElementById("sound6").volume = 0;
-    document.getElementById("sound7").volume = 0;
-    localStorage.setItem("mute", 1);
-});
 if (localStorage.getItem("mute") == 1) {
     document.getElementById("sound1").volume = 0;
     document.getElementById("sound2").volume = 0;
@@ -31,28 +20,27 @@ if (localStorage.getItem("mute") == 1) {
     document.getElementById("sound5").volume = 0;
     document.getElementById("sound6").volume = 0;
     document.getElementById("sound7").volume = 0;
+    document.getElementById("sound8").volume = 0;
 }
 $("#tori").click(function() {
     $('#sound7').get(0).play();
     alert("できません");
     if (typeof localStorage.totalTori === "undefined") {
-    localStorage.setItem("totalTori", 1);
-} else {
-    var totalTori = Number(localStorage.getItem("totalTori"));
-    totalTori++;
-    localStorage.setItem("totalTori", totalTori);
-}
-tori++;
-if (tori >= 5) {
-    alert("鳥になりすぎです")
-    window.location.href = "usapri.html";
-    localStorage.setItem("usapri", 1);
-}
-console.log(totalTori);
+        localStorage.setItem("totalTori", 1);
+    } else {
+        var totalTori = Number(localStorage.getItem("totalTori"));
+        totalTori++;
+        localStorage.setItem("totalTori", totalTori);
+    }
+    tori++;
+    if (tori >= 5) {
+        alert("鳥になりすぎです")
+        window.location.href = "usapri.html";
+        localStorage.setItem("usapri", 1);
+    }
+    console.log(totalTori);
 });
 //ボタンクリック
-
-
 function usafuya() {
     $('#sound2').get(0).currentTime = 0;
     $('#sound2').get(0).play();
@@ -97,7 +85,6 @@ function usafuya() {
 }
 //0.1秒毎に状態チェック
 setInterval(function() {
-
     u = usagi + '匹のうさぎがいます';
     if (kuma >= 1) {
         u = u + '<br>\n' + kuma + '匹のくまがいます';
@@ -126,10 +113,10 @@ setInterval(function() {
         //うさぎが1000匹を超える毎に大漁を表示しカルメン組曲を再生
     } else if (usagi >= 1000 * n) {
         if (notCarmen != 1) {
-        $('#sound5').get(0).pause();
-        $('#sound1').get(0).currentTime = 0;
-        $('#sound1').get(0).play();
-    }
+            $('#sound5').get(0).pause();
+            $('#sound1').get(0).currentTime = 0;
+            $('#sound1').get(0).play();
+        }
         var creimg = document.createElement("img");
         creimg.setAttribute("src", "image/tairyou.png");
         creimg.setAttribute("style", "position:fixed; bottom:10px; right:10px;");

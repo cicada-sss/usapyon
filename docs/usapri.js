@@ -71,7 +71,6 @@ setInterval(function() {
     }
     u + '"';
     $("#usa").html(u);
-    achievement();
     if (usagi >= 1000) {
         usapriBreak();
     }

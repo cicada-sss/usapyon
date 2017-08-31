@@ -1,5 +1,28 @@
+var usagi = 0;
+var kuma = 0;
+var risu = 0;
+var aja = 0;
+var tori = 0;
+var tairyou = 0;
+var notCarmen = 0;
+var n = 1;
+var n2 = 1;
+var creimg;
+var usaran = ["image/usa (1).png", "image/usa (2).png", "image/usa (3).png", "image/usa (4).png", "image/usa (5).png", "image/usa (6).png", "image/usa (7).png"];
+for (var i = 0; i < 40; i++) {
+    var key = localStorage.key(i);
+    console.log(key + ":" + localStorage[key]);
+}
+
 //データ読み込み
 var launchTimes = localStorage.getItem("launchTimes");
+
+
+if (typeof localStorage.totalTairyou === "undefined") {
+    localStorage.totalTairyou = 0;
+    var totalTairyou = Number(localStorage.totalTairyou);
+}
+
 ////初回プレイの場合
 if (!localStorage.getItem("launchTimes")) {
     localStorage.clear();
@@ -27,6 +50,7 @@ if (!localStorage.getItem("launchTimes")) {
     var totalKuma = Number(localStorage.getItem("totalKuma"));
     var totalRisu = Number(localStorage.getItem("totalRisu"));
     var totalAja = Number(localStorage.getItem("totalAja"));
+    var totalTairyou = Number(localStorage.getItem("totalTairyou"));
     if (localStorage.usapri != 1) {
         launchTimes++;
         localStorage.setItem("launchTimes", launchTimes);
@@ -52,25 +76,22 @@ if (!localStorage.getItem("launchTimes")) {
         }, 5000);
     });
 }
+
 //データ保存
 $(window).on('pagehide', function() {
-    if (localStorage.getItem("launchTimes") == 1) {
-        var totalUsagi = usagi;
-        var totalKuma = kuma;
-        var totalRisu = risu;
-        var totalAja = aja;
-    } else {
         var totalUsagi = Number(localStorage.getItem("totalUsagi"));
         var totalKuma = Number(localStorage.getItem("totalKuma"));
         var totalRisu = Number(localStorage.getItem("totalRisu"));
         var totalAja = Number(localStorage.getItem("totalAja"));
+        var totalTairyou = Number(localStorage.getItem("totalTairyou"));
         totalUsagi = totalUsagi + usagi;
         totalKuma = totalKuma + kuma;
         totalRisu = totalRisu + risu;
         totalAja = totalAja + aja;
-    }
+        totalTairyou = totalTairyou + tairyou;
     localStorage.setItem("totalUsagi", totalUsagi);
     localStorage.setItem("totalKuma", totalKuma);
     localStorage.setItem("totalRisu", totalRisu);
     localStorage.setItem("totalAja", totalAja);
+    localStorage.totalTairyou = totalTairyou;
 })
