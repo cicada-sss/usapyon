@@ -33,7 +33,7 @@ $("#play_ca").click(function() {
 });
 
 $("#play_hi").click(function() {
-    if (!localStorage.usapriTimes && localStorage.usapri != 1) {
+    if (!localStorage.usapriTimes) {
     document.getElementById("sound7").play();
         alert("聴いたことがないのでダメです")
     } else {
