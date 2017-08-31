@@ -1,4 +1,16 @@
 //初期化
+if (localStorage.usapri != 1) {
+    alert("入ってはいけません");
+    window.location.href = "index.html";
+}
+if (typeof localStorage.first_launch_time === "undefined") {
+    var firstLaunchTime = Date.now();
+    firstLaunchTime = Math.floor(firstLaunchTime / 1000);
+    localStorage.setItem("first_launch_time", firstLaunchTime);
+}
+    var firstLaunchTime = localStorage.first_launch_time;
+    console.log (firstLaunchTime);
+//初期化
 document.getElementById("sound2").defaultPlaybackRate = 0.3;
 if (!localStorage.getItem("usapriTimes")) {
     var usapriTimes = 0;
@@ -29,7 +41,7 @@ function usafuya() {
     var sH2 = window.innerHeight + 100;
     var sW = Math.floor(Math.random() * sW2) - 30;
     var sH = Math.floor(Math.random() * sH2) - 50;
-    var ran = Math.floor(Math.random() * 101);
+    var ran = Math.floor(Math.random() * 2001);
     switch (ran) {
         case 0:
             $('#sound6').get(0).currentTime = 0;
