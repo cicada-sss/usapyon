@@ -2,13 +2,16 @@
 if (localStorage.usapri == 1) {
     window.location.href = "usapri.html";
 }
-if (typeof localStorage.first_launch_time === "undefined") {
-    var firstLaunchTime = Date.now();
-    firstLaunchTime = Math.floor(firstLaunchTime / 1000);
-    localStorage.setItem("first_launch_time", firstLaunchTime);
+if (typeof localStorage.play_time === "undefined") {
+    var playTime = 0;
+    var launchTime = Date.now();
+    launchTime = Math.floor(launchTime / 1000);
+} else {
+var playTime = Number(localStorage.play_time);
+    var launchTime = Date.now();
+    launchTime = Math.floor(launchTime / 1000);
 }
-    var firstLaunchTime = localStorage.first_launch_time;
-    console.log (firstLaunchTime);
+    console.log (playTime);
 $("#mute").click(function() {
     document.getElementById("sound1").volume = 0;
     document.getElementById("sound2").volume = 0;
