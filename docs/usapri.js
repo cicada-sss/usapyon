@@ -3,16 +3,13 @@ if (localStorage.usapri != 1) {
     alert("入ってはいけません");
     window.location.href = "index.html";
 }
-if (typeof localStorage.play_time === "undefined") {
-    var playTime = 0;
-    var launchTime = Date.now();
-    launchTime = Math.floor(launchTime / 1000);
-} else {
-var playTime = localStorage.play_time;
-    var launchTime = Date.now();
-    launchTime = Math.floor(launchTime / 1000);
+if (typeof localStorage.first_launch_time === "undefined") {
+    var firstLaunchTime = Date.now();
+    firstLaunchTime = Math.floor(firstLaunchTime / 1000);
+    localStorage.setItem("first_launch_time", firstLaunchTime);
 }
-    console.log (playTime);
+    var firstLaunchTime = localStorage.first_launch_time;
+    console.log (firstLaunchTime);
 //初期化
 document.getElementById("sound2").defaultPlaybackRate = 0.3;
 if (!localStorage.getItem("usapriTimes")) {

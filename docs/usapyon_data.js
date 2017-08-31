@@ -73,13 +73,4 @@ $(window).on('pagehide', function() {
     localStorage.setItem("totalKuma", totalKuma);
     localStorage.setItem("totalRisu", totalRisu);
     localStorage.setItem("totalAja", totalAja);
-    if (typeof localStorage.play_time === "undefined") {
-    nowTime = Math.floor(nowTime/1000);
-        var playTime = nowTime - launchTime;
-        localStorage.setItem("play_time", playTime);
-    } else {
-    playTime = playTime + nowTime - launchTime;
-    console.log(playTime)
-    localStorage.setItem("play_time", playTime);
-}
 })

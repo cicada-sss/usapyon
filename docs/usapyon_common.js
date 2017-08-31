@@ -27,4 +27,3 @@ $("#1").click(function() {
 });
 
 setInterval(achievement, 10);
-
