@@ -34,15 +34,20 @@ function stopAll() {
     document.getElementById("sound7").pause();
     document.getElementById("sound8").pause();
 }
+
 $("#mute_se").click(function() {
     muteSE();
 });
+
 $("#mute_bgm").click(function() {
     muteBGM();
 });
+
 $("#not_carmen").click(function() {
     var notCarmen = 1;
+    console.log(notCarmen);
 });
+
 $("#play_ko").click(function() {
     if (localStorage.usapri == 1) {
         document.getElementById("sound7").play();
@@ -53,6 +58,7 @@ $("#play_ko").click(function() {
         document.getElementById("sound5").play();
     }
 });
+
 $("#play_ca").click(function() {
     if (localStorage.usapri == 1) {
         document.getElementById("sound7").play();
@@ -63,6 +69,7 @@ $("#play_ca").click(function() {
         document.getElementById("sound1").play();
     }
 });
+
 $("#play_hi").click(function() {
     if (!localStorage.usapriTimes) {
         document.getElementById("sound7").play();
@@ -73,20 +80,37 @@ $("#play_hi").click(function() {
         document.getElementById("sound8").play();
     }
 });
+
 $("#del").click(function() {
+    if (localStorage.usapri == 1) {
+        alert("消せません");
+    } else {
     var del = confirm("全てのデータを初期化します。よろしいですか？");
     if (del) {
         localStorage.clear();
         clearInterval(setInterval(achievement, 10));
         location.reload();
     }
+}
 });
+
 $("#version").click(function() {
     $("#credit").fadeToggle();
 });
+
 $("#1").click(function() {
     usafuya();
 });
+
 $(window).keydown(function() {
     return false;
 });
+
+let lastTouch = 0;
+document.addEventListener('touchend', event => {
+  const now = window.performance.now();
+  if (now - lastTouch <= 500) {
+    event.preventDefault();
+  }
+  lastTouch = now;
+}, true);

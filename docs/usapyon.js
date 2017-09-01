@@ -113,7 +113,7 @@ setInterval(function() {
         //うさぎが1000匹を超える毎に大漁を表示しカルメン組曲を再生
     } else if (usagi >= 1000 * n) {
         if (notCarmen != 1) {
-            $('#sound5').get(0).pause();
+            stopAll();
             $('#sound1').get(0).currentTime = 0;
             $('#sound1').get(0).play();
         }

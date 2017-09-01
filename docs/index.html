@@ -34,15 +34,15 @@
       <div id="usa" style="font-size:500%;">0匹のうさぎがいます</div>
       <button id="1" style="font-size:500%;">うさぎを増やす</button>
       <button id="tori" style="font-size:100%;">Twitterで共有</button>
-      <div id="version">ver.0.9.0β</div>
+      <div id="version">ver.0.10.0β</div>
       <div id="info"></div>
     </div>
     <div id="credit">バージョン番号を再クリックで閉じる
       <hr>
       <h1>音設定</h1>
       <button id="mute_se">SEを消す（今プレイ中のみ）</button><br>
-      <button id="mute_bgm">BGMを消す（今プレイ中のみ）</button><br>
-      <button id="not_carmen">大漁で音楽が切り替わらないようにする（今プレイ中のみ）</button><br>
+      <button id="mute_bgm">BGMを消す（今プレイ中のみ）</button><br><!--
+      <button id="not_carmen">大漁で音楽が切り替わらないようにする（今プレイ中のみ）</button><br>-->
       <button id="play_ko">コロブチカを流す</button><br>
       <button id="play_ca">カルメン組曲を流す</button><br>
       <button id="play_hi">交響曲を流す</button>
@@ -78,7 +78,8 @@
       <hr>
       <h1>更新履歴</h1>●○ でかい更新
             <br>○● 細かい修正・バグ修正
-            <br>●○ ver0.9.0β 新実績を実装 (2017.09.01)
+            <br>●○ ver0.10.0β プレイ時間の測定を実装,新実績を実装,その他細かい修正
+            <br>●○ ver0.9.0β 新実績を実装 (～2017.09.01)
             <br>○● ver0.8.1β 大漁が出ないバグを修正
             <br>●○ ver0.8.0β 音設定を実装
             <br>○● ver0.7.1β うさプリ救済措置の出現確率を調整
@@ -115,9 +116,9 @@
       <source src="sound/usapri.mp3" type="audio/mp3">
     </audio>
     <script src="loading.js"></script>
+    <script src="usapyon_ui.js"></script>
     <script src="usapyon.js"></script>
     <script src="usapyon_data.js"></script>
-    <script src="usapyon_ui.js"></script>
     <script src="usapyon_achievement.js"></script>
   </body>
 </html>
