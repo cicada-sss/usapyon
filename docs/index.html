@@ -34,7 +34,7 @@
       <div id="usa" style="font-size:500%;">0匹のうさぎがいます</div>
       <button id="1" style="font-size:500%;">うさぎを増やす</button>
       <button id="tori" style="font-size:100%;">Twitterで共有</button>
-      <div id="version">ver.0.10.0β</div>
+      <div id="version"></div>
       <div id="info"></div>
     </div>
     <div id="credit">バージョン番号を再クリックで閉じる
@@ -49,6 +49,9 @@
       <hr>
       <h1>設定</h1>
       <button id="del" style="font-size:100%;">データ消去（消えます）</button>
+      <hr>
+      <h1>解除済実績一覧</h1>
+      <div id="achievement_list"></div>
       <hr>
       <h1>クレジット</h1>
       <b>原案</b>：
@@ -78,6 +81,7 @@
       <hr>
       <h1>更新履歴</h1>●○ でかい更新
             <br>○● 細かい修正・バグ修正
+            <br>●○ ver0.11.0β 解除済実績の一覧表示を実装,新実績を実装,その他細かい修正
             <br>●○ ver0.10.0β プレイ時間の測定を実装,新実績を実装,その他細かい修正
             <br>●○ ver0.9.0β 新実績を実装 (～2017.09.01)
             <br>○● ver0.8.1β 大漁が出ないバグを修正
@@ -116,9 +120,9 @@
       <source src="sound/usapri.mp3" type="audio/mp3">
     </audio>
     <script src="loading.js"></script>
-    <script src="usapyon_ui.js"></script>
+    <script src="usapyon_achievement.js"></script>
     <script src="usapyon.js"></script>
     <script src="usapyon_data.js"></script>
-    <script src="usapyon_achievement.js"></script>
+    <script src="usapyon_ui.js"></script>
   </body>
 </html>

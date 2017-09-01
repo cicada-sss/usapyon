@@ -94,7 +94,10 @@ $("#del").click(function() {
 }
 });
 
+$("#version").html("ver.0.11.0β");
+
 $("#version").click(function() {
+    
     $("#credit").fadeToggle();
 });
 
@@ -114,3 +117,4 @@ document.addEventListener('touchend', event => {
   }
   lastTouch = now;
 }, true);*/
+

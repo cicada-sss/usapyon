@@ -7,6 +7,7 @@ var tairyou = 0;
 var notCarmen = 0;
 var n = 1;
 var n2 = 1;
+var no = 1;
 var creimg;
 var usaran = ["image/usa (1).png", "image/usa (2).png", "image/usa (3).png", "image/usa (4).png", "image/usa (5).png", "image/usa (6).png", "image/usa (7).png"];
 for (var i = 0; i < 40; i++) {
@@ -16,7 +17,6 @@ for (var i = 0; i < 40; i++) {
 
 //データ読み込み
 var launchTimes = localStorage.getItem("launchTimes");
-
 
 var launchTime = Math.floor(Date.now()/1000);
 

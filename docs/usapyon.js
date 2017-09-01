@@ -82,6 +82,7 @@ function usafuya() {
     creimg.setAttribute("src", usasrc);
     creimg.setAttribute("style", "position:fixed; top:" + sH + "px; left:" + sW + "px;");
     document.body.appendChild(creimg);
+
 }
 //0.1秒毎に状態チェック
 setInterval(function() {
@@ -98,17 +99,18 @@ setInterval(function() {
     u + '"';
     $("#usa").html(u);
     //うさぎが10000匹を超えた場合ジュピターを流してスタッフロールを表示
-    if (usagi >= 10000) {
-        $('#sound1').get(0).pause();
+    if (usagi >= 10000 * no) {
+        stopAll();
         $('#sound3').get(0).play();
         var b = document.createElement("img");
         b.setAttribute("src", "image/staff.png");
         b.setAttribute("id", "staff");
-        b.setAttribute("style", "text-align:center; position:fixed; bottom:-600px; opacity:0.8;");
+        b.setAttribute("style", "text-align:center; position:fixed; bottom:0px; left:200px;z-index:9999;opacity:0.9; max-width:50%;margin:0 auto;");
         document.body.appendChild(b);
         $("#staff").animate({
             "top": "50px"
-        }, 20000);
+        }, 400);
+        no++;
         n++;
         //うさぎが1000匹を超える毎に大漁を表示しカルメン組曲を再生
     } else if (usagi >= 1000 * n) {
