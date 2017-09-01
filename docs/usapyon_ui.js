@@ -105,7 +105,7 @@ $("#1").click(function() {
 $(window).keydown(function() {
     return false;
 });
-
+/*
 let lastTouch = 0;
 document.addEventListener('touchend', event => {
   const now = window.performance.now();
@@ -113,4 +113,4 @@ document.addEventListener('touchend', event => {
     event.preventDefault();
   }
   lastTouch = now;
-}, true);
+}, true);*/
