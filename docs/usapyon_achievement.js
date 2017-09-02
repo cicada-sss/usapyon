@@ -814,7 +814,7 @@ function achievement() {
         achshow();
     }
     if (usagi == 1000 && kuma == 0 && aja == 0 && risu == 0 && localStorage.usapri != 1 && typeof localStorage.achievement9_4 === "undefined") {
-        infotext = '<span class="notice">うさぎのみで大漁を達成した🐰実績：うさぴょんプレイヤーの鑑解除</span><br>\n' + infotext
+        infotext = '<span class="notice">うさぎのみで1000匹を達成した🐰実績：うさぴょんプレイヤーの鑑解除</span><br>\n' + infotext
         localStorage.achievement9_3 = 1;
         achshow();
     }
