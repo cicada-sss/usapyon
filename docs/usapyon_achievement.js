@@ -23,6 +23,7 @@ function achievement() {
         achievementList = achievementList + '<span class="notice">うさぴょんLv.5</span> - 累計うさぎ数10000匹突破<br>\n'
         totalAchievement++;
     }
+    /*
     if (typeof localStorage.achievement1_6 !== "undefined") {
         achievementList = achievementList + '<span class="notice">うさぴょんLv.6</span> - 累計うさぎ数50000匹突破<br>\n'
         totalAchievement++;
@@ -43,6 +44,7 @@ function achievement() {
         achievementList = achievementList + '<span class="notice">うさぴょんLv.10</span> - 累計うさぎ数5000000匹突破<br>\n'
         totalAchievement++;
     }
+    */
     if (typeof localStorage.achievement2_1 !== "undefined") {
         achievementList = achievementList + '<span class="notice">くまぴょんLv.1</span> - くま発見<br>\n'
         totalAchievement++;
@@ -63,6 +65,7 @@ function achievement() {
         achievementList = achievementList + '<span class="notice">くまぴょんLv.5</span> - 累計くま発見数100匹突破<br>\n'
         totalAchievement++;
     }
+    /*
     if (typeof localStorage.achievement2_6 !== "undefined") {
         achievementList = achievementList + '<span class="notice">くまぴょんLv.6</span> - 累計くま発見数500匹突破<br>\n'
         totalAchievement++;
@@ -83,6 +86,7 @@ function achievement() {
         achievementList = achievementList + '<span class="notice">くまぴょんLv.10</span> - 累計くま発見数50000匹突破<br>\n'
         totalAchievement++;
     }
+    */
     if (typeof localStorage.achievement3_1 !== "undefined") {
         achievementList = achievementList + '<span class="notice">トッテナムLv.1</span> - りす発見<br>\n'
         totalAchievement++;
@@ -103,6 +107,7 @@ function achievement() {
         achievementList = achievementList + '<span class="notice">トッテナムLv.5</span> - 累計りす発見数100匹突破<br>\n'
         totalAchievement++;
     }
+    /*
     if (typeof localStorage.achievement3_6 !== "undefined") {
         achievementList = achievementList + '<span class="notice">トッテナムLv.6</span> - 累計りす発見数500匹突破<br>\n'
         totalAchievement++;
@@ -123,6 +128,7 @@ function achievement() {
         achievementList = achievementList + '<span class="notice">トッテナムLv.10</span> - 累計りす発見数50000匹突破<br>\n'
         totalAchievement++;
     }
+    */
     if (typeof localStorage.achievement4_1 !== "undefined") {
         achievementList = achievementList + '<span class="notice">あじゃぴょんLv.1</span> - あじゃ発見<br>\n'
         totalAchievement++;
@@ -143,6 +149,7 @@ function achievement() {
         achievementList = achievementList + '<span class="notice">あじゃぴょんLv.5</span> - 累計あじゃ発見数30匹突破<br>\n'
         totalAchievement++;
     }
+    /*
     if (typeof localStorage.achievement4_6 !== "undefined") {
         achievementList = achievementList + '<span class="notice">あじゃぴょんLv.6</span> - 累計あじゃ発見数50匹突破<br>\n'
         totalAchievement++;
@@ -163,6 +170,7 @@ function achievement() {
         achievementList = achievementList + '<span class="notice">あじゃぴょんLv.10</span> - 累計あじゃ発見数1000匹突破<br>\n'
         totalAchievement++;
     }
+    */
     if (typeof localStorage.achievement5_1 !== "undefined") {
         achievementList = achievementList + '<span class="notice">鳥貴族Lv.1</span> - 鳥になった回数1回突破<br>\n'
         totalAchievement++;
@@ -183,6 +191,7 @@ function achievement() {
         achievementList = achievementList + '<span class="notice">鳥貴族Lv.5</span> - 鳥になった回数50回突破<br>\n'
         totalAchievement++;
     }
+    /*
     if (typeof localStorage.achievement5_6 !== "undefined") {
         achievementList = achievementList + '<span class="notice">鳥貴族Lv.6</span> - 鳥になった回数100回突破<br>\n'
         totalAchievement++;
@@ -203,6 +212,7 @@ function achievement() {
         achievementList = achievementList + '<span class="notice">鳥貴族Lv.10</span> - 鳥になった回数3000回突破<br>\n'
         totalAchievement++;
     }
+    */
     if (typeof localStorage.achievement6_1 !== "undefined") {
         achievementList = achievementList + '<span class="notice">うさプリズナーLv.1</span> - うさプリ収監<br>\n'
         totalAchievement++;
@@ -223,6 +233,7 @@ function achievement() {
         achievementList = achievementList + '<span class="notice">うさプリズナーLv.5</span> - うさプリ収監30回突破<br>\n'
         totalAchievement++;
     }
+    /*
     if (typeof localStorage.achievement6_6 !== "undefined") {
         achievementList = achievementList + '<span class="notice">うさプリズナーLv.6</span> - うさプリ収監50回突破<br>\n'
         totalAchievement++;
@@ -243,6 +254,7 @@ function achievement() {
         achievementList = achievementList + '<span class="notice">うさプリズナーLv.10</span> - うさプリ収監1000回突破<br>\n'
         totalAchievement++;
     }
+    */
     if (typeof localStorage.achievement7_1 !== "undefined") {
         achievementList = achievementList + '<span class="notice">うさぴょん中毒Lv.1</span> - 累計プレイ時間10秒突破<br>\n'
         totalAchievement++;
@@ -263,6 +275,7 @@ function achievement() {
         achievementList = achievementList + '<span class="notice">うさぴょん中毒Lv.5</span> - 累計プレイ時間43200秒突破<br>\n'
         totalAchievement++;
     }
+    /*
     if (typeof localStorage.achievement7_6 !== "undefined") {
         achievementList = achievementList + '<span class="notice">うさぴょん中毒Lv.6</span> - 累計プレイ時間86400秒突破<br>\n'
         totalAchievement++;
@@ -283,6 +296,7 @@ function achievement() {
         achievementList = achievementList + '<span class="notice">うさぴょん中毒Lv.10</span> - 累計プレイ時間31536000秒突破<br>\n'
         totalAchievement++;
     }
+    */
     if (typeof localStorage.achievement8_1 !== "undefined") {
         achievementList = achievementList + '<span class="notice">大漁Lv.1</span> - 大漁1回突破<br>\n'
         totalAchievement++;
@@ -303,6 +317,7 @@ function achievement() {
         achievementList = achievementList + '<span class="notice">大漁Lv.5</span> - 大漁100回突破<br>\n'
         totalAchievement++;
     }
+    /*
     if (typeof localStorage.achievement8_6 !== "undefined") {
         achievementList = achievementList + '<span class="notice">大漁Lv.6</span> - 大漁500回突破<br>\n'
         totalAchievement++;
@@ -323,6 +338,7 @@ function achievement() {
         achievementList = achievementList + '<span class="notice">大漁Lv.10</span> - 大漁50000回突破<br>\n'
         totalAchievement++;
     }
+    */
     if (typeof localStorage.achievement9_1 !== "undefined") {
         achievementList = achievementList + '<span class="notice">奇跡のあじゃ</span> - 最初にあじゃを出した<br>\n'
         totalAchievement++;
@@ -348,21 +364,23 @@ function achievement() {
         totalAchievement++;
     }
     if (typeof localStorage.achievement11_2 !== "undefined") {
-        achievementList = achievementList + '<span class="notice">うさぴょんマスターLv.2</span> - 実績25個解除<br>\n'
+        achievementList = achievementList + '<span class="notice">うさぴょんマスターLv.2</span> - 実績20個解除<br>\n'
         totalAchievement++;
     }
     if (typeof localStorage.achievement11_3 !== "undefined") {
-        achievementList = achievementList + '<span class="notice">うさぴょんマスターLv.3</span> - 実績45個解除<br>\n'
+        achievementList = achievementList + '<span class="notice">うさぴょんマスターLv.3</span> - 実績30個解除<br>\n'
         totalAchievement++;
     }
     if (typeof localStorage.achievement11_4 !== "undefined") {
-        achievementList = achievementList + '<span class="notice">うさぴょんマスターLv.4</span> - 実績65個解除<br>\n'
+        achievementList = achievementList + '<span class="notice">うさぴょんマスターLv.4</span> - 実績40個解除<br>\n'
         totalAchievement++;
     }
     if (typeof localStorage.achievement11_5 !== "undefined") {
         achievementList = achievementList + '<span class="notice">Congratulations!</span> - 全実績解除<br>\n'
         totalAchievement++;
     }
+
+
     //実績解除
     if ((totalUsagi + usagi) >= 100 && typeof localStorage.achievement1_1 === "undefined") {
         infotext = '<span class="notice">累計うさぎ数100匹突破🐰実績：うさぴょんLv.1解除</span><br>\n' + infotext
@@ -389,6 +407,7 @@ function achievement() {
         localStorage.achievement1_5 = 1;
         achshow();
     }
+    /*
     if ((totalUsagi + usagi) >= 50000 && typeof localStorage.achievement1_6 === "undefined") {
         infotext = '<span class="notice">累計うさぎ数50000匹突破🐰実績：うさぴょんLv.6解除</span><br>\n' + infotext
         localStorage.achievement1_6 = 1;
@@ -414,6 +433,7 @@ function achievement() {
         localStorage.achievement1_10 = 1;
         achshow();
     }
+    */
     if ((totalKuma + kuma) >= 1 && typeof localStorage.achievement2_1 === "undefined") {
         infotext = '<span class="notice">くま発見🐰実績：くまぴょんLv.1解除</span><br>\n' + infotext
         localStorage.achievement2_1 = 1;
@@ -439,6 +459,7 @@ function achievement() {
         localStorage.achievement2_5 = 1;
         achshow();
     }
+    /*
     if ((totalKuma + kuma) >= 500 && typeof localStorage.achievement2_6 === "undefined") {
         infotext = '<span class="notice">累計くま発見数500匹突破🐰実績：くまぴょんLv.6解除</span><br>\n' + infotext
         localStorage.achievement2_6 = 1;
@@ -464,6 +485,7 @@ function achievement() {
         localStorage.achievement2_10 = 1;
         achshow();
     }
+    */
     if ((totalRisu + risu) >= 1 && typeof localStorage.achievement3_1 === "undefined") {
         infotext = '<span class="notice">りす発見🐰実績：トッテナムLv.1解除</span><br>\n' + infotext
         localStorage.achievement3_1 = 1;
@@ -489,6 +511,7 @@ function achievement() {
         localStorage.achievement3_5 = 1;
         achshow();
     }
+    /*
     if ((totalRisu + risu) >= 500 && typeof localStorage.achievement3_6 === "undefined") {
         infotext = '<span class="notice">累計りす発見数500匹突破🐰実績：トッテナムLv.6解除</span><br>\n' + infotext
         localStorage.achievement3_6 = 1;
@@ -514,6 +537,7 @@ function achievement() {
         localStorage.achievement3_10 = 1;
         achshow();
     }
+    */
     if ((totalAja + aja) >= 1 && typeof localStorage.achievement4_1 === "undefined") {
         infotext = '<span class="notice">あじゃ発見🐰実績：あじゃぴょんLv.1解除</span><br>\n' + infotext
         localStorage.achievement4_1 = 1;
@@ -539,6 +563,7 @@ function achievement() {
         localStorage.achievement4_5 = 1;
         achshow();
     }
+    /*
     if ((totalAja + aja) >= 50 && typeof localStorage.achievement4_6 === "undefined") {
         infotext = '<span class="notice">累計あじゃ発見数50匹突破🐰実績：あじゃぴょんLv.6解除</span><br>\n' + infotext
         localStorage.achievement4_6 = 1;
@@ -564,6 +589,7 @@ function achievement() {
         localStorage.achievement4_10 = 1;
         achshow();
     }
+    */
     if ((localStorage.totalTori) >= 1 && typeof localStorage.achievement5_1 === "undefined") {
         infotext = '<span class="notice">鳥になった回数1回突破🐰実績：鳥貴族Lv.1解除</span><br>\n' + infotext
         localStorage.achievement5_1 = 1;
@@ -589,6 +615,7 @@ function achievement() {
         localStorage.achievement5_5 = 1;
         achshow();
     }
+    /*
     if ((localStorage.totalTori) >= 100 && typeof localStorage.achievement5_6 === "undefined") {
         infotext = '<span class="notice">鳥になった回数30回突破🐰実績：鳥貴族Lv.6解除</span><br>\n' + infotext
         localStorage.achievement5_6 = 1;
@@ -614,6 +641,7 @@ function achievement() {
         localStorage.achievement5_10 = 1;
         achshow();
     }
+    */
     if ((localStorage.usapriTimes) >= 1 && typeof localStorage.achievement6_1 === "undefined") {
         infotext = '<span class="notice">うさプリ収監🐰実績：うさプリズナーLv.1解除</span><br>\n' + infotext
         localStorage.achievement6_1 = 1;
@@ -639,6 +667,7 @@ function achievement() {
         localStorage.achievement6_5 = 1;
         achshow();
     }
+    /*
     if ((localStorage.usapriTimes) >= 50 && typeof localStorage.achievement6_6 === "undefined") {
         infotext = '<span class="notice">うさプリ収監50回突破🐰実績：うさプリズナーLv.6解除</span><br>\n' + infotext
         localStorage.achievement6_6 = 1;
@@ -664,6 +693,7 @@ function achievement() {
         localStorage.achievement6_10 = 1;
         achshow();
     }
+    */
     if (playTime + nowTime - launchTime >= 10 && typeof localStorage.achievement7_1 === "undefined") {
         infotext = '<span class="notice">累計プレイ時間10秒突破🐰実績：うさぴょん中毒Lv.1解除</span><br>\n' + infotext
         localStorage.achievement7_1 = 1;
@@ -689,6 +719,7 @@ function achievement() {
         localStorage.achievement7_5 = 1;
         achshow();
     }
+    /*
     if (playTime + nowTime - launchTime >= 86400 && typeof localStorage.achievement7_6 === "undefined") {
         infotext = '<span class="notice">累計プレイ時間86400秒突破🐰実績：うさぴょん中毒Lv.6解除</span><br>\n' + infotext
         localStorage.achievement7_6 = 1;
@@ -714,6 +745,7 @@ function achievement() {
         localStorage.achievement7_10 = 1;
         achshow();
     }
+    */
     if ((totalTairyou + tairyou) >= 1 && typeof localStorage.achievement8_1 === "undefined") {
         infotext = '<span class="notice">大漁1回突破🐰実績：大漁Lv.1解除</span><br>\n' + infotext
         localStorage.achievement8_1 = 1;
@@ -739,6 +771,7 @@ function achievement() {
         localStorage.achievement8_5 = 1;
         achshow();
     }
+    /*
     if ((totalTairyou + tairyou) >= 500 && typeof localStorage.achievement8_6 === "undefined") {
         infotext = '<span class="notice">大漁500回突破🐰実績：大漁Lv.6解除</span><br>\n' + infotext
         localStorage.achievement8_6 = 1;
@@ -764,6 +797,7 @@ function achievement() {
         localStorage.achievement8_10 = 1;
         achshow();
     }
+    */
     if (usagi == 0 && kuma == 0 && risu == 0 && aja == 1 && typeof localStorage.achievement9_1 === "undefined") {
         infotext = '<span class="notice">最初にあじゃを出した🐰実績：奇跡のあじゃ解除</span><br>\n' + infotext
         localStorage.achievement9_1 = 1;
@@ -794,22 +828,22 @@ function achievement() {
         localStorage.achievement11_1 = 1;
         achshow();
     }
-    if (totalAchievement >= 25 && typeof localStorage.achievement11_2 === "undefined") {
-        infotext = '<span class="notice">実績25個解除🐰実績：うさぴょんマスターLv.2解除</span><br>\n' + infotext
+    if (totalAchievement >= 20 && typeof localStorage.achievement11_2 === "undefined") {
+        infotext = '<span class="notice">実績20個解除🐰実績：うさぴょんマスターLv.2解除</span><br>\n' + infotext
         localStorage.achievement11_2 = 1;
         achshow();
     }
-    if (totalAchievement >= 45 && typeof localStorage.achievement11_3 === "undefined") {
-        infotext = '<span class="notice">実績45個解除🐰実績：うさぴょんマスターLv.3解除</span><br>\n' + infotext
+    if (totalAchievement >= 30 && typeof localStorage.achievement11_3 === "undefined") {
+        infotext = '<span class="notice">実績30個解除🐰実績：うさぴょんマスターLv.3解除</span><br>\n' + infotext
         localStorage.achievement11_3 = 1;
         achshow();
     }
-    if (totalAchievement >= 65 && typeof localStorage.achievement11_4 === "undefined") {
-        infotext = '<span class="notice">実績65個解除🐰実績：うさぴょんマスターLv.4解除</span><br>\n' + infotext
+    if (totalAchievement >= 40 && typeof localStorage.achievement11_4 === "undefined") {
+        infotext = '<span class="notice">実績40個解除🐰実績：うさぴょんマスターLv.4解除</span><br>\n' + infotext
         localStorage.achievement11_4 = 1;
         achshow();
     }
-    if (totalAchievement >= 89 && typeof localStorage.achievement11_5 === "undefined") {
+    if (totalAchievement >= 49 && typeof localStorage.achievement11_5 === "undefined") {
         infotext = '<span class="notice">全実績解除🐰実績：Congratulations!解除</span><br>\n' + infotext
         localStorage.achievement11_5 = 1;
         achshow();

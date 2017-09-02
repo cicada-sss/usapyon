@@ -94,7 +94,7 @@ $("#del").click(function() {
 }
 });
 
-$("#version").html("ver.1β");
+$("#version").html("ver.1.1β");
 
 $("#version").click(function() {
     
