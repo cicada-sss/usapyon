@@ -37,12 +37,6 @@ function usafuya() {
             usasrc = "image/aja.png";
             aja++;
             localStorage.setItem("usapri", "0");
-            if (typeof localStorage.getItem("usapriTimes") === undefined) {
-                localStorage.setItem("usapriTimes", 1);
-            } else {
-                var usapriTimes = Number(localStorage.getItem("usapriTimes"));
-                usapriTimes++;
-            }
             localStorage.setItem("usapriTimes", usapriTimes);
             alert("あじゃが助け出してくれました");
             window.location.href = "index.html";
@@ -78,13 +72,7 @@ setInterval(function() {
 
 function usapriBreak() {
     localStorage.setItem("usapri", "0");
-    if (typeof localStorage.getItem("usapriTimes") === undefined) {
-        localStorage.setItem("usapriTimes", 1);
-    } else {
-        var usapriTimes = Number(localStorage.getItem("usapriTimes"));
-        usapriTimes++;
-    }
-    localStorage.setItem("usapriTimes", usapriTimes);
+
     alert("釈放します。\nもう戻ってきちゃダメですよ");
     window.location.href = "index.html";
 }

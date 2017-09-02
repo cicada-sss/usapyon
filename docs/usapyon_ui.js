@@ -71,7 +71,7 @@ $("#play_ca").click(function() {
 });
 
 $("#play_hi").click(function() {
-    if (!localStorage.usapriTimes) {
+    if (localStorage.usapriTimes == 0) {
         document.getElementById("sound7").play();
         alert("聴いたことがないのでダメです")
     } else {
@@ -94,7 +94,7 @@ $("#del").click(function() {
 }
 });
 
-$("#version").html("ver.0.11.0β");
+$("#version").html("ver.1β");
 
 $("#version").click(function() {
     
