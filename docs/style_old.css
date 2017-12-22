@@ -1,0 +1,99 @@
+* {
+    margin, padding: 0;
+}
+/*
+body {
+    background-image: url("kangoku.jpg");
+    color: white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+ */
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    overflow: hidden;
+    background-image: url("image/sougen.png");
+}
+#wrap {
+    margin: 5px;
+    width: 100%;
+    height: 100%;
+}
+#info {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    opacity: 0.8;
+    padding: 5px;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    z-index: 1;
+}
+#version {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    opacity: 0.8;
+    padding: 5px;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+}
+.notice {
+    color: orange;
+}
+#loading {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    text-align: center
+}
+#loading #loader {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+}
+#credit {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    background-color: rgba(0,0,0,0.9);
+    color: pink;
+    font-family: sans-serif;
+    padding: 1%;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    z-index: 1;
+}
+h1 {
+    line-height: 100%;
+    margin: 0;
+    font-size:300%;
+}
+a {
+    color:#66f;
+    text-decoration: none;
+}
