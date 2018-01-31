@@ -94,10 +94,9 @@ $("#del").click(function() {
 }
 });
 
-$("#version").html("ver.1.1β");
+$("#version").html("ver.1.1.1β");
 
 $("#version").click(function() {
-    
     $("#credit").fadeToggle();
 });
 
@@ -108,13 +107,3 @@ $("#1").click(function() {
 $(window).keydown(function() {
     return false;
 });
-/*
-let lastTouch = 0;
-document.addEventListener('touchend', event => {
-  const now = window.performance.now();
-  if (now - lastTouch <= 500) {
-    event.preventDefault();
-  }
-  lastTouch = now;
-}, true);*/
-

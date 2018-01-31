@@ -862,4 +862,4 @@ function achshow() {
         infotext = "";
     }, 5000);
 }
-setInterval(achievement, 10);
+setInterval(achievement, 1000);

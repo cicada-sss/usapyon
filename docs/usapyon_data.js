@@ -152,4 +152,4 @@ if (totalTairyou + tairyou >= 1) {
     score = Math.round(score);
     var showScore = "スコア : " + score + "点<br>\n";
     $("#status").html(showlaunchtime + showPlayTime + usagiRuikei + kumaRuikei + risuRuikei + ajaRuikei + toriRuikei + priRuikei + tairyouRuikei + usagiHeikin + kumaHeikin + risuHeikin + ajaHeikin + showScore);
-});
+}, 1000);
