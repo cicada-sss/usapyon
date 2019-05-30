@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "https://github.com/cicada-sss/usapyon.git",
   "author": "cicada_sss <sss.cicada@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
 }
