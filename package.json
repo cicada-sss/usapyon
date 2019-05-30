@@ -5,6 +5,7 @@
   "repository": "https://github.com/cicada-sss/usapyon.git",
   "author": "cicada_sss <sss.cicada@gmail.com>",
   "license": "MIT",
+  "scripts": {"browserify": "browserify --transform babelify"},
   "dependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
@@ -13,5 +14,11 @@
     "browserify": "^16.2.3",
     "gulp": "^4.0.2",
     "gulp-pug": "^4.0.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react",
+      "@babel/preset-env"
+    ]
   }
 }
