@@ -16,6 +16,7 @@
     "browserify": "^16.2.3",
     "gulp": "^4.0.2",
     "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
