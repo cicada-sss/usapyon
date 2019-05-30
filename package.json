@@ -6,6 +6,7 @@
   "author": "cicada_sss <sss.cicada@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-pug": "^4.0.1"
   }
 }
