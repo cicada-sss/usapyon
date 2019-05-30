@@ -17,7 +17,7 @@ gulp.task("pug", done => {
 
 gulp.task("sass", done => {
   gulp
-    .src("./src/*.scss")
+    .src("./src/*.sass")
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(gulp.dest("./docs/"));
   done();
