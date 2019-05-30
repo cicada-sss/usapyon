@@ -6,7 +6,7 @@
   "author": "cicada_sss <sss.cicada@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "browserify": "browserify --transform babelify"
+    "dev-b": "browserify --transform babelify"
   },
   "dependencies": {
     "@babel/core": "^7.4.5",
