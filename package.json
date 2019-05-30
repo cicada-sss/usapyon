@@ -1,0 +1,8 @@
+{
+  "name": "usapyon",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/cicada-sss/usapyon.git",
+  "author": "cicada_sss <sss.cicada@gmail.com>",
+  "license": "MIT"
+}
