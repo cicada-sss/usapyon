@@ -1,7 +1,7 @@
 import React from "react";
 
 const PlayUsapri = () => {
-  handleClick = e => {
+  const handleClick = e => {
     e.preventDefault();
     if (localStorage.usapriTimes == 0) {
       document.getElementById("sound7").play();
