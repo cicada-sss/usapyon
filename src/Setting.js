@@ -25130,25 +25130,19 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
-var _MuteSE = _interopRequireDefault(require("./components/_MuteSE.jsx"));
+var _SettingSounds = _interopRequireDefault(require("./components/_SettingSounds.jsx"));
 
-var _MuteBGM = _interopRequireDefault(require("./components/_MuteBGM.jsx"));
-
-var _PlayKorobushka = _interopRequireDefault(require("./components/_PlayKorobushka.jsx"));
-
-var _PlayCarmen = _interopRequireDefault(require("./components/_PlayCarmen.jsx"));
-
-var _PlayUsapri = _interopRequireDefault(require("./components/_PlayUsapri.jsx"));
+var _SettingData = _interopRequireDefault(require("./components/_SettingData.jsx"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function SettingSounds() {
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement("h1", null, "\u97F3\u8A2D\u5B9A"), _react["default"].createElement(_MuteSE["default"], null), _react["default"].createElement(_MuteBGM["default"], null), _react["default"].createElement(_PlayKorobushka["default"], null), _react["default"].createElement(_PlayCarmen["default"], null), _react["default"].createElement(_PlayUsapri["default"], null));
-}
+var Setting = function Setting() {
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_SettingSounds["default"], null), _react["default"].createElement("hr", null), _react["default"].createElement(_SettingData["default"], null));
+};
 
-_reactDom["default"].render(_react["default"].createElement(SettingSounds, null), document.getElementById("setting-sounds"));
+_reactDom["default"].render(_react["default"].createElement(Setting, null), document.getElementById("setting"));
 
-},{"./components/_MuteBGM.jsx":18,"./components/_MuteSE.jsx":19,"./components/_PlayCarmen.jsx":20,"./components/_PlayKorobushka.jsx":21,"./components/_PlayUsapri.jsx":22,"react":10,"react-dom":7}],18:[function(require,module,exports){
+},{"./components/_SettingData.jsx":24,"./components/_SettingSounds.jsx":25,"react":10,"react-dom":7}],18:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25160,21 +25154,32 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function MuteBGM() {
-  function handleClick(e) {
+var DeleteButton = function DeleteButton() {
+  var handleClick = function handleClick(e) {
     e.preventDefault();
-    document.getElementById("sound1").volume = 0;
-    document.getElementById("sound3").volume = 0;
-    document.getElementById("sound5").volume = 0;
-    document.getElementById("sound8").volume = 0;
-  }
+
+    if (localStorage.usapri == 1) {
+      alert("消せません");
+    } else {
+      var del = confirm("全てのデータを初期化します。よろしいですか？");
+
+      if (del) {
+        localStorage.clear();
+        clearInterval(setInterval(achievement, 10));
+        location.reload();
+      }
+    }
+  };
 
   return _react["default"].createElement("button", {
+    style: {
+      fontSize: "100%"
+    },
     onClick: handleClick
-  }, "BGM\u3092\u6D88\u3059\uFF08\u4ECA\u30D7\u30EC\u30A4\u4E2D\u306E\u307F\uFF09");
-}
+  }, "\u30C7\u30FC\u30BF\u6D88\u53BB\uFF08\u6D88\u3048\u307E\u3059\uFF09");
+};
 
-var _default = MuteBGM;
+var _default = DeleteButton;
 exports["default"] = _default;
 
 },{"react":10}],19:[function(require,module,exports){
@@ -25189,21 +25194,21 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function MuteSE() {
-  function handleClick(e) {
+var MuteBGM = function MuteBGM() {
+  var handleClick = function handleClick(e) {
     e.preventDefault();
-    document.getElementById("sound2").volume = 0;
-    document.getElementById("sound4").volume = 0;
-    document.getElementById("sound6").volume = 0;
-    document.getElementById("sound7").volume = 0;
-  }
+    document.getElementById("sound1").volume = 0;
+    document.getElementById("sound3").volume = 0;
+    document.getElementById("sound5").volume = 0;
+    document.getElementById("sound8").volume = 0;
+  };
 
   return _react["default"].createElement("button", {
     onClick: handleClick
-  }, "SE\u3092\u6D88\u3059\uFF08\u4ECA\u30D7\u30EC\u30A4\u4E2D\u306E\u307F\uFF09");
-}
+  }, "BGM\u3092\u6D88\u3059\uFF08\u4ECA\u30D7\u30EC\u30A4\u4E2D\u306E\u307F\uFF09");
+};
 
-var _default = MuteSE;
+var _default = MuteBGM;
 exports["default"] = _default;
 
 },{"react":10}],20:[function(require,module,exports){
@@ -25218,26 +25223,21 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function PlayCarmen() {
-  function handleClick(e) {
+var MuteSE = function MuteSE() {
+  var handleClick = function handleClick(e) {
     e.preventDefault();
-
-    if (localStorage.usapri == 1) {
-      document.getElementById("sound7").play();
-      alert("ダメです");
-    } else {
-      stopAll();
-      document.getElementById("sound1").currentTime = 0;
-      document.getElementById("sound1").play();
-    }
-  }
+    document.getElementById("sound2").volume = 0;
+    document.getElementById("sound4").volume = 0;
+    document.getElementById("sound6").volume = 0;
+    document.getElementById("sound7").volume = 0;
+  };
 
   return _react["default"].createElement("button", {
     onClick: handleClick
-  }, "\u30AB\u30EB\u30E1\u30F3\u7D44\u66F2\u3092\u6D41\u3059");
-}
+  }, "SE\u3092\u6D88\u3059\uFF08\u4ECA\u30D7\u30EC\u30A4\u4E2D\u306E\u307F\uFF09");
+};
 
-var _default = PlayCarmen;
+var _default = MuteSE;
 exports["default"] = _default;
 
 },{"react":10}],21:[function(require,module,exports){
@@ -25252,8 +25252,8 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function PlayKorobushka() {
-  function handleClick(e) {
+var PlayCarmen = function PlayCarmen() {
+  var handleClick = function handleClick(e) {
     e.preventDefault();
 
     if (localStorage.usapri == 1) {
@@ -25261,17 +25261,17 @@ function PlayKorobushka() {
       alert("ダメです");
     } else {
       stopAll();
-      document.getElementById("sound5").currentTime = 0;
-      document.getElementById("sound5").play();
+      document.getElementById("sound1").currentTime = 0;
+      document.getElementById("sound1").play();
     }
-  }
+  };
 
   return _react["default"].createElement("button", {
     onClick: handleClick
-  }, "\u30B3\u30ED\u30D6\u30C1\u30AB\u3092\u6D41\u3059");
-}
+  }, "\u30AB\u30EB\u30E1\u30F3\u7D44\u66F2\u3092\u6D41\u3059");
+};
 
-var _default = PlayKorobushka;
+var _default = PlayCarmen;
 exports["default"] = _default;
 
 },{"react":10}],22:[function(require,module,exports){
@@ -25286,8 +25286,42 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function PlayUsapri() {
-  function handleClick(e) {
+var PlayKorobushka = function PlayKorobushka() {
+  var handleClick = function handleClick(e) {
+    e.preventDefault();
+
+    if (localStorage.usapri == 1) {
+      document.getElementById("sound7").play();
+      alert("ダメです");
+    } else {
+      stopAll();
+      document.getElementById("sound5").currentTime = 0;
+      document.getElementById("sound5").play();
+    }
+  };
+
+  return _react["default"].createElement("button", {
+    onClick: handleClick
+  }, "\u30B3\u30ED\u30D6\u30C1\u30AB\u3092\u6D41\u3059");
+};
+
+var _default = PlayKorobushka;
+exports["default"] = _default;
+
+},{"react":10}],23:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var PlayUsapri = function PlayUsapri() {
+  var handleClick = function handleClick(e) {
     e.preventDefault();
 
     if (localStorage.usapriTimes == 0) {
@@ -25298,14 +25332,64 @@ function PlayUsapri() {
       document.getElementById("sound8").currentTime = 0;
       document.getElementById("sound8").play();
     }
-  }
+  };
 
   return _react["default"].createElement("button", {
     onClick: handleClick
   }, "\u4EA4\u97FF\u66F2\u3092\u6D41\u3059");
-}
+};
 
 var _default = PlayUsapri;
 exports["default"] = _default;
 
-},{"react":10}]},{},[17]);
+},{"react":10}],24:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _DeleteButton = _interopRequireDefault(require("./_DeleteButton.jsx"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var SettingData = function SettingData() {
+  return _react["default"].createElement("section", null, _react["default"].createElement("h1", null, "\u8A2D\u5B9A"), _react["default"].createElement(_DeleteButton["default"], null));
+};
+
+var _default = SettingData;
+exports["default"] = _default;
+
+},{"./_DeleteButton.jsx":18,"react":10}],25:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _MuteSE = _interopRequireDefault(require("./_MuteSE.jsx"));
+
+var _MuteBGM = _interopRequireDefault(require("./_MuteBGM.jsx"));
+
+var _PlayKorobushka = _interopRequireDefault(require("./_PlayKorobushka.jsx"));
+
+var _PlayCarmen = _interopRequireDefault(require("./_PlayCarmen.jsx"));
+
+var _PlayUsapri = _interopRequireDefault(require("./_PlayUsapri.jsx"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var SettingSounds = function SettingSounds() {
+  return _react["default"].createElement("section", null, _react["default"].createElement("h1", null, "\u97F3\u8A2D\u5B9A"), _react["default"].createElement(_MuteSE["default"], null), _react["default"].createElement("br", null), _react["default"].createElement(_MuteBGM["default"], null), _react["default"].createElement("br", null), _react["default"].createElement(_PlayKorobushka["default"], null), _react["default"].createElement("br", null), _react["default"].createElement(_PlayCarmen["default"], null), _react["default"].createElement("br", null), _react["default"].createElement(_PlayUsapri["default"], null));
+};
+
+var _default = SettingSounds;
+exports["default"] = _default;
+
+},{"./_MuteBGM.jsx":19,"./_MuteSE.jsx":20,"./_PlayCarmen.jsx":21,"./_PlayKorobushka.jsx":22,"./_PlayUsapri.jsx":23,"react":10}]},{},[17]);

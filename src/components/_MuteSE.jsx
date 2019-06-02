@@ -1,7 +1,7 @@
 import React from "react";
 
 const MuteSE = () => {
-  handleClick = e => {
+  const handleClick = e => {
     e.preventDefault();
     document.getElementById("sound2").volume = 0;
     document.getElementById("sound4").volume = 0;
