@@ -1,7 +1,7 @@
 import React from "react";
 
-function PlayCarmen() {
-  function handleClick(e) {
+const PlayCarmen = () => {
+  handleClick = e => {
     e.preventDefault();
     if (localStorage.usapri == 1) {
       document.getElementById("sound7").play();

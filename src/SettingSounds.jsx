@@ -7,7 +7,7 @@ import PlayKorobushka from "./components/_PlayKorobushka.jsx";
 import PlayCarmen from "./components/_PlayCarmen.jsx";
 import PlayUsapri from "./components/_PlayUsapri.jsx";
 
-function SettingSounds() {
+const SettingSounds = () => {
   return (
     <>
       <h1>音設定</h1>

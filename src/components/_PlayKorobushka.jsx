@@ -1,7 +1,7 @@
 import React from "react";
 
-function PlayKorobushka() {
-  function handleClick(e) {
+const PlayKorobushka = () => {
+  handleClick = e => {
     e.preventDefault();
     if (localStorage.usapri == 1) {
       document.getElementById("sound7").play();
