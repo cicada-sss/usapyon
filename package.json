@@ -6,7 +6,8 @@
   "author": "cicada_sss <sss.cicada@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev-b": "browserify --transform babelify"
+    "dev-b": "browserify --transform babelify",
+    "serve": "node_modules\\.bin\\http-server ./src -o"
   },
   "dependencies": {
     "@babel/core": "^7.4.5",
@@ -17,6 +18,7 @@
     "gulp": "^4.0.2",
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.0.2",
+    "http-server": "^0.11.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "run-sequence": "^2.2.1"
