@@ -22,29 +22,6 @@ if (localStorage.getItem("mute") == 1) {
   document.getElementById("sound7").volume = 0;
   document.getElementById("sound8").volume = 0;
 }
-$("#tori").click(function() {
-  $("#sound7")
-    .get(0)
-    .play();
-  alert("できません");
-  if (typeof localStorage.totalTori === "undefined") {
-    localStorage.setItem("totalTori", 1);
-  } else {
-    var totalTori = Number(localStorage.getItem("totalTori"));
-    totalTori++;
-    localStorage.setItem("totalTori", totalTori);
-  }
-  tori++;
-  if (tori >= 5) {
-    var usapriTimes = Number(localStorage.getItem("usapriTimes"));
-    usapriTimes++;
-    localStorage.setItem("usapriTimes", usapriTimes);
-    alert("鳥になりすぎです");
-    window.location.href = "usapri.html";
-    localStorage.setItem("usapri", 1);
-  }
-  console.log(totalTori);
-});
 //0.1秒毎に状態チェック
 setInterval(function() {
   u = usagi + "匹のうさぎがいます";
