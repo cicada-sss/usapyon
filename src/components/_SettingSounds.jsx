@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
 import MuteSE from "./_MuteSE.jsx";
 import MuteBGM from "./_MuteBGM.jsx";
@@ -24,4 +23,4 @@ const SettingSounds = () => {
   );
 };
 
-ReactDOM.render(<SettingSounds />, document.getElementById("setting-sounds"));
+export default SettingSounds;
