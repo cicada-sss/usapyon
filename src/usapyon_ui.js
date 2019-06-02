@@ -10,20 +10,6 @@ if (localStorage.usapri == 1) {
   document.getElementById("sound5").play();
 }
 
-function muteSE() {
-  document.getElementById("sound2").volume = 0;
-  document.getElementById("sound4").volume = 0;
-  document.getElementById("sound6").volume = 0;
-  document.getElementById("sound7").volume = 0;
-}
-
-function muteBGM() {
-  document.getElementById("sound1").volume = 0;
-  document.getElementById("sound3").volume = 0;
-  document.getElementById("sound5").volume = 0;
-  document.getElementById("sound8").volume = 0;
-}
-
 function stopAll() {
   document.getElementById("sound1").pause();
   document.getElementById("sound2").pause();
@@ -34,52 +20,6 @@ function stopAll() {
   document.getElementById("sound7").pause();
   document.getElementById("sound8").pause();
 }
-
-$("#mute_se").click(function() {
-  muteSE();
-});
-
-$("#mute_bgm").click(function() {
-  muteBGM();
-});
-
-$("#not_carmen").click(function() {
-  var notCarmen = 1;
-  console.log(notCarmen);
-});
-
-$("#play_ko").click(function() {
-  if (localStorage.usapri == 1) {
-    document.getElementById("sound7").play();
-    alert("ダメです");
-  } else {
-    stopAll();
-    document.getElementById("sound5").currentTime = 0;
-    document.getElementById("sound5").play();
-  }
-});
-
-$("#play_ca").click(function() {
-  if (localStorage.usapri == 1) {
-    document.getElementById("sound7").play();
-    alert("ダメです");
-  } else {
-    stopAll();
-    document.getElementById("sound1").currentTime = 0;
-    document.getElementById("sound1").play();
-  }
-});
-
-$("#play_hi").click(function() {
-  if (localStorage.usapriTimes == 0) {
-    document.getElementById("sound7").play();
-    alert("聴いたことがないのでダメです");
-  } else {
-    stopAll();
-    document.getElementById("sound8").currentTime = 0;
-    document.getElementById("sound8").play();
-  }
-});
 
 $("#del").click(function() {
   if (localStorage.usapri == 1) {
