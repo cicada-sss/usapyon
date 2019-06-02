@@ -9,14 +9,14 @@ import PlayUsapri from "./components/_PlayUsapri.jsx";
 
 const SettingSounds = () => {
   return (
-    <>
+    <section>
       <h1>音設定</h1>
       <MuteSE />
       <MuteBGM />
       <PlayKorobushka />
       <PlayCarmen />
       <PlayUsapri />
-    </>
+    </section>
   );
 }
 
