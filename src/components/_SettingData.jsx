@@ -1,6 +1,6 @@
 import React from "react";
 
-import DeleteButton from "./components/_DeleteButton.jsx";
+import DeleteButton from "./_DeleteButton.jsx";
 
 const SettingData = () => {
   return (
