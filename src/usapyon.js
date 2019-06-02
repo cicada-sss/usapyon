@@ -83,13 +83,11 @@ setInterval(function() {
     n++;
     //うさぎが1000匹を超える毎に大漁を表示しカルメン組曲を再生
   } else if (usagi >= 1000 * n) {
-    if (notCarmen != 1) {
-      stopAll();
-      $("#sound1").get(0).currentTime = 0;
-      $("#sound1")
-        .get(0)
-        .play();
-    }
+    stopAll();
+    $("#sound1").get(0).currentTime = 0;
+    $("#sound1")
+      .get(0)
+      .play();
     var creimg = document.createElement("img");
     creimg.setAttribute("src", "image/tairyou.png");
     creimg.setAttribute("style", "position:fixed; bottom:10px; right:10px;");

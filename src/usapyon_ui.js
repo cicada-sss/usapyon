@@ -21,11 +21,6 @@ function stopAll() {
   document.getElementById("sound8").pause();
 }
 
-$("#not_carmen").click(function() {
-  var notCarmen = 1;
-  console.log(notCarmen);
-});
-
 $("#del").click(function() {
   if (localStorage.usapri == 1) {
     alert("消せません");
