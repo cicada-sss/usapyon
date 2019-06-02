@@ -26,17 +26,6 @@ $("#not_carmen").click(function() {
   console.log(notCarmen);
 });
 
-$("#play_hi").click(function() {
-  if (localStorage.usapriTimes == 0) {
-    document.getElementById("sound7").play();
-    alert("聴いたことがないのでダメです");
-  } else {
-    stopAll();
-    document.getElementById("sound8").currentTime = 0;
-    document.getElementById("sound8").play();
-  }
-});
-
 $("#del").click(function() {
   if (localStorage.usapri == 1) {
     alert("消せません");
