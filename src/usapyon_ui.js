@@ -21,12 +21,6 @@ function stopAll() {
   document.getElementById("sound8").pause();
 }
 
-$("#version").html("ver.1.1.1β");
-
-$("#version").click(function() {
-  $("#credit").fadeToggle();
-});
-
 $("#1").click(function() {
   usafuya();
 });
