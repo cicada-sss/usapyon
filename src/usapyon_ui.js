@@ -10,13 +10,6 @@ if (localStorage.usapri == 1) {
   document.getElementById("sound5").play();
 }
 
-function muteSE() {
-  document.getElementById("sound2").volume = 0;
-  document.getElementById("sound4").volume = 0;
-  document.getElementById("sound6").volume = 0;
-  document.getElementById("sound7").volume = 0;
-}
-
 function muteBGM() {
   document.getElementById("sound1").volume = 0;
   document.getElementById("sound3").volume = 0;
@@ -34,10 +27,6 @@ function stopAll() {
   document.getElementById("sound7").pause();
   document.getElementById("sound8").pause();
 }
-
-$("#mute_se").click(function() {
-  muteSE();
-});
 
 $("#mute_bgm").click(function() {
   muteBGM();
