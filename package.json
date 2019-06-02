@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev-b": "browserify --transform babelify",
-    "serve": "node_modules\\.bin\\http-server ./src -o"
+    "serve": "gulp && node_modules\\.bin\\http-server ./src -o"
   },
   "dependencies": {
     "@babel/core": "^7.4.5",
