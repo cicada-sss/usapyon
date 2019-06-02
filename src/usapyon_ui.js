@@ -10,13 +10,6 @@ if (localStorage.usapri == 1) {
   document.getElementById("sound5").play();
 }
 
-function muteBGM() {
-  document.getElementById("sound1").volume = 0;
-  document.getElementById("sound3").volume = 0;
-  document.getElementById("sound5").volume = 0;
-  document.getElementById("sound8").volume = 0;
-}
-
 function stopAll() {
   document.getElementById("sound1").pause();
   document.getElementById("sound2").pause();
@@ -27,10 +20,6 @@ function stopAll() {
   document.getElementById("sound7").pause();
   document.getElementById("sound8").pause();
 }
-
-$("#mute_bgm").click(function() {
-  muteBGM();
-});
 
 $("#not_carmen").click(function() {
   var notCarmen = 1;
