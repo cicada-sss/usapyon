@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
 const Status = () => {
   let nowTime = Math.floor(Date.now() / 1000);
@@ -64,9 +63,4 @@ const Status = () => {
   );
 };
 
-setInterval(function() {
-  ReactDOM.render(
-    <Status />,
-    document.getElementById("status")
-  );
-}, 1000);
+export default Status;

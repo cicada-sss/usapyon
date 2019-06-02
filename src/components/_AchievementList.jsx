@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
 const AchievementList = () => {
   return (
@@ -269,6 +268,4 @@ const AchievementList = () => {
   );
 };
 
-setInterval(function() {
-  ReactDOM.render(<AchievementList />, document.getElementById("achievement-list"));
-}, 1000);
+export default AchievementList;
