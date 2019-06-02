@@ -30,8 +30,32 @@ html(lang='ja')
       #usa(style='font-size:500%;') 0匹のうさぎがいます
       button#1(style='font-size:500%;') うさぎを増やす
       span#share-button
-      #version
+      #version-toggle
       #info
-    include _credit_data.pug
+      #info
+    #data-credits
+    audio#sound1(preload='auto')
+      source(src='sound/carmen.mp3', type='audio/mp3')
+    audio#sound2(preload='auto')
+      source(src='sound/usa.mp3', type='audio/mp3')
+    audio#sound3(preload='auto')
+      source(src='sound/jupiter.mp3', type='audio/mp3')
+    audio#sound4(preload='auto')
+      source(src='sound/alert.mp3', type='audio/mp3')
+    audio#sound5(preload='auto')
+      source(src='sound/Коробейники.mp3', type='audio/mp3')
+    audio#sound6(preload='auto')
+      source(src='sound/trumpet.mp3', type='audio/mp3')
+    audio#sound7(preload='auto')
+      source(src='sound/dame.mp3', type='audio/mp3')
+    audio#sound8(preload='auto')
+      source(src='sound/usapri.mp3', type='audio/mp3')
+    script(src='usafuya.js')
+    script(src='loading.js')
+    script(src='usapyon_achievement.js')
+    script(src='usapyon_ui.js')
+    script(src='usapyon_data.js')
+    script(src='DataAndCredits.js')
     script(src='ShareButton.js')
+    script(src='VersionToggle.js')
     script(src='usapyon.js')

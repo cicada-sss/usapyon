@@ -25130,6 +25130,74 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
+var _SettingSounds = _interopRequireDefault(require("./components/_SettingSounds.jsx"));
+
+var _SettingData = _interopRequireDefault(require("./components/_SettingData.jsx"));
+
+var _Status = _interopRequireDefault(require("./components/_Status.jsx"));
+
+var _AchievementList = _interopRequireDefault(require("./components/_AchievementList.jsx"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var DataAndCredits = function DataAndCredits() {
+  return _react["default"].createElement(_react["default"].Fragment, null, "\u30D0\u30FC\u30B8\u30E7\u30F3\u756A\u53F7\u3092\u518D\u30AF\u30EA\u30C3\u30AF\u3067\u9589\u3058\u308B", _react["default"].createElement("hr", null), _react["default"].createElement(_SettingSounds["default"], null), _react["default"].createElement("hr", null), _react["default"].createElement(_SettingData["default"], null), _react["default"].createElement("hr", null), _react["default"].createElement(_Status["default"], null), _react["default"].createElement("hr", null), _react["default"].createElement(_AchievementList["default"], null), _react["default"].createElement("hr", null), _react["default"].createElement("h1", null, "\u30AF\u30EC\u30B8\u30C3\u30C8"), _react["default"].createElement("ul", null, _react["default"].createElement("li", null, _react["default"].createElement("b", null, "\u539F\u6848"), " :", _react["default"].createElement("a", {
+    href: "https://mastodon.cloud/@SugaryAlice",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, "\u3042\u308A\u3059")), _react["default"].createElement("li", null, _react["default"].createElement("b", null, "\u30D7\u30ED\u30B0\u30E9\u30E0"), " :", " ", _react["default"].createElement("a", {
+    href: "https://mastodon.cloud/@cs3",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, "\u305B\u305B\u305B")), _react["default"].createElement("li", null, _react["default"].createElement("b", null, "\u753B\u50CF"), " :", " ", _react["default"].createElement("a", {
+    href: "http://www.irasutoya.com/",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, "\u3044\u3089\u3059\u3068\u3084"), ", umezy12"), _react["default"].createElement("li", null, _react["default"].createElement("b", null, "\u697D\u66F2"), " :", " ", _react["default"].createElement("a", {
+    href: "https://mastodon.cloud/@hc85f",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, "HC"), ",", " ", _react["default"].createElement("a", {
+    href: "http://classical-sound.seesaa.net/",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, "\u30AF\u30E9\u30B7\u30C3\u30AF\u540D\u66F2\u30B5\u30A6\u30F3\u30C9\u30E9\u30A4\u30D6\u30E9\u30EA\u30FC")), _react["default"].createElement("li", null, _react["default"].createElement("b", null, "\u52B9\u679C\u97F3"), " :", " ", _react["default"].createElement("a", {
+    href: "https://soundeffect-lab.info/",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, "\u52B9\u679C\u97F3\u30E9\u30DC")), _react["default"].createElement("li", null, _react["default"].createElement("b", null, "\u51FA\u6F14"), " :", " ", _react["default"].createElement("a", {
+    href: "https://mastodon.cloud/@thethreegraces1",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, "\u3057\u307E\u304F\u307E"), ",", " ", _react["default"].createElement("a", {
+    href: "https://mastodon.cloud/@njp2",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, "FUBAR"), ",", " ", _react["default"].createElement("a", {
+    href: "https://mastodon.cloud/@awa",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, "\u3042\u3058\u3083")), _react["default"].createElement("li", null, _react["default"].createElement("b", null, "\u30B9\u30DA\u30B7\u30E3\u30EB\u30B5\u30F3\u30AF\u30B9"), " :", " ", _react["default"].createElement("a", {
+    href: "https://mastodon.cloud",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, "mastodon.cloud")), _react["default"].createElement("li", null, "(\u656C\u79F0\u7565)")), _react["default"].createElement("hr", null), _react["default"].createElement("h1", null, "\u66F4\u65B0\u5C65\u6B74"), _react["default"].createElement("ul", null, _react["default"].createElement("li", null, "\u25CF\u25CB \u3067\u304B\u3044\u66F4\u65B0"), _react["default"].createElement("li", null, "\u25CB\u25CF \u7D30\u304B\u3044\u4FEE\u6B63\u30FB\u30D0\u30B0\u4FEE\u6B63"), _react["default"].createElement("li", null, "\u25CB\u25CF ver.1.1.1\u03B2 \u30B3\u30FC\u30C9\u4FEE\u6B63 (2018.01.31)"), _react["default"].createElement("li", null, "\u25CF\u25CB ver.1.1\u03B2 \u5B9F\u7E3E\u524A\u9664 (2017.09.03)"), _react["default"].createElement("li", null, "\u25CF\u25CB ver.1\u03B2 \u30B9\u30C6\u30FC\u30BF\u30B9\u8868\u793A\u3092\u5B9F\u88C5,\u65B0\u5B9F\u7E3E\u3092\u5B9F\u88C5,\u305D\u306E\u4ED6\u7D30\u304B\u3044\u4FEE\u6B63 (2017.09.02)"), _react["default"].createElement("li", null, "\u25CF\u25CB ver.0.11.0\u03B2 \u89E3\u9664\u6E08\u5B9F\u7E3E\u306E\u4E00\u89A7\u8868\u793A\u3092\u5B9F\u88C5,\u65B0\u5B9F\u7E3E\u3092\u5B9F\u88C5,\u305D\u306E\u4ED6\u7D30\u304B\u3044\u4FEE\u6B63 (2017.09.01\uFF5E)"), _react["default"].createElement("li", null, "\u25CF\u25CB ver.0.10.0\u03B2 \u30D7\u30EC\u30A4\u6642\u9593\u306E\u6E2C\u5B9A\u3092\u5B9F\u88C5,\u65B0\u5B9F\u7E3E\u3092\u5B9F\u88C5,\u305D\u306E\u4ED6\u7D30\u304B\u3044\u4FEE\u6B63"), _react["default"].createElement("li", null, "\u25CF\u25CB ver.0.9.0\u03B2 \u65B0\u5B9F\u7E3E\u3092\u5B9F\u88C5 (\uFF5E2017.09.01)"), _react["default"].createElement("li", null, "\u25CB\u25CF ver.0.8.1\u03B2 \u5927\u6F01\u304C\u51FA\u306A\u3044\u30D0\u30B0\u3092\u4FEE\u6B63 (2017.08.30\uFF5E)"), _react["default"].createElement("li", null, "\u25CF\u25CB ver.0.8.0\u03B2 \u97F3\u8A2D\u5B9A\u3092\u5B9F\u88C5"), _react["default"].createElement("li", null, "\u25CB\u25CF ver.0.7.1\u03B2 \u3046\u3055\u30D7\u30EA\u6551\u6E08\u63AA\u7F6E\u306E\u51FA\u73FE\u78BA\u7387\u3092\u8ABF\u6574"), _react["default"].createElement("li", null, "\u25CF\u25CB ver.0.7.0\u03B2 \u3046\u3055\u30D7\u30EABGM\u5DEE\u3057\u66FF\u3048,\u6551\u6E08\u63AA\u7F6E\u3092\u5B9F\u88C5 (\uFF5E2017.08.30)"), _react["default"].createElement("li", null, "\u25CF\u25CB ver.0.6.0\u03B2 \u8A2D\u5B9A\u3092\u5B9F\u88C5 (2017.08.25)"), _react["default"].createElement("li", null, "\u25CF\u25CB ver.0.5.0\u03B2 \u30D0\u30FC\u30B8\u30E7\u30F3\u756A\u53F7\u3068\u30AF\u30EC\u30B8\u30C3\u30C8\u8868\u793A\u3092\u5B9F\u88C5 (2017.08.24\uFF5E)"), _react["default"].createElement("li", null, "\u25CF\u25CB ver.0.4.0\u03B2 \u3046\u3055\u30D7\u30EA\u3092\u5B9F\u88C5,\u3046\u3055\u30D7\u30EA\u95A2\u9023\u306E\u5B9F\u7E3E\u3092\u5B9F\u88C5"), _react["default"].createElement("li", null, "\u25CF\u25CB ver.0.3.0\u03B2 \u9CE5\u95A2\u9023\u306E\u5B9F\u7E3E\u3092\u5B9F\u88C5"), _react["default"].createElement("li", null, "\u25CF\u25CB ver.0.2.0\u03B2 Twitter\u3067\u5171\u6709\u30DC\u30BF\u30F3\u3092\u5B9F\u88C5 (\uFF5E2017.08.24)"), _react["default"].createElement("li", null, "\u25CF\u25CB ~ver.0.1.0\u03B2 \u30D0\u30FC\u30B8\u30E7\u30F3\u8A18\u9332\u958B\u59CB (\uFF5E2017.08.21)")));
+};
+
+setInterval(function () {
+  _reactDom["default"].render(_react["default"].createElement(DataAndCredits, null), document.getElementById("data-credits"));
+}, 1000);
+
+},{"./components/_AchievementList.jsx":18,"./components/_SettingData.jsx":25,"./components/_SettingSounds.jsx":26,"./components/_Status.jsx":27,"react":10,"react-dom":7}],18:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var AchievementList = function AchievementList() {
@@ -25236,8 +25304,277 @@ var AchievementList = function AchievementList() {
   }, "Congratulations!"), " - \u5168\u5B9F\u7E3E\u89E3\u9664")));
 };
 
-setInterval(function () {
-  _reactDom["default"].render(_react["default"].createElement(AchievementList, null), document.getElementById("achievement-list"));
-}, 1000);
+var _default = AchievementList;
+exports["default"] = _default;
 
-},{"react":10,"react-dom":7}]},{},[17]);
+},{"react":10}],19:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var DeleteButton = function DeleteButton() {
+  var handleClick = function handleClick(e) {
+    e.preventDefault();
+
+    if (localStorage.usapri == 1) {
+      alert("消せません");
+    } else {
+      var del = confirm("全てのデータを初期化します。よろしいですか？");
+
+      if (del) {
+        localStorage.clear();
+        clearInterval(setInterval(achievement, 10));
+        location.reload();
+      }
+    }
+  };
+
+  return _react["default"].createElement("button", {
+    style: {
+      fontSize: "100%"
+    },
+    onClick: handleClick
+  }, "\u30C7\u30FC\u30BF\u6D88\u53BB\uFF08\u6D88\u3048\u307E\u3059\uFF09");
+};
+
+var _default = DeleteButton;
+exports["default"] = _default;
+
+},{"react":10}],20:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var MuteBGM = function MuteBGM() {
+  var handleClick = function handleClick(e) {
+    e.preventDefault();
+    document.getElementById("sound1").volume = 0;
+    document.getElementById("sound3").volume = 0;
+    document.getElementById("sound5").volume = 0;
+    document.getElementById("sound8").volume = 0;
+  };
+
+  return _react["default"].createElement("button", {
+    onClick: handleClick
+  }, "BGM\u3092\u6D88\u3059\uFF08\u4ECA\u30D7\u30EC\u30A4\u4E2D\u306E\u307F\uFF09");
+};
+
+var _default = MuteBGM;
+exports["default"] = _default;
+
+},{"react":10}],21:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var MuteSE = function MuteSE() {
+  var handleClick = function handleClick(e) {
+    e.preventDefault();
+    document.getElementById("sound2").volume = 0;
+    document.getElementById("sound4").volume = 0;
+    document.getElementById("sound6").volume = 0;
+    document.getElementById("sound7").volume = 0;
+  };
+
+  return _react["default"].createElement("button", {
+    onClick: handleClick
+  }, "SE\u3092\u6D88\u3059\uFF08\u4ECA\u30D7\u30EC\u30A4\u4E2D\u306E\u307F\uFF09");
+};
+
+var _default = MuteSE;
+exports["default"] = _default;
+
+},{"react":10}],22:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var PlayCarmen = function PlayCarmen() {
+  var handleClick = function handleClick(e) {
+    e.preventDefault();
+
+    if (localStorage.usapri == 1) {
+      document.getElementById("sound7").play();
+      alert("ダメです");
+    } else {
+      stopAll();
+      document.getElementById("sound1").currentTime = 0;
+      document.getElementById("sound1").play();
+    }
+  };
+
+  return _react["default"].createElement("button", {
+    onClick: handleClick
+  }, "\u30AB\u30EB\u30E1\u30F3\u7D44\u66F2\u3092\u6D41\u3059");
+};
+
+var _default = PlayCarmen;
+exports["default"] = _default;
+
+},{"react":10}],23:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var PlayKorobushka = function PlayKorobushka() {
+  var handleClick = function handleClick(e) {
+    e.preventDefault();
+
+    if (localStorage.usapri == 1) {
+      document.getElementById("sound7").play();
+      alert("ダメです");
+    } else {
+      stopAll();
+      document.getElementById("sound5").currentTime = 0;
+      document.getElementById("sound5").play();
+    }
+  };
+
+  return _react["default"].createElement("button", {
+    onClick: handleClick
+  }, "\u30B3\u30ED\u30D6\u30C1\u30AB\u3092\u6D41\u3059");
+};
+
+var _default = PlayKorobushka;
+exports["default"] = _default;
+
+},{"react":10}],24:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var PlayUsapri = function PlayUsapri() {
+  var handleClick = function handleClick(e) {
+    e.preventDefault();
+
+    if (localStorage.usapriTimes == 0) {
+      document.getElementById("sound7").play();
+      alert("聴いたことがないのでダメです");
+    } else {
+      stopAll();
+      document.getElementById("sound8").currentTime = 0;
+      document.getElementById("sound8").play();
+    }
+  };
+
+  return _react["default"].createElement("button", {
+    onClick: handleClick
+  }, "\u4EA4\u97FF\u66F2\u3092\u6D41\u3059");
+};
+
+var _default = PlayUsapri;
+exports["default"] = _default;
+
+},{"react":10}],25:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _DeleteButton = _interopRequireDefault(require("./_DeleteButton.jsx"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var SettingData = function SettingData() {
+  return _react["default"].createElement("section", null, _react["default"].createElement("h1", null, "\u8A2D\u5B9A"), _react["default"].createElement(_DeleteButton["default"], null));
+};
+
+var _default = SettingData;
+exports["default"] = _default;
+
+},{"./_DeleteButton.jsx":19,"react":10}],26:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _MuteSE = _interopRequireDefault(require("./_MuteSE.jsx"));
+
+var _MuteBGM = _interopRequireDefault(require("./_MuteBGM.jsx"));
+
+var _PlayKorobushka = _interopRequireDefault(require("./_PlayKorobushka.jsx"));
+
+var _PlayCarmen = _interopRequireDefault(require("./_PlayCarmen.jsx"));
+
+var _PlayUsapri = _interopRequireDefault(require("./_PlayUsapri.jsx"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var SettingSounds = function SettingSounds() {
+  return _react["default"].createElement("section", null, _react["default"].createElement("h1", null, "\u97F3\u8A2D\u5B9A"), _react["default"].createElement(_MuteSE["default"], null), _react["default"].createElement("br", null), _react["default"].createElement(_MuteBGM["default"], null), _react["default"].createElement("br", null), _react["default"].createElement(_PlayKorobushka["default"], null), _react["default"].createElement("br", null), _react["default"].createElement(_PlayCarmen["default"], null), _react["default"].createElement("br", null), _react["default"].createElement(_PlayUsapri["default"], null));
+};
+
+var _default = SettingSounds;
+exports["default"] = _default;
+
+},{"./_MuteBGM.jsx":20,"./_MuteSE.jsx":21,"./_PlayCarmen.jsx":22,"./_PlayKorobushka.jsx":23,"./_PlayUsapri.jsx":24,"react":10}],27:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var Status = function Status() {
+  var nowTime = Math.floor(Date.now() / 1000);
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement("h1", null, "\u30B9\u30C6\u30FC\u30BF\u30B9"), _react["default"].createElement("ul", null, _react["default"].createElement("li", null, "\u7D2F\u8A08\u30D7\u30EC\u30A4\u56DE\u6570 : ", launchTimes, "\u56DE"), _react["default"].createElement("li", null, "\u7D2F\u8A08\u30D7\u30EC\u30A4\u6642\u9593 : ", playTime + nowTime - launchTime, "\u79D2"), _react["default"].createElement("li", null, "\u7D2F\u8A08\u3046\u3055\u304E\u5897\u3084\u3057\u6570 : ", totalUsagi + usagi, "\u5339"), _react["default"].createElement("li", null, "\u7D2F\u8A08\u304F\u307E\u767A\u898B\u6570 : ", totalKuma + kuma, "\u5339"), _react["default"].createElement("li", null, "\u7D2F\u8A08\u308A\u3059\u767A\u898B\u6570 : ", totalRisu + risu, "\u5339"), _react["default"].createElement("li", null, "\u7D2F\u8A08\u3042\u3058\u3083\u767A\u898B\u6570 : ", totalAja + aja, "\u5339"), totalTori + tori >= 1 && _react["default"].createElement("li", null, "\u7D2F\u8A08\u9CE5\u306B\u306A\u3063\u305F\u56DE\u6570 : ", totalTori + tori, "\u56DE"), Number(localStorage.usapriTimes) >= 1 && _react["default"].createElement("li", null, "\u7D2F\u8A08\u3046\u3055\u30D7\u30EA\u53CE\u76E3\u56DE\u6570 : ", localStorage.usapriTimes, "\u56DE"), totalTairyou + tairyou >= 1 && _react["default"].createElement("li", null, "\u7D2F\u8A08\u5927\u6F01\u56DE\u6570 : ", totalTairyou + tairyou, "\u56DE"), _react["default"].createElement("li", null, "1\u30D7\u30EC\u30A4\u3067\u306E\u5E73\u5747\u3046\u3055\u304E\u5897\u3084\u3057\u6570 :", " ", Math.round((totalUsagi + usagi) / launchTimes * 10) / 10, "\u5339"), _react["default"].createElement("li", null, "1\u30D7\u30EC\u30A4\u3067\u306E\u5E73\u5747\u304F\u307E\u767A\u898B\u6570 :", " ", Math.round((totalKuma + kuma) / launchTimes * 10) / 10, "\u5339"), _react["default"].createElement("li", null, "1\u30D7\u30EC\u30A4\u3067\u306E\u5E73\u5747\u308A\u3059\u767A\u898B\u6570 :", " ", Math.round((totalRisu + risu) / launchTimes * 10) / 10, "\u5339"), _react["default"].createElement("li", null, "1\u30D7\u30EC\u30A4\u3067\u306E\u5E73\u5747\u3042\u3058\u3083\u767A\u898B\u6570 :", " ", Math.round((totalAja + aja) / launchTimes * 10) / 10, "\u5339"), _react["default"].createElement("li", null, "\u30B9\u30B3\u30A2 :", " ", Math.round((Math.round((totalUsagi + usagi) / launchTimes * 10) / 10 + Math.round((totalKuma + kuma) / launchTimes * 10) / 10 * 100 + Math.round((totalRisu + risu) / launchTimes * 10) / 10 * 100 + Math.round((totalAja + aja) / launchTimes * 10) / 10 * 2000 + (totalTori + tori) * 10 + Number(localStorage.usapriTimes) * 1000 + (totalTairyou + tairyou) * 100 * (Number(localStorage.totalAchievement) + 10)) / 10 * (Math.round((playTime + Math.floor(Date.now() / 1000) - launchTime) / 60) + 10) / 10), "\u70B9")));
+};
+
+var _default = Status;
+exports["default"] = _default;
+
+},{"react":10}]},{},[17]);
