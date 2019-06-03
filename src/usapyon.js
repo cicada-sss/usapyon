@@ -2,16 +2,6 @@
 if (localStorage.usapri == 1) {
   window.location.href = "usapri.html";
 }
-var firstLaunchTime = Date.now();
-/*
-if (typeof localStorage.first_launch_time === "undefined"){
-firstLaunchTime = Math.floor(firstLaunchTime/1000);
-localStorage.first_launch_time = firstLaunchTime;
-console.log(localStorage.first_launch_time);
-} else {
-    var firstLaunchTime = localStorage.first_launch_time;
-}
-*/
 //0.1秒毎に状態チェック
 setInterval(function() {
   //うさぎが10000匹を超えた場合ジュピターを流してスタッフロールを表示
