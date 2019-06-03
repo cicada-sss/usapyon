@@ -8,14 +8,12 @@ if (!localStorage.getItem("usapriTimes")) {
   var usapriTimes = 0;
 } else {
   var usapriTimes = Number(localStorage.getItem("usapriTimes"));
-  console.log(usapriTimes);
 }
 $(function() {
   var buttonSize = 405 - (usapriTimes + 1) * 5;
   $("#1").css({
     "font-size": buttonSize + "%"
   });
-  console.log(buttonSize);
 });
 
 //0.1秒毎に状態チェック
