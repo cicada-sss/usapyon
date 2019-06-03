@@ -2,6 +2,7 @@ if (localStorage.usapri != 1) {
   alert("入ってはいけません");
   window.location.href = "index.html";
 }
+
 //初期化
 se1.defaultPlaybackRate = 0.3;
 if (!localStorage.getItem("usapriTimes")) {
@@ -9,6 +10,7 @@ if (!localStorage.getItem("usapriTimes")) {
 } else {
   var usapriTimes = Number(localStorage.getItem("usapriTimes"));
 }
+
 $(function() {
   var buttonSize = 405 - (usapriTimes + 1) * 5;
   $("#1").css({

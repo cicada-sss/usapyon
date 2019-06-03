@@ -2,6 +2,7 @@
 if (localStorage.usapri == 1) {
   window.location.href = "usapri.html";
 }
+
 //0.1秒毎に状態チェック
 setInterval(function() {
   //うさぎが10000匹を超えた場合ジュピターを流してスタッフロールを表示
