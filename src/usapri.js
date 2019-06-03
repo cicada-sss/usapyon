@@ -19,13 +19,8 @@ $(function() {
 //0.1秒毎に状態チェック
 setInterval(function() {
   if (usagi >= 1000) {
-    usapriBreak();
+    localStorage.setItem("usapri", "0");
+    alert("釈放します。\nもう戻ってきちゃダメですよ");
+    window.location.href = "index.html";
   }
 }, 100);
-
-function usapriBreak() {
-  localStorage.setItem("usapri", "0");
-
-  alert("釈放します。\nもう戻ってきちゃダメですよ");
-  window.location.href = "index.html";
-}
