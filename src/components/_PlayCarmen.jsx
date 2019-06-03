@@ -4,12 +4,12 @@ const PlayCarmen = () => {
   const handleClick = e => {
     e.preventDefault();
     if (localStorage.usapri == 1) {
-      document.getElementById("sound7").play();
+      se4.play();
       alert("ダメです");
     } else {
-      stopAll();
-      document.getElementById("sound1").currentTime = 0;
-      document.getElementById("sound1").play();
+      stopBGM();
+      bgm1.load();
+      bgm1.play();
     }
   }
 
