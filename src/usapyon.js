@@ -14,18 +14,6 @@ console.log(localStorage.first_launch_time);
 */
 //0.1秒毎に状態チェック
 setInterval(function() {
-  u = usagi + "匹のうさぎがいます";
-  if (kuma >= 1) {
-    u = u + "<br>\n" + kuma + "匹のくまがいます";
-  }
-  if (risu >= 1) {
-    u = u + "<br>\n" + risu + "匹のりすがいます";
-  }
-  if (aja >= 1) {
-    u = u + "<br>\n" + aja + "匹のあじゃがいます";
-  }
-  u + '"';
-  $("#usa").html(u);
   //うさぎが10000匹を超えた場合ジュピターを流してスタッフロールを表示
   if (usagi >= 10000 * no) {
     stopBGM();
