@@ -17,10 +17,10 @@ var usaran = [
   "image/usa (6).png",
   "image/usa (7).png"
 ];
-for (var i = 0; i < 40; i++) {
-  var key = localStorage.key(i);
-  console.log(key + ":" + localStorage[key]);
-}
+
+$(window).keydown(function() {
+  return false;
+});
 
 //データ読み込み
 var launchTimes = localStorage.getItem("launchTimes");

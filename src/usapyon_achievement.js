@@ -564,7 +564,6 @@ function achievement() {
     localStorage.achievement11_5 = 1;
     achshow();
   }
-  console.log(totalAchievement);
   localStorage.totalAchievement = totalAchievement;
 }
 //実績表示

@@ -22,7 +22,6 @@ const ShareButton = () => {
       window.location.href = "usapri.html";
       localStorage.setItem("usapri", 1);
     }
-    console.log(totalTori);
   };
 
   return (
