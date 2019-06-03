@@ -46,29 +46,4 @@ setInterval(function() {
     n++;
     tairyou++;
   }
-  //うさぎが500匹を超える毎にボタン再描画
-  if (usagi >= 500 * n2) {
-    var bleft = $("#1").offset().left;
-    var btop = $("#1").offset().top;
-    console.log(bleft);
-    var k = document.createElement("button");
-    var n22 = n2 + 1;
-    var n2c = "#" + n2;
-    var n22c = "#" + n22;
-    k.setAttribute("id", n22);
-    k.setAttribute(
-      "style",
-      "font-size:500%; position:fixed; top:" +
-        btop +
-        "px; left:" +
-        bleft +
-        "px;"
-    );
-    k.innerHTML = "うさぎを増やす";
-    document.body.appendChild(k);
-    $(n22c).click(function() {
-      usafuya();
-    });
-    n2++;
-  }
 }, 100);
