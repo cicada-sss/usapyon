@@ -6,7 +6,7 @@
   "author": "cicada_sss <sss.cicada@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev-b": "browserify --transform babelify",
+    "comp": "browserify --transform babelify",
     "serve": "gulp && node_modules\\.bin\\http-server ./src -o"
   },
   "dependencies": {
