@@ -18,6 +18,10 @@ var usaran = [
   "image/usa (7).png"
 ];
 
+$(window).keydown(function() {
+  return false;
+});
+
 //データ読み込み
 var launchTimes = localStorage.getItem("launchTimes");
 
