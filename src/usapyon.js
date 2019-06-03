@@ -38,10 +38,8 @@ setInterval(function() {
   $("#usa").html(u);
   //うさぎが10000匹を超えた場合ジュピターを流してスタッフロールを表示
   if (usagi >= 10000 * no) {
-    stopAll();
-    $("#sound3")
-      .get(0)
-      .play();
+    stopBGM();
+    bgm2.play();
     var b = document.createElement("img");
     b.setAttribute("src", "image/staff.png");
     b.setAttribute("id", "staff");
@@ -60,11 +58,9 @@ setInterval(function() {
     n++;
     //うさぎが1000匹を超える毎に大漁を表示しカルメン組曲を再生
   } else if (usagi >= 1000 * n) {
-    stopAll();
-    $("#sound1").get(0).currentTime = 0;
-    $("#sound1")
-      .get(0)
-      .play();
+    stopBGM();
+    bgm1.load();
+    bgm1.play();
     var creimg = document.createElement("img");
     creimg.setAttribute("src", "image/tairyou.png");
     creimg.setAttribute("style", "position:fixed; bottom:10px; right:10px;");

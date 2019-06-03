@@ -571,9 +571,7 @@ function achievement() {
 function achshow() {
   $("#info").html(infotext);
   $("#info").show();
-  $("#sound4")
-    .get(0)
-    .play();
+  se2.play();
   setTimeout(function() {
     $("#info").fadeOut("slow");
     infotext = "";

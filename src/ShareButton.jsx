@@ -4,9 +4,7 @@ import ReactDOM from "react-dom";
 const ShareButton = () => {
   const handleClick = e => {
     e.preventDefault();
-    $("#sound7")
-      .get(0)
-      .play();
+    se4.play();
     alert("できません");
     if (typeof localStorage.totalTori === "undefined") {
       localStorage.setItem("totalTori", 1);

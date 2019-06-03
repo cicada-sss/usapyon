@@ -1,8 +1,6 @@
 let usafuya = () => {
-  $("#sound2").get(0).currentTime = 0;
-  $("#sound2")
-    .get(0)
-    .play();
+  se1.currentTime = 0;
+  se1.play();
   let makeRandom = (randomNumber, ifFloor) => {
     if (ifFloor === true) {
       return Math.floor(Math.random() * randomNumber);
@@ -28,10 +26,8 @@ let usafuya = () => {
     case 2:
       switch (makeRandom(21, true)) {
         case 0:
-          $("#sound6").get(0).currentTime = 0;
-          $("#sound6")
-            .get(0)
-            .play();
+          se3.currentTime = 0;
+          se3.play();
           usasrc = "image/aja.png";
           aja++;
           break;

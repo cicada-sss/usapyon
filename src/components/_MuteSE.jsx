@@ -3,10 +3,10 @@ import React from "react";
 const MuteSE = () => {
   const handleClick = e => {
     e.preventDefault();
-    document.getElementById("sound2").volume = 0;
-    document.getElementById("sound4").volume = 0;
-    document.getElementById("sound6").volume = 0;
-    document.getElementById("sound7").volume = 0;
+    se1.volume = 0;
+    se2.volume = 0;
+    se3.volume = 0;
+    se4.volume = 0;
   }
 
   return (

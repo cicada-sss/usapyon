@@ -3,10 +3,10 @@ import React from "react";
 const MuteBGM = () => {
   const handleClick = e => {
     e.preventDefault();
-    document.getElementById("sound1").volume = 0;
-    document.getElementById("sound3").volume = 0;
-    document.getElementById("sound5").volume = 0;
-    document.getElementById("sound8").volume = 0;
+    bgm1.volume = 0;
+    bgm2.volume = 0;
+    bgm3.volume = 0;
+    bgm4.volume = 0;
   }
 
   return (

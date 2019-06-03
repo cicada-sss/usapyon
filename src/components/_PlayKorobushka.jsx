@@ -4,12 +4,12 @@ const PlayKorobushka = () => {
   const handleClick = e => {
     e.preventDefault();
     if (localStorage.usapri == 1) {
-      document.getElementById("sound7").play();
+      se4.play();
       alert("ダメです");
     } else {
-      stopAll();
-      document.getElementById("sound5").currentTime = 0;
-      document.getElementById("sound5").play();
+      stopBGM();
+      bgm3.load();
+      bgm3.play();
     }
   }
 
