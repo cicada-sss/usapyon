@@ -17,12 +17,6 @@ $(function() {
   });
   console.log(buttonSize);
 });
-$("#mute").click(function() {
-  $("#sound7")
-    .get(0)
-    .play();
-  alert("消えません");
-});
 
 function usafuya() {
   se1.currentTime = 0;

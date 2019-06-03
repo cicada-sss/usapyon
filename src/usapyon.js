@@ -12,16 +12,6 @@ console.log(localStorage.first_launch_time);
     var firstLaunchTime = localStorage.first_launch_time;
 }
 */
-if (localStorage.getItem("mute") == 1) {
-  document.getElementById("sound1").volume = 0;
-  document.getElementById("sound2").volume = 0;
-  document.getElementById("sound3").volume = 0;
-  document.getElementById("sound4").volume = 0;
-  document.getElementById("sound5").volume = 0;
-  document.getElementById("sound6").volume = 0;
-  document.getElementById("sound7").volume = 0;
-  document.getElementById("sound8").volume = 0;
-}
 //0.1秒毎に状態チェック
 setInterval(function() {
   u = usagi + "匹のうさぎがいます";
