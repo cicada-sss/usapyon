@@ -6,13 +6,8 @@ const ShareButton = () => {
     e.preventDefault();
     se4.play();
     alert("できません");
-    if (typeof localStorage.totalTori === "undefined") {
-      localStorage.setItem("totalTori", 1);
-    } else {
-      var totalTori = Number(localStorage.getItem("totalTori"));
-      totalTori++;
-      localStorage.setItem("totalTori", totalTori);
-    }
+    total.tori++;
+    localStorage.setItem("totalTori", total.tori);
     animals.tori++;
     if (animals.tori >= 5) {
       var usapriTimes = Number(localStorage.getItem("usapriTimes"));

@@ -55,7 +55,7 @@ function achievement() {
 
   //実績解除
   if (
-    totalUsagi + animals.usagi >= 100 &&
+    total.usagi + animals.usagi >= 100 &&
     typeof localStorage.achievement1_1 === "undefined"
   ) {
     infotext =
@@ -65,7 +65,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalUsagi + animals.usagi >= 500 &&
+    total.usagi + animals.usagi >= 500 &&
     typeof localStorage.achievement1_2 === "undefined"
   ) {
     infotext =
@@ -75,7 +75,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalUsagi + animals.usagi >= 1000 &&
+    total.usagi + animals.usagi >= 1000 &&
     typeof localStorage.achievement1_3 === "undefined"
   ) {
     infotext =
@@ -85,7 +85,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalUsagi + animals.usagi >= 5000 &&
+    total.usagi + animals.usagi >= 5000 &&
     typeof localStorage.achievement1_4 === "undefined"
   ) {
     infotext =
@@ -95,7 +95,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalUsagi + animals.usagi >= 10000 &&
+    total.usagi + animals.usagi >= 10000 &&
     typeof localStorage.achievement1_5 === "undefined"
   ) {
     infotext =
@@ -105,7 +105,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalKuma + animals.kuma >= 1 &&
+    total.kuma + animals.kuma >= 1 &&
     typeof localStorage.achievement2_1 === "undefined"
   ) {
     infotext =
@@ -115,7 +115,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalKuma + animals.kuma >= 5 &&
+    total.kuma + animals.kuma >= 5 &&
     typeof localStorage.achievement2_2 === "undefined"
   ) {
     infotext =
@@ -125,7 +125,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalKuma + animals.kuma >= 10 &&
+    total.kuma + animals.kuma >= 10 &&
     typeof localStorage.achievement2_3 === "undefined"
   ) {
     infotext =
@@ -135,7 +135,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalKuma + animals.kuma >= 50 &&
+    total.kuma + animals.kuma >= 50 &&
     typeof localStorage.achievement2_4 === "undefined"
   ) {
     infotext =
@@ -145,7 +145,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalKuma + animals.kuma >= 100 &&
+    total.kuma + animals.kuma >= 100 &&
     typeof localStorage.achievement2_5 === "undefined"
   ) {
     infotext =
@@ -155,7 +155,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalRisu + animals.risu >= 1 &&
+    total.risu + animals.risu >= 1 &&
     typeof localStorage.achievement3_1 === "undefined"
   ) {
     infotext =
@@ -165,7 +165,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalRisu + animals.risu >= 5 &&
+    total.risu + animals.risu >= 5 &&
     typeof localStorage.achievement3_2 === "undefined"
   ) {
     infotext =
@@ -175,7 +175,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalRisu + animals.risu >= 10 &&
+    total.risu + animals.risu >= 10 &&
     typeof localStorage.achievement3_3 === "undefined"
   ) {
     infotext =
@@ -185,7 +185,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalRisu + animals.risu >= 50 &&
+    total.risu + animals.risu >= 50 &&
     typeof localStorage.achievement3_4 === "undefined"
   ) {
     infotext =
@@ -195,7 +195,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalRisu + animals.risu >= 100 &&
+    total.risu + animals.risu >= 100 &&
     typeof localStorage.achievement3_5 === "undefined"
   ) {
     infotext =
@@ -205,7 +205,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalAja + animals.aja >= 1 &&
+    total.aja + animals.aja >= 1 &&
     typeof localStorage.achievement4_1 === "undefined"
   ) {
     infotext =
@@ -215,7 +215,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalAja + animals.aja >= 3 &&
+    total.aja + animals.aja >= 3 &&
     typeof localStorage.achievement4_2 === "undefined"
   ) {
     infotext =
@@ -225,7 +225,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalAja + animals.aja >= 5 &&
+    total.aja + animals.aja >= 5 &&
     typeof localStorage.achievement4_3 === "undefined"
   ) {
     infotext =
@@ -235,7 +235,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalAja + animals.aja >= 10 &&
+    total.aja + animals.aja >= 10 &&
     typeof localStorage.achievement4_4 === "undefined"
   ) {
     infotext =
@@ -245,7 +245,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalAja + animals.aja >= 30 &&
+    total.aja + animals.aja >= 30 &&
     typeof localStorage.achievement4_5 === "undefined"
   ) {
     infotext =
@@ -405,7 +405,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalTairyou + animals.tairyou >= 1 &&
+    total.tairyou + animals.tairyou >= 1 &&
     typeof localStorage.achievement8_1 === "undefined"
   ) {
     infotext =
@@ -415,7 +415,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalTairyou + animals.tairyou >= 5 &&
+    total.tairyou + animals.tairyou >= 5 &&
     typeof localStorage.achievement8_2 === "undefined"
   ) {
     infotext =
@@ -425,7 +425,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalTairyou + animals.tairyou >= 10 &&
+    total.tairyou + animals.tairyou >= 10 &&
     typeof localStorage.achievement8_3 === "undefined"
   ) {
     infotext =
@@ -435,7 +435,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalTairyou + animals.tairyou >= 50 &&
+    total.tairyou + animals.tairyou >= 50 &&
     typeof localStorage.achievement8_4 === "undefined"
   ) {
     infotext =
@@ -445,7 +445,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalTairyou + animals.tairyou >= 100 &&
+    total.tairyou + animals.tairyou >= 100 &&
     typeof localStorage.achievement8_5 === "undefined"
   ) {
     infotext =
