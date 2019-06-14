@@ -50,7 +50,7 @@ const UsafuyaButton = () => {
       switch (makeRandom(101, true)) {
         case 0:
           usasrc = "image/risu.png";
-          risu++;
+          animals.risu++;
           break;
         case 1:
           usasrc = "image/kuma.png";

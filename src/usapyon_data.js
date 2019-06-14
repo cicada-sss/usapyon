@@ -1,9 +1,9 @@
 var usagi = 0;
 var kuma = 0;
-var risu = 0;
 
 let animals = {
-  animals.aja: 0,
+  risu: 0,
+  aja: 0,
   tori: 0,
   tairyou: 0
 };
@@ -105,7 +105,7 @@ $(window).on("pagehide", function() {
   var totalTairyou = Number(localStorage.getItem("totalTairyou"));
   totalUsagi = totalUsagi + usagi;
   totalKuma = totalKuma + kuma;
-  totalRisu = totalRisu + risu;
+  totalRisu = totalRisu + animals.risu;
   totalAja = totalAja + animals.aja;
   totalTairyou = totalTairyou + animals.tairyou;
   var nowTime = Math.floor(Date.now() / 1000);

@@ -11,10 +11,10 @@ const NowAnimals = () => {
           {kuma}匹のくまがいます
         </>
       )}
-      {risu >= 1 && (
+      {animals.risu >= 1 && (
         <>
           <br />
-          {risu}匹のりすがいます
+          {animals.risu}匹のりすがいます
         </>
       )}
       {animals.aja >= 1 && (
