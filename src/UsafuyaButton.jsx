@@ -108,7 +108,7 @@ const UsafuyaButton = () => {
       creimg.setAttribute("src", "image/tairyou.png");
       creimg.setAttribute("style", "position:fixed; bottom:10px; right:10px;");
       document.body.appendChild(creimg);
-      tairyou++;
+      animals.tairyou++;
     } else if (usagi % 500 === 0 && localStorage.usapri !== "1") {
       var bleft = $("#usafuya-button").offset().left;
       var btop = $("#usafuya-button").offset().top;

@@ -3,7 +3,10 @@ var kuma = 0;
 var risu = 0;
 var aja = 0;
 var tori = 0;
-var tairyou = 0;
+
+let animals = {
+  tairyou: 0
+};
 
 //初期化
 if (localStorage.usapri == 1) {
@@ -104,7 +107,7 @@ $(window).on("pagehide", function() {
   totalKuma = totalKuma + kuma;
   totalRisu = totalRisu + risu;
   totalAja = totalAja + aja;
-  totalTairyou = totalTairyou + tairyou;
+  totalTairyou = totalTairyou + animals.tairyou;
   var nowTime = Math.floor(Date.now() / 1000);
   playTime = playTime + nowTime - launchTime;
   localStorage.setItem("totalUsagi", totalUsagi);

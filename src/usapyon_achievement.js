@@ -405,7 +405,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalTairyou + tairyou >= 1 &&
+    totalTairyou + animals.tairyou >= 1 &&
     typeof localStorage.achievement8_1 === "undefined"
   ) {
     infotext =
@@ -415,7 +415,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalTairyou + tairyou >= 5 &&
+    totalTairyou + animals.tairyou >= 5 &&
     typeof localStorage.achievement8_2 === "undefined"
   ) {
     infotext =
@@ -425,7 +425,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalTairyou + tairyou >= 10 &&
+    totalTairyou + animals.tairyou >= 10 &&
     typeof localStorage.achievement8_3 === "undefined"
   ) {
     infotext =
@@ -435,7 +435,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalTairyou + tairyou >= 50 &&
+    totalTairyou + animals.tairyou >= 50 &&
     typeof localStorage.achievement8_4 === "undefined"
   ) {
     infotext =
@@ -445,7 +445,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalTairyou + tairyou >= 100 &&
+    totalTairyou + animals.tairyou >= 100 &&
     typeof localStorage.achievement8_5 === "undefined"
   ) {
     infotext =

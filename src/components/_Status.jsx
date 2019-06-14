@@ -18,8 +18,8 @@ const Status = () => {
         {Number(localStorage.usapriTimes) >= 1 && (
           <li>累計うさプリ収監回数 : {localStorage.usapriTimes}回</li>
         )}
-        {totalTairyou + tairyou >= 1 && (
-          <li>累計大漁回数 : {totalTairyou + tairyou}回</li>
+        {totalTairyou + animals.tairyou >= 1 && (
+          <li>累計大漁回数 : {totalTairyou + animals.tairyou}回</li>
         )}
         <li>
           1プレイでの平均うさぎ増やし数 :{" "}
@@ -46,7 +46,7 @@ const Status = () => {
               (Math.round(((totalAja + aja) / launchTimes) * 10) / 10) * 2000 +
               (totalTori + tori) * 10 +
               Number(localStorage.usapriTimes) * 1000 +
-              (totalTairyou + tairyou) *
+              (totalTairyou + animals.tairyou) *
                 100 *
                 (Number(localStorage.totalAchievement) + 10)) /
               10) *
