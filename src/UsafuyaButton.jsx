@@ -5,6 +5,15 @@ const UsafuyaButton = () => {
   const handleClick = e => {
     e.preventDefault();
     let usasrc;
+    var usaran = [
+      "image/usa (1).png",
+      "image/usa (2).png",
+      "image/usa (3).png",
+      "image/usa (4).png",
+      "image/usa (5).png",
+      "image/usa (6).png",
+      "image/usa (7).png"
+    ];
     se1.currentTime = 0;
     se1.play();
     let makeRandom = (randomNumber, ifFloor) => {
@@ -23,8 +32,8 @@ const UsafuyaButton = () => {
     if (localStorage.usapri === "1") {
       switch (makeRandom(2001, true)) {
         case 0:
-        se3.currentTime = 0;
-        se3.play();
+          se3.currentTime = 0;
+          se3.play();
           usasrc = "image/aja.png";
           aja++;
           localStorage.setItem("usapri", "0");
@@ -65,7 +74,7 @@ const UsafuyaButton = () => {
           break;
       }
     }
-    creimg = document.createElement("img");
+    let creimg = document.createElement("img");
     creimg.setAttribute("src", usasrc);
     creimg.setAttribute(
       "style",
@@ -90,18 +99,15 @@ const UsafuyaButton = () => {
         },
         20000
       );
-      no++;
-      n++;
       // うさぎが1000匹を超える毎に大漁を表示しカルメン組曲を再生
     } else if (usagi % 1000 === 0) {
       stopBGM();
       bgm1.load();
       bgm1.play();
-      let creimg = document.createElement("img");
+      creimg = document.createElement("img");
       creimg.setAttribute("src", "image/tairyou.png");
       creimg.setAttribute("style", "position:fixed; bottom:10px; right:10px;");
       document.body.appendChild(creimg);
-      n++;
       tairyou++;
     } else if (usagi % 500 === 0 && localStorage.usapri !== "1") {
       var bleft = $("#usafuya-button").offset().left;
@@ -116,7 +122,6 @@ const UsafuyaButton = () => {
         "position:fixed; top:" + btop + "px; left:" + bleft + "px;"
       );
       document.body.appendChild(k);
-      n2++;
       ReactDOM.render(
         <UsafuyaButton />,
         document.getElementById("usafuya-button")

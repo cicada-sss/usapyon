@@ -4,19 +4,6 @@ var risu = 0;
 var aja = 0;
 var tori = 0;
 var tairyou = 0;
-var n = 1;
-var n2 = 1;
-var no = 1;
-var creimg;
-var usaran = [
-  "image/usa (1).png",
-  "image/usa (2).png",
-  "image/usa (3).png",
-  "image/usa (4).png",
-  "image/usa (5).png",
-  "image/usa (6).png",
-  "image/usa (7).png"
-];
 
 //初期化
 if (localStorage.usapri == 1) {
