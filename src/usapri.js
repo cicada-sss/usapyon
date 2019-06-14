@@ -20,7 +20,7 @@ $(function() {
 
 //0.1秒毎に状態チェック
 setInterval(function() {
-  if (usagi >= 1000) {
+  if (animals.usagi >= 1000) {
     localStorage.setItem("usapri", "0");
     alert("釈放します。\nもう戻ってきちゃダメですよ");
     window.location.href = "index.html";

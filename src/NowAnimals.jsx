@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 
 const NowAnimals = () => {
   return (
-    <div style={{fontSize: "500%"}}>
-      {usagi}匹のうさぎがいます
+    <div style={{ fontSize: "500%" }}>
+      {animals.usagi}匹のうさぎがいます
       {animals.kuma >= 1 && (
         <>
           <br />

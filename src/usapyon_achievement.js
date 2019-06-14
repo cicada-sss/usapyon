@@ -55,7 +55,7 @@ function achievement() {
 
   //実績解除
   if (
-    totalUsagi + usagi >= 100 &&
+    totalUsagi + animals.usagi >= 100 &&
     typeof localStorage.achievement1_1 === "undefined"
   ) {
     infotext =
@@ -65,7 +65,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalUsagi + usagi >= 500 &&
+    totalUsagi + animals.usagi >= 500 &&
     typeof localStorage.achievement1_2 === "undefined"
   ) {
     infotext =
@@ -75,7 +75,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalUsagi + usagi >= 1000 &&
+    totalUsagi + animals.usagi >= 1000 &&
     typeof localStorage.achievement1_3 === "undefined"
   ) {
     infotext =
@@ -85,7 +85,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalUsagi + usagi >= 5000 &&
+    totalUsagi + animals.usagi >= 5000 &&
     typeof localStorage.achievement1_4 === "undefined"
   ) {
     infotext =
@@ -95,7 +95,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalUsagi + usagi >= 10000 &&
+    totalUsagi + animals.usagi >= 10000 &&
     typeof localStorage.achievement1_5 === "undefined"
   ) {
     infotext =
@@ -455,7 +455,7 @@ function achievement() {
     achshow();
   }
   if (
-    usagi == 0 &&
+    animals.usagi == 0 &&
     animals.kuma == 0 &&
     animals.risu == 0 &&
     animals.aja == 1 &&
@@ -468,7 +468,7 @@ function achievement() {
     achshow();
   }
   if (
-    usagi == 0 &&
+    animals.usagi == 0 &&
     animals.risu == 0 &&
     animals.aja == 0 &&
     animals.kuma == 1 &&
@@ -481,7 +481,7 @@ function achievement() {
     achshow();
   }
   if (
-    usagi == 0 &&
+    animals.usagi == 0 &&
     animals.kuma == 0 &&
     animals.aja == 0 &&
     animals.risu == 1 &&
@@ -494,7 +494,7 @@ function achievement() {
     achshow();
   }
   if (
-    usagi == 1000 &&
+    animals.usagi == 1000 &&
     animals.kuma == 0 &&
     animals.aja == 0 &&
     animals.risu == 0 &&
@@ -507,7 +507,10 @@ function achievement() {
     localStorage.achievement9_3 = 1;
     achshow();
   }
-  if (usagi >= 10000 && typeof localStorage.achievement10_1 === "undefined") {
+  if (
+    animals.usagi >= 10000 &&
+    typeof localStorage.achievement10_1 === "undefined"
+  ) {
     infotext =
       '<span class="notice">エンディングを見た🐰実績：Thank you for playing解除</span><br>\n' +
       infotext;

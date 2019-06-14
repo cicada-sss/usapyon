@@ -24,7 +24,7 @@ const UsafuyaButton = () => {
       }
     };
     let usagifuya = () => {
-      usagi++;
+      animals.usagi++;
       return usaran[makeRandom(usaran.length, true)];
     };
     let sW = makeRandom(window.innerWidth + 60, true) - 30;
@@ -43,7 +43,7 @@ const UsafuyaButton = () => {
           break;
         default:
           usasrc = usaran[Math.floor(Math.random() * usaran.length)];
-          usagi++;
+          animals.usagi++;
           break;
       }
     } else {
@@ -82,7 +82,7 @@ const UsafuyaButton = () => {
     );
     document.body.appendChild(creimg);
     // うさぎが10000匹を超えた場合ジュピターを流してスタッフロールを表示
-    if (usagi === 10000) {
+    if (animals.usagi === 10000) {
       stopBGM();
       bgm2.play();
       var b = document.createElement("img");
@@ -100,7 +100,7 @@ const UsafuyaButton = () => {
         20000
       );
       // うさぎが1000匹を超える毎に大漁を表示しカルメン組曲を再生
-    } else if (usagi % 1000 === 0) {
+    } else if (animals.usagi % 1000 === 0) {
       stopBGM();
       bgm1.load();
       bgm1.play();
@@ -109,7 +109,7 @@ const UsafuyaButton = () => {
       creimg.setAttribute("style", "position:fixed; bottom:10px; right:10px;");
       document.body.appendChild(creimg);
       animals.tairyou++;
-    } else if (usagi % 500 === 0 && localStorage.usapri !== "1") {
+    } else if (animals.usagi % 500 === 0 && localStorage.usapri !== "1") {
       var bleft = $("#usafuya-button").offset().left;
       var btop = $("#usafuya-button").offset().top;
       document

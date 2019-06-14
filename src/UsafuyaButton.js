@@ -25149,7 +25149,7 @@ var UsafuyaButton = function UsafuyaButton() {
     };
 
     var usagifuya = function usagifuya() {
-      usagi++;
+      animals.usagi++;
       return usaran[makeRandom(usaran.length, true)];
     };
 
@@ -25171,7 +25171,7 @@ var UsafuyaButton = function UsafuyaButton() {
 
         default:
           usasrc = usaran[Math.floor(Math.random() * usaran.length)];
-          usagi++;
+          animals.usagi++;
           break;
       }
     } else {
