@@ -12,8 +12,8 @@ const Status = () => {
         <li>累計くま発見数 : {totalKuma + kuma}匹</li>
         <li>累計りす発見数 : {totalRisu + risu}匹</li>
         <li>累計あじゃ発見数 : {totalAja + aja}匹</li>
-        {totalTori + tori >= 1 && (
-          <li>累計鳥になった回数 : {totalTori + tori}回</li>
+        {totalTori + animals.tori >= 1 && (
+          <li>累計鳥になった回数 : {totalTori + animals.tori}回</li>
         )}
         {Number(localStorage.usapriTimes) >= 1 && (
           <li>累計うさプリ収監回数 : {localStorage.usapriTimes}回</li>
@@ -44,7 +44,7 @@ const Status = () => {
               (Math.round(((totalKuma + kuma) / launchTimes) * 10) / 10) * 100 +
               (Math.round(((totalRisu + risu) / launchTimes) * 10) / 10) * 100 +
               (Math.round(((totalAja + aja) / launchTimes) * 10) / 10) * 2000 +
-              (totalTori + tori) * 10 +
+              (totalTori + animals.tori) * 10 +
               Number(localStorage.usapriTimes) * 1000 +
               (totalTairyou + animals.tairyou) *
                 100 *

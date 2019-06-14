@@ -2,9 +2,9 @@ var usagi = 0;
 var kuma = 0;
 var risu = 0;
 var aja = 0;
-var tori = 0;
 
 let animals = {
+  tori: 0,
   tairyou: 0
 };
 

@@ -13,8 +13,8 @@ const ShareButton = () => {
       totalTori++;
       localStorage.setItem("totalTori", totalTori);
     }
-    tori++;
-    if (tori >= 5) {
+    animals.tori++;
+    if (animals.tori >= 5) {
       var usapriTimes = Number(localStorage.getItem("usapriTimes"));
       usapriTimes++;
       localStorage.setItem("usapriTimes", usapriTimes);
