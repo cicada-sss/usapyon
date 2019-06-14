@@ -17,10 +17,10 @@ const NowAnimals = () => {
           {risu}匹のりすがいます
         </>
       )}
-      {aja >= 1 && (
+      {animals.aja >= 1 && (
         <>
           <br />
-          {aja}匹のあじゃがいます
+          {animals.aja}匹のあじゃがいます
         </>
       )}
     </div>

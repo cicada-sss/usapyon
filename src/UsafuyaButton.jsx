@@ -35,7 +35,7 @@ const UsafuyaButton = () => {
           se3.currentTime = 0;
           se3.play();
           usasrc = "image/aja.png";
-          aja++;
+          animals.aja++;
           localStorage.setItem("usapri", "0");
           localStorage.setItem("usapriTimes", usapriTimes);
           alert("あじゃが助け出してくれました");
@@ -62,7 +62,7 @@ const UsafuyaButton = () => {
               se3.currentTime = 0;
               se3.play();
               usasrc = "image/aja.png";
-              aja++;
+              animals.aja++;
               break;
             default:
               usasrc = usagifuya();

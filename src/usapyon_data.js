@@ -1,9 +1,9 @@
 var usagi = 0;
 var kuma = 0;
 var risu = 0;
-var aja = 0;
 
 let animals = {
+  animals.aja: 0,
   tori: 0,
   tairyou: 0
 };
@@ -106,7 +106,7 @@ $(window).on("pagehide", function() {
   totalUsagi = totalUsagi + usagi;
   totalKuma = totalKuma + kuma;
   totalRisu = totalRisu + risu;
-  totalAja = totalAja + aja;
+  totalAja = totalAja + animals.aja;
   totalTairyou = totalTairyou + animals.tairyou;
   var nowTime = Math.floor(Date.now() / 1000);
   playTime = playTime + nowTime - launchTime;
