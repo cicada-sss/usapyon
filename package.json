@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "comp": "browserify --transform babelify",
-    "serve": "gulp && node_modules\\.bin\\http-server ./src -o"
+    "serve": "gulp && node_modules\\.bin\\http-server ./src -o",
+    "test": "eslint src/**/*.jsx"
   },
   "dependencies": {
     "@babel/core": "^7.4.5",
