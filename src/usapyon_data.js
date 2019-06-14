@@ -1,7 +1,7 @@
 var usagi = 0;
-var kuma = 0;
 
 let animals = {
+  kuma: 0,
   risu: 0,
   aja: 0,
   tori: 0,
@@ -104,7 +104,7 @@ $(window).on("pagehide", function() {
   var totalAja = Number(localStorage.getItem("totalAja"));
   var totalTairyou = Number(localStorage.getItem("totalTairyou"));
   totalUsagi = totalUsagi + usagi;
-  totalKuma = totalKuma + kuma;
+  totalKuma = totalKuma + animals.kuma;
   totalRisu = totalRisu + animals.risu;
   totalAja = totalAja + animals.aja;
   totalTairyou = totalTairyou + animals.tairyou;

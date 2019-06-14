@@ -25183,7 +25183,7 @@ var UsafuyaButton = function UsafuyaButton() {
 
         case 1:
           usasrc = "image/kuma.png";
-          kuma++;
+          animals.kuma++;
           break;
 
         case 2:

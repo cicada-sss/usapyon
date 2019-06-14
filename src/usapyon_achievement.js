@@ -105,7 +105,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalKuma + kuma >= 1 &&
+    totalKuma + animals.kuma >= 1 &&
     typeof localStorage.achievement2_1 === "undefined"
   ) {
     infotext =
@@ -115,7 +115,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalKuma + kuma >= 5 &&
+    totalKuma + animals.kuma >= 5 &&
     typeof localStorage.achievement2_2 === "undefined"
   ) {
     infotext =
@@ -125,7 +125,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalKuma + kuma >= 10 &&
+    totalKuma + animals.kuma >= 10 &&
     typeof localStorage.achievement2_3 === "undefined"
   ) {
     infotext =
@@ -135,7 +135,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalKuma + kuma >= 50 &&
+    totalKuma + animals.kuma >= 50 &&
     typeof localStorage.achievement2_4 === "undefined"
   ) {
     infotext =
@@ -145,7 +145,7 @@ function achievement() {
     achshow();
   }
   if (
-    totalKuma + kuma >= 100 &&
+    totalKuma + animals.kuma >= 100 &&
     typeof localStorage.achievement2_5 === "undefined"
   ) {
     infotext =
@@ -456,7 +456,7 @@ function achievement() {
   }
   if (
     usagi == 0 &&
-    kuma == 0 &&
+    animals.kuma == 0 &&
     animals.risu == 0 &&
     animals.aja == 1 &&
     typeof localStorage.achievement9_1 === "undefined"
@@ -471,7 +471,7 @@ function achievement() {
     usagi == 0 &&
     animals.risu == 0 &&
     animals.aja == 0 &&
-    kuma == 1 &&
+    animals.kuma == 1 &&
     typeof localStorage.achievement9_2 === "undefined"
   ) {
     infotext =
@@ -482,7 +482,7 @@ function achievement() {
   }
   if (
     usagi == 0 &&
-    kuma == 0 &&
+    animals.kuma == 0 &&
     animals.aja == 0 &&
     animals.risu == 1 &&
     typeof localStorage.achievement9_3 === "undefined"
@@ -495,7 +495,7 @@ function achievement() {
   }
   if (
     usagi == 1000 &&
-    kuma == 0 &&
+    animals.kuma == 0 &&
     animals.aja == 0 &&
     animals.risu == 0 &&
     localStorage.usapri != 1 &&

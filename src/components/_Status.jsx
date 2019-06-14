@@ -9,7 +9,7 @@ const Status = () => {
         <li>累計プレイ回数 : {launchTimes}回</li>
         <li>累計プレイ時間 : {playTime + nowTime - launchTime}秒</li>
         <li>累計うさぎ増やし数 : {totalUsagi + usagi}匹</li>
-        <li>累計くま発見数 : {totalKuma + kuma}匹</li>
+        <li>累計くま発見数 : {totalKuma + animals.kuma}匹</li>
         <li>累計りす発見数 : {totalRisu + animals.risu}匹</li>
         <li>累計あじゃ発見数 : {totalAja + animals.aja}匹</li>
         {totalTori + animals.tori >= 1 && (
@@ -27,7 +27,7 @@ const Status = () => {
         </li>
         <li>
           1プレイでの平均くま発見数 :{" "}
-          {Math.round(((totalKuma + kuma) / launchTimes) * 10) / 10}匹
+          {Math.round(((totalKuma + animals.kuma) / launchTimes) * 10) / 10}匹
         </li>
         <li>
           1プレイでの平均りす発見数 :{" "}
@@ -41,7 +41,7 @@ const Status = () => {
           スコア :{" "}
           {Math.round(
             (((Math.round(((totalUsagi + usagi) / launchTimes) * 10) / 10 +
-              (Math.round(((totalKuma + kuma) / launchTimes) * 10) / 10) * 100 +
+              (Math.round(((totalKuma + animals.kuma) / launchTimes) * 10) / 10) * 100 +
               (Math.round(((totalRisu + animals.risu) / launchTimes) * 10) / 10) * 100 +
               (Math.round(((totalAja + animals.aja) / launchTimes) * 10) / 10) *
                 2000 +

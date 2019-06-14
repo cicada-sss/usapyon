@@ -5,10 +5,10 @@ const NowAnimals = () => {
   return (
     <div style={{fontSize: "500%"}}>
       {usagi}匹のうさぎがいます
-      {kuma >= 1 && (
+      {animals.kuma >= 1 && (
         <>
           <br />
-          {kuma}匹のくまがいます
+          {animals.kuma}匹のくまがいます
         </>
       )}
       {animals.risu >= 1 && (
