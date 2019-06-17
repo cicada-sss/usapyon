@@ -1,7 +1,6 @@
 import React from "react";
 
-const AchievementList = () => {
-  return (
+const AchievementList = () => (
     <>
     <h1>解除済実績一覧</h1>
     <ul>
@@ -265,7 +264,6 @@ const AchievementList = () => {
       )}
     </ul>
     </>
-  );
-};
+);
 
 export default AchievementList;

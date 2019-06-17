@@ -7,21 +7,19 @@ let animals = {
   tairyou: 0
 };
 
-//初期化
+// 初期化
 if (localStorage.usapri == 1) {
   window.location.href = "usapri.html";
 }
 
-$(window).keydown(function() {
-  return false;
-});
+$(window).keydown(() => false);
 
-//データ読み込み
+// データ読み込み
 var launchTimes = localStorage.getItem("launchTimes");
 
 var launchTime = Math.floor(Date.now() / 1000);
 
-////初回プレイの場合
+// //初回プレイの場合
 if (!localStorage.getItem("launchTimes")) {
   localStorage.clear();
   localStorage.setItem("launchTimes", 1);
@@ -44,63 +42,63 @@ let total = {
   tairyou: Number(localStorage.getItem("totalTairyou"))
 };
 
-var playTime = Number(localStorage.playTime);
+let playTime = Number(localStorage.playTime);
 
 if (!localStorage.getItem("launchTimes")) {
   var launchTimes = 1;
   var infotext = "初回プレイです";
-  $(document).ready(function() {
+  $(document).ready(() => {
     $("#info").html(infotext);
-    setTimeout(function() {
+    setTimeout(() => {
       $("#info").fadeOut("slow");
       infotext = "";
     }, 5000);
   });
 } else {
-  ////二回目以降の場合
+  // //二回目以降の場合
   if (localStorage.usapri != 1) {
     launchTimes++;
     localStorage.setItem("launchTimes", launchTimes);
-    var infotext = launchTimes + "回目のプレイです";
+    var infotext = `${launchTimes}回目のプレイです`;
   } else {
     var infotext = "あなたはうさプリに入れられました";
   }
-  infotext =
-    infotext + "<br>\n今まで累計" + total.usagi + "匹のうさぎを増やしました";
+  infotext = `${infotext}<br>\n今まで累計${
+    total.usagi
+  }匹のうさぎを増やしました`;
   if (total.kuma >= 1) {
-    infotext =
-      infotext + "<br>\n今まで累計" + total.kuma + "匹のくまを見つけました";
+    infotext = `${infotext}<br>\n今まで累計${total.kuma}匹のくまを見つけました`;
   }
   if (total.risu >= 1) {
-    infotext =
-      infotext + "<br>\n今まで累計" + total.risu + "匹のりすを見つけました";
+    infotext = `${infotext}<br>\n今まで累計${total.risu}匹のりすを見つけました`;
   }
   if (total.aja >= 1) {
-    infotext =
-      infotext + "<br>\n今まで累計" + total.aja + "匹のあじゃを見つけました";
+    infotext = `${infotext}<br>\n今まで累計${
+      total.aja
+    }匹のあじゃを見つけました`;
   }
-  $(document).ready(function() {
+  $(document).ready(() => {
     $("#info").html(infotext);
-    setTimeout(function() {
+    setTimeout(() => {
       $("#info").fadeOut("slow");
       infotext = "";
     }, 5000);
   });
 }
 
-//データ保存
-$(window).on("pagehide", function() {
+// データ保存
+$(window).on("pagehide", () => {
   total.usagi = Number(localStorage.getItem("totalUsagi"));
   total.kuma = Number(localStorage.getItem("totalKuma"));
   total.risu = Number(localStorage.getItem("totalRisu"));
   total.aja = Number(localStorage.getItem("totalAja"));
   total.tairyou = Number(localStorage.getItem("totalTairyou"));
-  total.usagi = total.usagi + animals.usagi;
-  total.kuma = total.kuma + animals.kuma;
-  total.risu = total.risu + animals.risu;
-  total.aja = total.aja + animals.aja;
-  total.tairyou = total.tairyou + animals.tairyou;
-  var nowTime = Math.floor(Date.now() / 1000);
+  total.usagi += animals.usagi;
+  total.kuma += animals.kuma;
+  total.risu += animals.risu;
+  total.aja += animals.aja;
+  total.tairyou += animals.tairyou;
+  let nowTime = Math.floor(Date.now() / 1000);
   playTime = playTime + nowTime - launchTime;
   localStorage.setItem("totalUsagi", total.usagi);
   localStorage.setItem("totalKuma", total.kuma);

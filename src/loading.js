@@ -1,5 +1,5 @@
-$(document).ready(function() {
-  $(function() {
+$(document).ready(() => {
+  $(() => {
     $("#loading").fadeOut();
   });
   $("#loader")
