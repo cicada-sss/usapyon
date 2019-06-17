@@ -15,19 +15,19 @@ if (localStorage.usapri === true) {
 $(window).keydown(() => false);
 
 // データ読み込み
-var launchTimes = localStorage.getItem("launchTimes");
+var launchTimes = localStorage.launchTimes;
 
 var launchTime = Math.floor(Date.now() / 1000);
 
 // //初回プレイの場合
-if (!localStorage.getItem("launchTimes")) {
+if (!localStorage.launchTimes) {
   localStorage.clear();
-  localStorage.setItem("launchTimes", 1);
-  localStorage.setItem("totalUsagi", 0);
-  localStorage.setItem("totalKuma", 0);
-  localStorage.setItem("totalRisu", 0);
-  localStorage.setItem("totalAja", 0);
-  localStorage.setItem("totalTori", 0);
+  localStorage.launchTimes = 1;
+  localStorage.totalUsagi = 0;
+  localStorage.totalKuma = 0;
+  localStorage.totalRisu = 0;
+  localStorage.totalAja = 0;
+  localStorage.totalTori = 0;
   localStorage.totalTairyou = 0;
   localStorage.usapriTimes = 0;
   localStorage.playTime = 0;
@@ -35,17 +35,17 @@ if (!localStorage.getItem("launchTimes")) {
 }
 
 let total = {
-  usagi: Number(localStorage.getItem("totalUsagi")),
-  kuma: Number(localStorage.getItem("totalKuma")),
-  risu: Number(localStorage.getItem("totalRisu")),
-  aja: Number(localStorage.getItem("totalAja")),
-  tori: Number(localStorage.getItem("totalTori")),
-  tairyou: Number(localStorage.getItem("totalTairyou"))
+  usagi: Number(localStorage.totalUsagi),
+  kuma: Number(localStorage.totalKuma),
+  risu: Number(localStorage.totalRisu),
+  aja: Number(localStorage.totalAja),
+  tori: Number(localStorage.totalTori),
+  tairyou: Number(localStorage.totalTairyou)
 };
 
 let playTime = Number(localStorage.playTime);
 
-if (!localStorage.getItem("launchTimes")) {
+if (!localStorage.launchTimes) {
   var launchTimes = 1;
   var infotext = "初回プレイです";
   $(document).ready(() => {
@@ -61,7 +61,7 @@ if (!localStorage.getItem("launchTimes")) {
     var infotext = "あなたはうさプリに入れられました";
   } else {
     launchTimes++;
-    localStorage.setItem("launchTimes", launchTimes);
+    localStorage.launchTimes = launchTimes;
     var infotext = `${launchTimes}回目のプレイです`;
   }
   infotext = `${infotext}<br>\n今まで累計${
@@ -89,11 +89,11 @@ if (!localStorage.getItem("launchTimes")) {
 
 // データ保存
 $(window).on("pagehide", () => {
-  total.usagi = Number(localStorage.getItem("totalUsagi"));
-  total.kuma = Number(localStorage.getItem("totalKuma"));
-  total.risu = Number(localStorage.getItem("totalRisu"));
-  total.aja = Number(localStorage.getItem("totalAja"));
-  total.tairyou = Number(localStorage.getItem("totalTairyou"));
+  total.usagi = Number(localStorage.totalUsagi);
+  total.kuma = Number(localStorage.totalKuma);
+  total.risu = Number(localStorage.totalRisu);
+  total.aja = Number(localStorage.totalAja);
+  total.tairyou = Number(localStorage.totalTairyou);
   total.usagi += animals.usagi;
   total.kuma += animals.kuma;
   total.risu += animals.risu;
@@ -101,10 +101,10 @@ $(window).on("pagehide", () => {
   total.tairyou += animals.tairyou;
   let nowTime = Math.floor(Date.now() / 1000);
   playTime = playTime + nowTime - launchTime;
-  localStorage.setItem("totalUsagi", total.usagi);
-  localStorage.setItem("totalKuma", total.kuma);
-  localStorage.setItem("totalRisu", total.risu);
-  localStorage.setItem("totalAja", total.aja);
+  localStorage.totalUsagi = total.usagi;
+  localStorage.totalKuma = total.kuma;
+  localStorage.totalRisu = total.risu;
+  localStorage.totalAja = total.aja;
   localStorage.totalTairyou = total.tairyou;
   localStorage.playTime = playTime;
 });

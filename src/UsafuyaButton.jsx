@@ -38,7 +38,7 @@ const UsafuyaButton = () => {
           usasrc = "image/aja.png";
           animals.aja++;
           localStorage.usapri = false;
-          localStorage.setItem("usapriTimes", usapriTimes);
+          localStorage.usapriTimes = usapriTimes;
           alert("あじゃが助け出してくれました");
           window.location.href = "index.html";
           break;

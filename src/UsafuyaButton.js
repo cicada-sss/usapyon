@@ -25163,8 +25163,8 @@ var UsafuyaButton = function UsafuyaButton() {
           se3.play();
           usasrc = "image/aja.png";
           aja++;
-          localStorage.setItem("usapri", "0");
-          localStorage.setItem("usapriTimes", usapriTimes);
+          localStorage.usapri = "0";
+          localStorage.usapriTimes = usapriTimes;
           alert("あじゃが助け出してくれました");
           window.location.href = "index.html";
           break;
