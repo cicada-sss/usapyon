@@ -4,7 +4,7 @@ import * as sounds from "../loadSounds.js";
 const PlayKorobushka = () => {
   const handleClick = e => {
     e.preventDefault();
-    if (localStorage.usapri == 1) {
+    if (localStorage.usapri === true) {
       sounds.se.dame.play();
       alert("ダメです");
     } else {

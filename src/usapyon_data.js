@@ -8,7 +8,7 @@ let animals = {
 };
 
 // 初期化
-if (localStorage.usapri == 1) {
+if (localStorage.usapri === true) {
   window.location.href = "usapri.html";
 }
 
@@ -31,6 +31,7 @@ if (!localStorage.getItem("launchTimes")) {
   localStorage.totalTairyou = 0;
   localStorage.usapriTimes = 0;
   localStorage.playTime = 0;
+  localStorage.usapri = false;
 }
 
 let total = {
@@ -56,12 +57,12 @@ if (!localStorage.getItem("launchTimes")) {
   });
 } else {
   // //二回目以降の場合
-  if (localStorage.usapri != 1) {
+  if (localStorage.usapri === true) {
+    var infotext = "あなたはうさプリに入れられました";
+  } else {
     launchTimes++;
     localStorage.setItem("launchTimes", launchTimes);
     var infotext = `${launchTimes}回目のプレイです`;
-  } else {
-    var infotext = "あなたはうさプリに入れられました";
   }
   infotext = `${infotext}<br>\n今まで累計${
     total.usagi

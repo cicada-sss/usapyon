@@ -412,7 +412,7 @@ function achievement() {
     animals.kuma == 0 &&
     animals.aja == 0 &&
     animals.risu == 0 &&
-    localStorage.usapri != 1 &&
+    localStorage.usapri === false &&
     typeof localStorage.achievement9_4 === "undefined"
   ) {
     infotext = `<span class="notice">うさぎのみで1000匹を達成した🐰実績：うさぴょんプレイヤーの鑑解除</span><br>\n${infotext}`;

@@ -1,4 +1,4 @@
-if (localStorage.usapri != 1) {
+if (localStorage.usapri === false) {
   alert("入ってはいけません");
   window.location.href = "index.html";
 }
@@ -19,7 +19,7 @@ $(() => {
 // 0.1秒毎に状態チェック
 setInterval(() => {
   if (animals.usagi >= 1000) {
-    localStorage.setItem("usapri", "0");
+    localStorage.usapri = false;
     alert("釈放します。\nもう戻ってきちゃダメですよ");
     window.location.href = "index.html";
   }

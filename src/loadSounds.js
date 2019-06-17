@@ -26,7 +26,7 @@ se.alert.preload = "auto";
 se.trumpet.preload = "auto";
 se.dame.preload = "auto";
 
-if (localStorage.usapri == 1) {
+if (localStorage.usapri === true) {
   bgm.usapri.play();
 } else {
   bgm.korobushka.play();
