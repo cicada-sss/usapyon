@@ -1,6 +1,6 @@
-var gulp = require("gulp");
-var pug = require("gulp-pug");
-var sass = require("gulp-sass");
+const gulp = require("gulp");
+const pug = require("gulp-pug");
+const sass = require("gulp-sass");
 
 gulp.task("pug", () => {
   return gulp

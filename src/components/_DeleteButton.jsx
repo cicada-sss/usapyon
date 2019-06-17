@@ -6,7 +6,7 @@ const DeleteButton = () => {
     if (localStorage.usapri === true) {
       alert("消せません");
     } else {
-      var del = confirm("全てのデータを初期化します。よろしいですか？");
+      const del = confirm("全てのデータを初期化します。よろしいですか？");
       if (del) {
         localStorage.clear();
         clearInterval(setInterval(achievement, 10));

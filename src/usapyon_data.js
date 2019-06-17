@@ -15,9 +15,9 @@ if (localStorage.usapri === true) {
 $(window).keydown(() => false);
 
 // データ読み込み
-var launchTimes = localStorage.launchTimes;
+let launchTimes = localStorage.launchTimes;
 
-var launchTime = Math.floor(Date.now() / 1000);
+let launchTime = Math.floor(Date.now() / 1000);
 
 // //初回プレイの場合
 if (!localStorage.launchTimes) {
@@ -46,8 +46,8 @@ let total = {
 let playTime = Number(localStorage.playTime);
 
 if (!localStorage.launchTimes) {
-  var launchTimes = 1;
-  var infotext = "初回プレイです";
+  let launchTimes = 1;
+  let infotext = "初回プレイです";
   $(document).ready(() => {
     $("#info").html(infotext);
     setTimeout(() => {
@@ -58,11 +58,11 @@ if (!localStorage.launchTimes) {
 } else {
   // //二回目以降の場合
   if (localStorage.usapri === true) {
-    var infotext = "あなたはうさプリに入れられました";
+    let infotext = "あなたはうさプリに入れられました";
   } else {
     launchTimes++;
     localStorage.launchTimes = launchTimes;
-    var infotext = `${launchTimes}回目のプレイです`;
+    let infotext = `${launchTimes}回目のプレイです`;
   }
   infotext = `${infotext}<br>\n今まで累計${
     total.usagi

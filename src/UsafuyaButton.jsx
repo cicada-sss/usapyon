@@ -6,7 +6,7 @@ const UsafuyaButton = () => {
   const handleClick = e => {
     e.preventDefault();
     let usasrc;
-    var usaran = [
+    let usaran = [
       "image/usa (1).png",
       "image/usa (2).png",
       "image/usa (3).png",
@@ -86,7 +86,7 @@ const UsafuyaButton = () => {
     if (animals.usagi === 10000) {
       sounds.stopBGM();
       sounds.bgm.jupiter.play();
-      var b = document.createElement("img");
+      let b = document.createElement("img");
       b.setAttribute("src", "image/staff.png");
       b.setAttribute("id", "staff");
       b.setAttribute(
@@ -111,12 +111,12 @@ const UsafuyaButton = () => {
       document.body.appendChild(creimg);
       animals.tairyou++;
     } else if (animals.usagi % 500 === 0 && localStorage.usapri === false) {
-      var bleft = $("#usafuya-button").offset().left;
-      var btop = $("#usafuya-button").offset().top;
+      let bleft = $("#usafuya-button").offset().left;
+      let btop = $("#usafuya-button").offset().top;
       document
         .getElementById("usafuya-button")
         .parentNode.removeChild(document.getElementById("usafuya-button"));
-      var k = document.createElement("div");
+      let k = document.createElement("div");
       k.setAttribute("id", "usafuya-button");
       k.setAttribute(
         "style",
