@@ -1,21 +1,20 @@
 import React from "react";
+import * as sounds from "../loadSounds.js";
 
 const PlayUsapri = () => {
   const handleClick = e => {
     e.preventDefault();
     if (localStorage.usapriTimes == 0) {
-      se4.play();
+      sounds.se.dame.play();
       alert("聴いたことがないのでダメです");
     } else {
-      stopBGM();
-      bgm4.load();
-      bgm4.play();
+      sounds.stopBGM();
+      sounds.bgm.usapri.load();
+      sounds.bgm.usapri.play();
     }
-  }
+  };
 
-  return (
-    <button onClick={handleClick}>交響曲を流す</button>
-  );
-}
+  return <button onClick={handleClick}>交響曲を流す</button>;
+};
 
 export default PlayUsapri;

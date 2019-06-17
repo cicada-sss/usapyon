@@ -1,21 +1,20 @@
 import React from "react";
+import * as sounds from "../loadSounds.js";
 
 const PlayCarmen = () => {
   const handleClick = e => {
     e.preventDefault();
     if (localStorage.usapri == 1) {
-      se4.play();
+      sounds.se.dame.play();
       alert("ダメです");
     } else {
-      stopBGM();
-      bgm1.load();
-      bgm1.play();
+      sounds.stopBGM();
+      sounds.bgm.carmen.load();
+      sounds.bgm.carmen.play();
     }
-  }
+  };
 
-  return (
-    <button onClick={handleClick}>カルメン組曲を流す</button>
-  );
-}
+  return <button onClick={handleClick}>カルメン組曲を流す</button>;
+};
 
 export default PlayCarmen;

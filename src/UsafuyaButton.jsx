@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import * as sounds from "./loadSounds.js";
 
 const UsafuyaButton = () => {
   const handleClick = e => {
@@ -14,8 +15,8 @@ const UsafuyaButton = () => {
       "image/usa (6).png",
       "image/usa (7).png"
     ];
-    se1.currentTime = 0;
-    se1.play();
+    sounds.se.usafuya.currentTime = 0;
+    sounds.se.usafuya.play();
     let makeRandom = (randomNumber, ifFloor) => {
       if (ifFloor === true) {
         return Math.floor(Math.random() * randomNumber);
@@ -32,8 +33,8 @@ const UsafuyaButton = () => {
     if (localStorage.usapri === "1") {
       switch (makeRandom(2001, true)) {
         case 0:
-          se3.currentTime = 0;
-          se3.play();
+          sounds.se.trumpet.currentTime = 0;
+          sounds.se.trumpet.play();
           usasrc = "image/aja.png";
           animals.aja++;
           localStorage.setItem("usapri", "0");
@@ -59,8 +60,8 @@ const UsafuyaButton = () => {
         case 2:
           switch (makeRandom(21, true)) {
             case 0:
-              se3.currentTime = 0;
-              se3.play();
+              sounds.se.trumpet.currentTime = 0;
+              sounds.se.trumpet.play();
               usasrc = "image/aja.png";
               animals.aja++;
               break;
@@ -83,8 +84,8 @@ const UsafuyaButton = () => {
     document.body.appendChild(creimg);
     // うさぎが10000匹を超えた場合ジュピターを流してスタッフロールを表示
     if (animals.usagi === 10000) {
-      stopBGM();
-      bgm2.play();
+      sounds.stopBGM();
+      sounds.bgm.jupiter.play();
       var b = document.createElement("img");
       b.setAttribute("src", "image/staff.png");
       b.setAttribute("id", "staff");
@@ -101,9 +102,9 @@ const UsafuyaButton = () => {
       );
       // うさぎが1000匹を超える毎に大漁を表示しカルメン組曲を再生
     } else if (animals.usagi % 1000 === 0) {
-      stopBGM();
-      bgm1.load();
-      bgm1.play();
+      sounds.stopBGM();
+      sounds.bgm.carmen.load();
+      sounds.bgm.carmen.play();
       creimg = document.createElement("img");
       creimg.setAttribute("src", "image/tairyou.png");
       creimg.setAttribute("style", "position:fixed; bottom:10px; right:10px;");

@@ -573,7 +573,7 @@ function achievement() {
 function achshow() {
   $("#info").html(infotext);
   $("#info").show();
-  se2.play();
+  se.alert.play();
   setTimeout(function() {
     $("#info").fadeOut("slow");
     infotext = "";
