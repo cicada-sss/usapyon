@@ -3,24 +3,24 @@ import ReactDOM from "react-dom";
 
 const NowAnimals = () => {
   return (
-    <div style={{fontSize: "500%"}}>
-      {usagi}匹のうさぎがいます
-      {kuma >= 1 && (
+    <div style={{ fontSize: "500%" }}>
+      {animals.usagi}匹のうさぎがいます
+      {animals.kuma >= 1 && (
         <>
           <br />
-          {kuma}匹のくまがいます
+          {animals.kuma}匹のくまがいます
         </>
       )}
-      {risu >= 1 && (
+      {animals.risu >= 1 && (
         <>
           <br />
-          {risu}匹のりすがいます
+          {animals.risu}匹のりすがいます
         </>
       )}
-      {aja >= 1 && (
+      {animals.aja >= 1 && (
         <>
           <br />
-          {aja}匹のあじゃがいます
+          {animals.aja}匹のあじゃがいます
         </>
       )}
     </div>

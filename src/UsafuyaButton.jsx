@@ -5,6 +5,15 @@ const UsafuyaButton = () => {
   const handleClick = e => {
     e.preventDefault();
     let usasrc;
+    var usaran = [
+      "image/usa (1).png",
+      "image/usa (2).png",
+      "image/usa (3).png",
+      "image/usa (4).png",
+      "image/usa (5).png",
+      "image/usa (6).png",
+      "image/usa (7).png"
+    ];
     se1.currentTime = 0;
     se1.play();
     let makeRandom = (randomNumber, ifFloor) => {
@@ -15,7 +24,7 @@ const UsafuyaButton = () => {
       }
     };
     let usagifuya = () => {
-      usagi++;
+      animals.usagi++;
       return usaran[makeRandom(usaran.length, true)];
     };
     let sW = makeRandom(window.innerWidth + 60, true) - 30;
@@ -23,10 +32,10 @@ const UsafuyaButton = () => {
     if (localStorage.usapri === "1") {
       switch (makeRandom(2001, true)) {
         case 0:
-        se3.currentTime = 0;
-        se3.play();
+          se3.currentTime = 0;
+          se3.play();
           usasrc = "image/aja.png";
-          aja++;
+          animals.aja++;
           localStorage.setItem("usapri", "0");
           localStorage.setItem("usapriTimes", usapriTimes);
           alert("あじゃが助け出してくれました");
@@ -34,18 +43,18 @@ const UsafuyaButton = () => {
           break;
         default:
           usasrc = usaran[Math.floor(Math.random() * usaran.length)];
-          usagi++;
+          animals.usagi++;
           break;
       }
     } else {
       switch (makeRandom(101, true)) {
         case 0:
           usasrc = "image/risu.png";
-          risu++;
+          animals.risu++;
           break;
         case 1:
           usasrc = "image/kuma.png";
-          kuma++;
+          animals.kuma++;
           break;
         case 2:
           switch (makeRandom(21, true)) {
@@ -53,7 +62,7 @@ const UsafuyaButton = () => {
               se3.currentTime = 0;
               se3.play();
               usasrc = "image/aja.png";
-              aja++;
+              animals.aja++;
               break;
             default:
               usasrc = usagifuya();
@@ -65,7 +74,7 @@ const UsafuyaButton = () => {
           break;
       }
     }
-    creimg = document.createElement("img");
+    let creimg = document.createElement("img");
     creimg.setAttribute("src", usasrc);
     creimg.setAttribute(
       "style",
@@ -73,7 +82,7 @@ const UsafuyaButton = () => {
     );
     document.body.appendChild(creimg);
     // うさぎが10000匹を超えた場合ジュピターを流してスタッフロールを表示
-    if (usagi === 10000) {
+    if (animals.usagi === 10000) {
       stopBGM();
       bgm2.play();
       var b = document.createElement("img");
@@ -90,20 +99,17 @@ const UsafuyaButton = () => {
         },
         20000
       );
-      no++;
-      n++;
       // うさぎが1000匹を超える毎に大漁を表示しカルメン組曲を再生
-    } else if (usagi % 1000 === 0) {
+    } else if (animals.usagi % 1000 === 0) {
       stopBGM();
       bgm1.load();
       bgm1.play();
-      let creimg = document.createElement("img");
+      creimg = document.createElement("img");
       creimg.setAttribute("src", "image/tairyou.png");
       creimg.setAttribute("style", "position:fixed; bottom:10px; right:10px;");
       document.body.appendChild(creimg);
-      n++;
-      tairyou++;
-    } else if (usagi % 500 === 0 && localStorage.usapri !== "1") {
+      animals.tairyou++;
+    } else if (animals.usagi % 500 === 0 && localStorage.usapri !== "1") {
       var bleft = $("#usafuya-button").offset().left;
       var btop = $("#usafuya-button").offset().top;
       document
@@ -116,7 +122,6 @@ const UsafuyaButton = () => {
         "position:fixed; top:" + btop + "px; left:" + bleft + "px;"
       );
       document.body.appendChild(k);
-      n2++;
       ReactDOM.render(
         <UsafuyaButton />,
         document.getElementById("usafuya-button")
