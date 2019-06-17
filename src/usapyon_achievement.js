@@ -1,6 +1,6 @@
 // 0.1秒毎に状態チェック
 function achievement() {
-  const nowTime = Math.floor(Date.now() / 1000);
+  let nowTime = Math.floor(Date.now() / 1000);
   let totalAchievement = 0;
   typeof localStorage.achievement1_1 !== "undefined" && totalAchievement++;
   typeof localStorage.achievement1_2 !== "undefined" && totalAchievement++;
