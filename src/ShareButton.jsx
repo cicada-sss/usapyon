@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import * as sounds from "./loadSounds.js";
 
 const ShareButton = () => {
   const handleClick = e => {
     e.preventDefault();
-    se4.play();
+    sounds.se[3].play();
     alert("できません");
     total.tori++;
     localStorage.setItem("totalTori", total.tori);

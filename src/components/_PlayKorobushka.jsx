@@ -1,21 +1,20 @@
 import React from "react";
+import * as sounds from "../loadSounds.js";
 
 const PlayKorobushka = () => {
   const handleClick = e => {
     e.preventDefault();
     if (localStorage.usapri == 1) {
-      se4.play();
+      sounds.se[3].play();
       alert("ダメです");
     } else {
-      stopBGM();
-      bgm3.load();
-      bgm3.play();
+      sounds.stopBGM();
+      sounds.bgm[2].load();
+      sounds.bgm[2].play();
     }
-  }
+  };
 
-  return (
-    <button onClick={handleClick}>コロブチカを流す</button>
-  );
-}
+  return <button onClick={handleClick}>コロブチカを流す</button>;
+};
 
 export default PlayKorobushka;
