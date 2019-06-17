@@ -11,7 +11,7 @@ const ShareButton = () => {
     localStorage.totalTori = total.tori;
     animals.tori++;
     if (animals.tori >= 5) {
-      var usapriTimes = Number(localStorage.usapriTimes);
+      let usapriTimes = Number(localStorage.usapriTimes);
       usapriTimes++;
       localStorage.usapriTimes = usapriTimes;
       alert("鳥になりすぎです");

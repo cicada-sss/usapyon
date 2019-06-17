@@ -6,9 +6,9 @@ if (localStorage.usapri === false) {
 // 初期化
 se.usafuya.defaultPlaybackRate = 0.3;
 if (!localStorage.usapriTimes) {
-  var usapriTimes = 0;
+  let usapriTimes = 0;
 } else {
-  var usapriTimes = Number(localStorage.usapriTimes);
+  let usapriTimes = Number(localStorage.usapriTimes);
 }
 
 $(() => {
