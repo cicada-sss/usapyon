@@ -23,46 +23,42 @@ const Status = () => {
         )}
         <li>
           1プレイでの平均うさぎ増やし数 :{" "}
-          {Math.round(((total.usagi + animals.usagi) / launchTimes) * 10) / 10}
+          {Math.round((total.usagi + animals.usagi) / launchTimes * 10) / 10}
           匹
         </li>
         <li>
           1プレイでの平均くま発見数 :{" "}
-          {Math.round(((total.kuma + animals.kuma) / launchTimes) * 10) / 10}匹
+          {Math.round((total.kuma + animals.kuma) / launchTimes * 10) / 10}匹
         </li>
         <li>
           1プレイでの平均りす発見数 :{" "}
-          {Math.round(((total.risu + animals.risu) / launchTimes) * 10) / 10}匹
+          {Math.round((total.risu + animals.risu) / launchTimes * 10) / 10}匹
         </li>
         <li>
           1プレイでの平均あじゃ発見数 :{" "}
-          {Math.round(((total.aja + animals.aja) / launchTimes) * 10) / 10}匹
+          {Math.round((total.aja + animals.aja) / launchTimes * 10) / 10}匹
         </li>
         <li>
           スコア :{" "}
-          {Math.round(
-            (((Math.round(((total.usagi + animals.usagi) / launchTimes) * 10) /
+          {Math.round((Math.round((total.usagi + animals.usagi) / launchTimes * 10) /
               10 +
-              (Math.round(((total.kuma + animals.kuma) / launchTimes) * 10) /
-                10) *
+              Math.round((total.kuma + animals.kuma) / launchTimes * 10) /
+                10 *
                 100 +
-              (Math.round(((total.risu + animals.risu) / launchTimes) * 10) /
-                10) *
+              Math.round((total.risu + animals.risu) / launchTimes * 10) /
+                10 *
                 100 +
-              (Math.round(((total.aja + animals.aja) / launchTimes) * 10) / 10) *
+              Math.round((total.aja + animals.aja) / launchTimes * 10) / 10 *
                 2000 +
               (total.tori + animals.tori) * 10 +
               Number(localStorage.usapriTimes) * 1000 +
               (total.tairyou + animals.tairyou) *
                 100 *
                 (Number(localStorage.totalAchievement) + 10)) /
-              10) *
-              (Math.round(
-                (playTime + Math.floor(Date.now() / 1000) - launchTime) / 60
-              ) +
-                10)) /
-              10
-          )}
+              10 *
+              (Math.round((playTime + Math.floor(Date.now() / 1000) - launchTime) / 60) +
+                10) /
+              10)}
           点
         </li>
       </ul>

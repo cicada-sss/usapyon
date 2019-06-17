@@ -6,21 +6,19 @@ import PlayKorobushka from "./_PlayKorobushka.jsx";
 import PlayCarmen from "./_PlayCarmen.jsx";
 import PlayUsapri from "./_PlayUsapri.jsx";
 
-const SettingSounds = () => {
-  return (
-    <section>
-      <h1>音設定</h1>
-      <MuteSE />
-      <br />
-      <MuteBGM />
-      <br />
-      <PlayKorobushka />
-      <br />
-      <PlayCarmen />
-      <br />
-      <PlayUsapri />
-    </section>
-  );
-};
+const SettingSounds = () => (
+  <section>
+    <h1>音設定</h1>
+    <MuteSE />
+    <br />
+    <MuteBGM />
+    <br />
+    <PlayKorobushka />
+    <br />
+    <PlayCarmen />
+    <br />
+    <PlayUsapri />
+  </section>
+);
 
 export default SettingSounds;
