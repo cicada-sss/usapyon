@@ -4,10 +4,10 @@ import * as sounds from "../loadSounds.js";
 const MuteSE = () => {
   const handleClick = e => {
     e.preventDefault();
-    sounds.se[0].volume = 0;
-    sounds.se[1].volume = 0;
-    sounds.se[2].volume = 0;
-    sounds.se[3].volume = 0;
+    sounds.se.usafuya.volume = 0;
+    sounds.se.alert.volume = 0;
+    sounds.se.trumpet.volume = 0;
+    sounds.se.dame.volume = 0;
   };
 
   return <button onClick={handleClick}>SEを消す（今プレイ中のみ）</button>;

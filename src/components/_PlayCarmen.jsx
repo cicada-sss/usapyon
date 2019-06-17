@@ -5,12 +5,12 @@ const PlayCarmen = () => {
   const handleClick = e => {
     e.preventDefault();
     if (localStorage.usapri == 1) {
-      sounds.se[3].play();
+      sounds.se.dame.play();
       alert("ダメです");
     } else {
       sounds.stopBGM();
-      sounds.bgm[0].load();
-      sounds.bgm[0].play();
+      sounds.bgm.carmen.load();
+      sounds.bgm.carmen.play();
     }
   };
 

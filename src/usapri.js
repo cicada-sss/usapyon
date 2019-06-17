@@ -4,7 +4,7 @@ if (localStorage.usapri != 1) {
 }
 
 //初期化
-se[0].defaultPlaybackRate = 0.3;
+se.usafuya.defaultPlaybackRate = 0.3;
 if (!localStorage.getItem("usapriTimes")) {
   var usapriTimes = 0;
 } else {

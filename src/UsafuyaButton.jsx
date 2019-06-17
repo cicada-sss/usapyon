@@ -15,8 +15,8 @@ const UsafuyaButton = () => {
       "image/usa (6).png",
       "image/usa (7).png"
     ];
-    sounds.se[0].currentTime = 0;
-    sounds.se[0].play();
+    sounds.se.usafuya.currentTime = 0;
+    sounds.se.usafuya.play();
     let makeRandom = (randomNumber, ifFloor) => {
       if (ifFloor === true) {
         return Math.floor(Math.random() * randomNumber);
@@ -33,8 +33,8 @@ const UsafuyaButton = () => {
     if (localStorage.usapri === "1") {
       switch (makeRandom(2001, true)) {
         case 0:
-          sounds.se[2].currentTime = 0;
-          sounds.se[2].play();
+          sounds.se.trumpet.currentTime = 0;
+          sounds.se.trumpet.play();
           usasrc = "image/aja.png";
           animals.aja++;
           localStorage.setItem("usapri", "0");
@@ -60,8 +60,8 @@ const UsafuyaButton = () => {
         case 2:
           switch (makeRandom(21, true)) {
             case 0:
-              sounds.se[2].currentTime = 0;
-              sounds.se[2].play();
+              sounds.se.trumpet.currentTime = 0;
+              sounds.se.trumpet.play();
               usasrc = "image/aja.png";
               animals.aja++;
               break;
@@ -85,7 +85,7 @@ const UsafuyaButton = () => {
     // うさぎが10000匹を超えた場合ジュピターを流してスタッフロールを表示
     if (animals.usagi === 10000) {
       sounds.stopBGM();
-      sounds.bgm[1].play();
+      sounds.bgm.jupiter.play();
       var b = document.createElement("img");
       b.setAttribute("src", "image/staff.png");
       b.setAttribute("id", "staff");
@@ -103,8 +103,8 @@ const UsafuyaButton = () => {
       // うさぎが1000匹を超える毎に大漁を表示しカルメン組曲を再生
     } else if (animals.usagi % 1000 === 0) {
       sounds.stopBGM();
-      sounds.bgm[0].load();
-      sounds.bgm[0].play();
+      sounds.bgm.carmen.load();
+      sounds.bgm.carmen.play();
       creimg = document.createElement("img");
       creimg.setAttribute("src", "image/tairyou.png");
       creimg.setAttribute("style", "position:fixed; bottom:10px; right:10px;");

@@ -5,7 +5,7 @@ import * as sounds from "./loadSounds.js";
 const ShareButton = () => {
   const handleClick = e => {
     e.preventDefault();
-    sounds.se[3].play();
+    sounds.se.dame.play();
     alert("できません");
     total.tori++;
     localStorage.setItem("totalTori", total.tori);

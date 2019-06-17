@@ -5,12 +5,12 @@ const PlayKorobushka = () => {
   const handleClick = e => {
     e.preventDefault();
     if (localStorage.usapri == 1) {
-      sounds.se[3].play();
+      sounds.se.dame.play();
       alert("ダメです");
     } else {
       sounds.stopBGM();
-      sounds.bgm[2].load();
-      sounds.bgm[2].play();
+      sounds.bgm.korobushka.load();
+      sounds.bgm.korobushka.play();
     }
   };
 

@@ -5,12 +5,12 @@ const PlayUsapri = () => {
   const handleClick = e => {
     e.preventDefault();
     if (localStorage.usapriTimes == 0) {
-      sounds.se[3].play();
+      sounds.se.dame.play();
       alert("聴いたことがないのでダメです");
     } else {
       sounds.stopBGM();
-      sounds.bgm[3].load();
-      sounds.bgm[3].play();
+      sounds.bgm.usapri.load();
+      sounds.bgm.usapri.play();
     }
   };
 
