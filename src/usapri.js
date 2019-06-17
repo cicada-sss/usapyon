@@ -5,10 +5,10 @@ if (localStorage.usapri === false) {
 
 // 初期化
 se.usafuya.defaultPlaybackRate = 0.3;
-if (!localStorage.getItem("usapriTimes")) {
+if (!localStorage.usapriTimes) {
   var usapriTimes = 0;
 } else {
-  var usapriTimes = Number(localStorage.getItem("usapriTimes"));
+  var usapriTimes = Number(localStorage.usapriTimes);
 }
 
 $(() => {

@@ -8,12 +8,12 @@ const ShareButton = () => {
     sounds.se.dame.play();
     alert("できません");
     total.tori++;
-    localStorage.setItem("totalTori", total.tori);
+    localStorage.totalTori = total.tori;
     animals.tori++;
     if (animals.tori >= 5) {
-      var usapriTimes = Number(localStorage.getItem("usapriTimes"));
+      var usapriTimes = Number(localStorage.usapriTimes);
       usapriTimes++;
-      localStorage.setItem("usapriTimes", usapriTimes);
+      localStorage.usapriTimes = usapriTimes;
       alert("鳥になりすぎです");
       window.location.href = "usapri.html";
       localStorage.usapri = true;
