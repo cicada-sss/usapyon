@@ -16,7 +16,7 @@ const ShareButton = () => {
       localStorage.setItem("usapriTimes", usapriTimes);
       alert("鳥になりすぎです");
       window.location.href = "usapri.html";
-      localStorage.setItem("usapri", 1);
+      localStorage.usapri = true;
     }
   };
 

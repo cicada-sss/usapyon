@@ -30,14 +30,14 @@ const UsafuyaButton = () => {
     };
     let sW = makeRandom(window.innerWidth + 60, true) - 30;
     let sH = makeRandom(window.innerHeight + 100, true) - 50;
-    if (localStorage.usapri === "1") {
+    if (localStorage.usapri === true) {
       switch (makeRandom(2001, true)) {
         case 0:
           sounds.se.trumpet.currentTime = 0;
           sounds.se.trumpet.play();
           usasrc = "image/aja.png";
           animals.aja++;
-          localStorage.setItem("usapri", "0");
+          localStorage.usapri = false;
           localStorage.setItem("usapriTimes", usapriTimes);
           alert("あじゃが助け出してくれました");
           window.location.href = "index.html";
@@ -110,7 +110,7 @@ const UsafuyaButton = () => {
       creimg.setAttribute("style", "position:fixed; bottom:10px; right:10px;");
       document.body.appendChild(creimg);
       animals.tairyou++;
-    } else if (animals.usagi % 500 === 0 && localStorage.usapri !== "1") {
+    } else if (animals.usagi % 500 === 0 && localStorage.usapri === false) {
       var bleft = $("#usafuya-button").offset().left;
       var btop = $("#usafuya-button").offset().top;
       document

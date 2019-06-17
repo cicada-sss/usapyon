@@ -3,7 +3,7 @@ import React from "react";
 const DeleteButton = () => {
   const handleClick = e => {
     e.preventDefault();
-    if (localStorage.usapri == 1) {
+    if (localStorage.usapri === true) {
       alert("消せません");
     } else {
       var del = confirm("全てのデータを初期化します。よろしいですか？");
