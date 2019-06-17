@@ -18,6 +18,11 @@ var usaran = [
   "image/usa (7).png"
 ];
 
+//初期化
+if (localStorage.usapri == 1) {
+  window.location.href = "usapri.html";
+}
+
 $(window).keydown(function() {
   return false;
 });

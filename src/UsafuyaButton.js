@@ -1,4 +1,96 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+'use strict';
+/* eslint-disable no-unused-vars */
+var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+var propIsEnumerable = Object.prototype.propertyIsEnumerable;
+
+function toObject(val) {
+	if (val === null || val === undefined) {
+		throw new TypeError('Object.assign cannot be called with null or undefined');
+	}
+
+	return Object(val);
+}
+
+function shouldUseNative() {
+	try {
+		if (!Object.assign) {
+			return false;
+		}
+
+		// Detect buggy property enumeration order in older V8 versions.
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
+		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
+		test1[5] = 'de';
+		if (Object.getOwnPropertyNames(test1)[0] === '5') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test2 = {};
+		for (var i = 0; i < 10; i++) {
+			test2['_' + String.fromCharCode(i)] = i;
+		}
+		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
+			return test2[n];
+		});
+		if (order2.join('') !== '0123456789') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test3 = {};
+		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
+			test3[letter] = letter;
+		});
+		if (Object.keys(Object.assign({}, test3)).join('') !==
+				'abcdefghijklmnopqrst') {
+			return false;
+		}
+
+		return true;
+	} catch (err) {
+		// We don't expect any of the above to throw, but better to be safe.
+		return false;
+	}
+}
+
+module.exports = shouldUseNative() ? Object.assign : function (target, source) {
+	var from;
+	var to = toObject(target);
+	var symbols;
+
+	for (var s = 1; s < arguments.length; s++) {
+		from = Object(arguments[s]);
+
+		for (var key in from) {
+			if (hasOwnProperty.call(from, key)) {
+				to[key] = from[key];
+			}
+		}
+
+		if (getOwnPropertySymbols) {
+			symbols = getOwnPropertySymbols(from);
+			for (var i = 0; i < symbols.length; i++) {
+				if (propIsEnumerable.call(from, symbols[i])) {
+					to[symbols[i]] = from[symbols[i]];
+				}
+			}
+		}
+	}
+
+	return to;
+};
+
+},{}],2:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -184,98 +276,6 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],2:[function(require,module,exports){
-/*
-object-assign
-(c) Sindre Sorhus
-@license MIT
-*/
-
-'use strict';
-/* eslint-disable no-unused-vars */
-var getOwnPropertySymbols = Object.getOwnPropertySymbols;
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-var propIsEnumerable = Object.prototype.propertyIsEnumerable;
-
-function toObject(val) {
-	if (val === null || val === undefined) {
-		throw new TypeError('Object.assign cannot be called with null or undefined');
-	}
-
-	return Object(val);
-}
-
-function shouldUseNative() {
-	try {
-		if (!Object.assign) {
-			return false;
-		}
-
-		// Detect buggy property enumeration order in older V8 versions.
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
-		test1[5] = 'de';
-		if (Object.getOwnPropertyNames(test1)[0] === '5') {
-			return false;
-		}
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test2 = {};
-		for (var i = 0; i < 10; i++) {
-			test2['_' + String.fromCharCode(i)] = i;
-		}
-		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
-			return test2[n];
-		});
-		if (order2.join('') !== '0123456789') {
-			return false;
-		}
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test3 = {};
-		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
-			test3[letter] = letter;
-		});
-		if (Object.keys(Object.assign({}, test3)).join('') !==
-				'abcdefghijklmnopqrst') {
-			return false;
-		}
-
-		return true;
-	} catch (err) {
-		// We don't expect any of the above to throw, but better to be safe.
-		return false;
-	}
-}
-
-module.exports = shouldUseNative() ? Object.assign : function (target, source) {
-	var from;
-	var to = toObject(target);
-	var symbols;
-
-	for (var s = 1; s < arguments.length; s++) {
-		from = Object(arguments[s]);
-
-		for (var key in from) {
-			if (hasOwnProperty.call(from, key)) {
-				to[key] = from[key];
-			}
-		}
-
-		if (getOwnPropertySymbols) {
-			symbols = getOwnPropertySymbols(from);
-			for (var i = 0; i < symbols.length; i++) {
-				if (propIsEnumerable.call(from, symbols[i])) {
-					to[symbols[i]] = from[symbols[i]];
-				}
-			}
-		}
-	}
-
-	return to;
-};
-
 },{}],3:[function(require,module,exports){
 (function (process){
 /**
@@ -382,7 +382,7 @@ checkPropTypes.resetWarningCache = function() {
 module.exports = checkPropTypes;
 
 }).call(this,require('_process'))
-},{"./lib/ReactPropTypesSecret":4,"_process":1}],4:[function(require,module,exports){
+},{"./lib/ReactPropTypesSecret":4,"_process":2}],4:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -21678,7 +21678,7 @@ module.exports = reactDom;
 }
 
 }).call(this,require('_process'))
-},{"_process":1,"object-assign":2,"prop-types/checkPropTypes":3,"react":10,"scheduler":15,"scheduler/tracing":16}],6:[function(require,module,exports){
+},{"_process":2,"object-assign":1,"prop-types/checkPropTypes":3,"react":10,"scheduler":15,"scheduler/tracing":16}],6:[function(require,module,exports){
 /** @license React v16.8.6
  * react-dom.production.min.js
  *
@@ -21949,7 +21949,7 @@ x("38"):void 0;return Si(a,b,c,!1,d)},unmountComponentAtNode:function(a){Qi(a)?v
 X;X=!0;try{ki(a)}finally{(X=b)||W||Yh(1073741823,!1)}},__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED:{Events:[Ia,Ja,Ka,Ba.injectEventPluginsByName,pa,Qa,function(a){ya(a,Pa)},Eb,Fb,Dd,Da]}};function Ui(a,b){Qi(a)?void 0:x("299","unstable_createRoot");return new Pi(a,!0,null!=b&&!0===b.hydrate)}
 (function(a){var b=a.findFiberByHostInstance;return Te(n({},a,{overrideProps:null,currentDispatcherRef:Tb.ReactCurrentDispatcher,findHostInstanceByFiber:function(a){a=hd(a);return null===a?null:a.stateNode},findFiberByHostInstance:function(a){return b?b(a):null}}))})({findFiberByHostInstance:Ha,bundleType:0,version:"16.8.6",rendererPackageName:"react-dom"});var Wi={default:Vi},Xi=Wi&&Vi||Wi;module.exports=Xi.default||Xi;
 
-},{"object-assign":2,"react":10,"scheduler":15}],7:[function(require,module,exports){
+},{"object-assign":1,"react":10,"scheduler":15}],7:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -21991,7 +21991,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./cjs/react-dom.development.js":5,"./cjs/react-dom.production.min.js":6,"_process":1}],8:[function(require,module,exports){
+},{"./cjs/react-dom.development.js":5,"./cjs/react-dom.production.min.js":6,"_process":2}],8:[function(require,module,exports){
 (function (process){
 /** @license React v16.8.6
  * react.development.js
@@ -23896,7 +23896,7 @@ module.exports = react;
 }
 
 }).call(this,require('_process'))
-},{"_process":1,"object-assign":2,"prop-types/checkPropTypes":3}],9:[function(require,module,exports){
+},{"_process":2,"object-assign":1,"prop-types/checkPropTypes":3}],9:[function(require,module,exports){
 /** @license React v16.8.6
  * react.production.min.js
  *
@@ -23923,7 +23923,7 @@ b,d){return W().useImperativeHandle(a,b,d)},useDebugValue:function(){},useLayout
 b){void 0!==b.ref&&(h=b.ref,f=J.current);void 0!==b.key&&(g=""+b.key);var l=void 0;a.type&&a.type.defaultProps&&(l=a.type.defaultProps);for(c in b)K.call(b,c)&&!L.hasOwnProperty(c)&&(e[c]=void 0===b[c]&&void 0!==l?l[c]:b[c])}c=arguments.length-2;if(1===c)e.children=d;else if(1<c){l=Array(c);for(var m=0;m<c;m++)l[m]=arguments[m+2];e.children=l}return{$$typeof:p,type:a.type,key:g,ref:h,props:e,_owner:f}},createFactory:function(a){var b=M.bind(null,a);b.type=a;return b},isValidElement:N,version:"16.8.6",
 unstable_ConcurrentMode:x,unstable_Profiler:u,__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED:{ReactCurrentDispatcher:I,ReactCurrentOwner:J,assign:k}},Y={default:X},Z=Y&&X||Y;module.exports=Z.default||Z;
 
-},{"object-assign":2}],10:[function(require,module,exports){
+},{"object-assign":1}],10:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -23934,7 +23934,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./cjs/react.development.js":8,"./cjs/react.production.min.js":9,"_process":1}],11:[function(require,module,exports){
+},{"./cjs/react.development.js":8,"./cjs/react.production.min.js":9,"_process":2}],11:[function(require,module,exports){
 (function (process){
 /** @license React v0.13.6
  * scheduler-tracing.development.js
@@ -24361,7 +24361,7 @@ exports.unstable_unsubscribe = unstable_unsubscribe;
 }
 
 }).call(this,require('_process'))
-},{"_process":1}],12:[function(require,module,exports){
+},{"_process":2}],12:[function(require,module,exports){
 /** @license React v0.13.6
  * scheduler-tracing.production.min.js
  *
@@ -25076,7 +25076,7 @@ exports.unstable_getFirstCallbackNode = unstable_getFirstCallbackNode;
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":1}],14:[function(require,module,exports){
+},{"_process":2}],14:[function(require,module,exports){
 (function (global){
 /** @license React v0.13.6
  * scheduler.production.min.js
@@ -25112,7 +25112,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./cjs/scheduler.development.js":13,"./cjs/scheduler.production.min.js":14,"_process":1}],16:[function(require,module,exports){
+},{"./cjs/scheduler.development.js":13,"./cjs/scheduler.production.min.js":14,"_process":2}],16:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -25123,7 +25123,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./cjs/scheduler-tracing.development.js":11,"./cjs/scheduler-tracing.production.min.js":12,"_process":1}],17:[function(require,module,exports){
+},{"./cjs/scheduler-tracing.development.js":11,"./cjs/scheduler-tracing.production.min.js":12,"_process":2}],17:[function(require,module,exports){
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -25135,6 +25135,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var UsafuyaButton = function UsafuyaButton() {
   var handleClick = function handleClick(e) {
     e.preventDefault();
+    var usaran = ["image/usa (1).png", "image/usa (2).png", "image/usa (3).png", "image/usa (4).png", "image/usa (5).png", "image/usa (6).png", "image/usa (7).png"];
     var usasrc;
     se1.currentTime = 0;
     se1.play();
@@ -25207,10 +25208,50 @@ var UsafuyaButton = function UsafuyaButton() {
       }
     }
 
-    creimg = document.createElement("img");
+    var creimg = document.createElement("img");
     creimg.setAttribute("src", usasrc);
     creimg.setAttribute("style", "position:fixed; top:" + sH + "px; left:" + sW + "px;");
-    document.body.appendChild(creimg);
+    document.body.appendChild(creimg); // うさぎが10000匹を超えた場合ジュピターを流してスタッフロールを表示
+
+    if (usagi === 10) {
+      stopBGM();
+      bgm2.play();
+      var b = document.createElement("img");
+      b.setAttribute("src", "image/staff.png");
+      b.setAttribute("id", "staff");
+      b.setAttribute("style", "text-align:center; position:fixed; bottom:0px; left:200px;z-index:9999;opacity:0.9; max-width:50%;margin:0 auto;");
+      document.body.appendChild(b);
+      $("#staff").animate({
+        top: "50px"
+      }, 20000);
+      no++;
+      n++; // うさぎが1000匹を超える毎に大漁を表示しカルメン組曲を再生
+    } else if (usagi % 1 === 0) {
+      stopBGM();
+      bgm1.load();
+      bgm1.play();
+
+      var _creimg = document.createElement("img");
+
+      _creimg.setAttribute("src", "image/tairyou.png");
+
+      _creimg.setAttribute("style", "position:fixed; bottom:10px; right:10px;");
+
+      document.body.appendChild(_creimg);
+      n++;
+      tairyou++;
+    } else if (usagi % 5 === 0 && localStorage.usapri !== "1") {
+      var bleft = $("#usafuya-button").offset().left;
+      var btop = $("#usafuya-button").offset().top;
+      document.getElementById("usafuya-button").parentNode.removeChild(document.getElementById("usafuya-button"));
+      var k = document.createElement("div");
+      k.setAttribute("id", "usafuya-button");
+      k.setAttribute("style", "position:fixed; top:" + btop + "px; left:" + bleft + "px;");
+      document.body.appendChild(k);
+      n2++;
+
+      _reactDom["default"].render(_react["default"].createElement(UsafuyaButton, null), document.getElementById("usafuya-button"));
+    }
   };
 
   return _react["default"].createElement("button", {
@@ -25222,20 +25263,5 @@ var UsafuyaButton = function UsafuyaButton() {
 };
 
 _reactDom["default"].render(_react["default"].createElement(UsafuyaButton, null), document.getElementById("usafuya-button"));
-
-setInterval(function () {
-  if (usagi >= 500 * n2 && localStorage.usapri !== "1") {
-    var bleft = $("#usafuya-button").offset().left;
-    var btop = $("#usafuya-button").offset().top;
-    document.getElementById("usafuya-button").parentNode.removeChild(document.getElementById("usafuya-button"));
-    var k = document.createElement("div");
-    k.setAttribute("id", "usafuya-button");
-    k.setAttribute("style", "position:fixed; top:" + btop + "px; left:" + bleft + "px;");
-    document.body.appendChild(k);
-    n2++;
-
-    _reactDom["default"].render(_react["default"].createElement(UsafuyaButton, null), document.getElementById("usafuya-button"));
-  }
-}, 100);
 
 },{"react":10,"react-dom":7}]},{},[17]);

@@ -72,6 +72,56 @@ const UsafuyaButton = () => {
       "position:fixed; top:" + sH + "px; left:" + sW + "px;"
     );
     document.body.appendChild(creimg);
+    // うさぎが10000匹を超えた場合ジュピターを流してスタッフロールを表示
+    if (usagi === 10000) {
+      stopBGM();
+      bgm2.play();
+      var b = document.createElement("img");
+      b.setAttribute("src", "image/staff.png");
+      b.setAttribute("id", "staff");
+      b.setAttribute(
+        "style",
+        "text-align:center; position:fixed; bottom:0px; left:200px;z-index:9999;opacity:0.9; max-width:50%;margin:0 auto;"
+      );
+      document.body.appendChild(b);
+      $("#staff").animate(
+        {
+          top: "50px"
+        },
+        20000
+      );
+      no++;
+      n++;
+      // うさぎが1000匹を超える毎に大漁を表示しカルメン組曲を再生
+    } else if (usagi % 1000 === 0) {
+      stopBGM();
+      bgm1.load();
+      bgm1.play();
+      let creimg = document.createElement("img");
+      creimg.setAttribute("src", "image/tairyou.png");
+      creimg.setAttribute("style", "position:fixed; bottom:10px; right:10px;");
+      document.body.appendChild(creimg);
+      n++;
+      tairyou++;
+    } else if (usagi % 500 === 0 && localStorage.usapri !== "1") {
+      var bleft = $("#usafuya-button").offset().left;
+      var btop = $("#usafuya-button").offset().top;
+      document
+        .getElementById("usafuya-button")
+        .parentNode.removeChild(document.getElementById("usafuya-button"));
+      var k = document.createElement("div");
+      k.setAttribute("id", "usafuya-button");
+      k.setAttribute(
+        "style",
+        "position:fixed; top:" + btop + "px; left:" + bleft + "px;"
+      );
+      document.body.appendChild(k);
+      n2++;
+      ReactDOM.render(
+        <UsafuyaButton />,
+        document.getElementById("usafuya-button")
+      );
+    }
   };
 
   return (
@@ -82,25 +132,3 @@ const UsafuyaButton = () => {
 };
 
 ReactDOM.render(<UsafuyaButton />, document.getElementById("usafuya-button"));
-
-setInterval(function() {
-  if (usagi >= 500 * n2 && localStorage.usapri !== "1") {
-    var bleft = $("#usafuya-button").offset().left;
-    var btop = $("#usafuya-button").offset().top;
-    document
-      .getElementById("usafuya-button")
-      .parentNode.removeChild(document.getElementById("usafuya-button"));
-    var k = document.createElement("div");
-    k.setAttribute("id", "usafuya-button");
-    k.setAttribute(
-      "style",
-      "position:fixed; top:" + btop + "px; left:" + bleft + "px;"
-    );
-    document.body.appendChild(k);
-    n2++;
-    ReactDOM.render(
-      <UsafuyaButton />,
-      document.getElementById("usafuya-button")
-    );
-  }
-}, 100);
