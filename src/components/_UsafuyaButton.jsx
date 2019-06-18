@@ -1,6 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import * as sounds from "./loadSounds.js";
+import * as sounds from "../loadSounds.js";
+
+import { total, animals } from "../usapyon_data";
 
 const UsafuyaButton = () => {
   const handleClick = e => {
@@ -137,4 +138,4 @@ const UsafuyaButton = () => {
   );
 };
 
-ReactDOM.render(<UsafuyaButton />, document.getElementById("usafuya-button"));
+export default UsafuyaButton;

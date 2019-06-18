@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
 const VersionToggle = () => {
   const handleClick = e => {
@@ -14,4 +13,4 @@ const VersionToggle = () => {
   );
 };
 
-ReactDOM.render(<VersionToggle />, document.getElementById("version-toggle"));
+export default VersionToggle;

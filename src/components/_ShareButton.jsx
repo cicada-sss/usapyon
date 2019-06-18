@@ -1,6 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import * as sounds from "./loadSounds.js";
+import * as sounds from "../loadSounds.js";
+import { total, animals } from "../usapyon_data";
 
 const ShareButton = () => {
   const handleClick = e => {
@@ -27,4 +27,4 @@ const ShareButton = () => {
   );
 };
 
-ReactDOM.render(<ShareButton />, document.getElementById("share-button"));
+export default ShareButton;
