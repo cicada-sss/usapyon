@@ -1,0 +1,20 @@
+<!DOCTYPE html><!-- （<●><●>）--><html lang="ja"><head><title>うさプリ</title><meta charset="UTF-8"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script><link rel="stylesheet" type="text/css" href="style.css"><style>body {
+background-image: url("image/kangoku.jpg");
+color: white;
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}</style></head><body><script>(function(i, s, o, g, r, a, m) {
+i['GoogleAnalyticsObject'] = r;
+i[r] = i[r] || function() {
+(i[r].q = i[r].q || []).push(arguments)
+}, i[r].l = 1 * new Date();
+a = s.createElement(o),
+m = s.getElementsByTagName(o)[0];
+a.async = 1;
+a.src = g;
+m.parentNode.insertBefore(a, m)
+})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+ga('create', 'UA-105148732-1', 'auto');
+ga('send', 'pageview');</script><div id="loading"><div id="loader"><img src="image/loading.gif"></div></div><!-- <div>/div>--><div id="wrap"><span style="color:red;font-size:250%;">ここはうさプリです。<u>1プレイで</u>1000匹うさぎを増やすまで出れません。音が出ます</span><div id="usa" style="font-size:500%;">0匹のうさぎがいます</div><button id="1" style="font-size:500%;">うさぎを増やす</button><div id="version"></div><div id="info"></div></div><div id="credit">バージョン番号を再クリックで閉じる<hr><h1>音設定</h1><button id="mute_se">SEを消す（今プレイ中のみ）</button><br><button id="mute_bgm">BGMを消す（今プレイ中のみ）</button><br><button id="play_ko">コロブチカを流す</button><br><button id="play_ca">カルメン組曲を流す</button><br><button id="play_hi">交響曲を流す</button><hr><h1>設定</h1><button id="del" style="font-size:100%;">データ消去（消えます）</button><hr><h1>ステータス</h1><div id="status"></div><hr><h1>解除済実績一覧</h1><div id="achievement_list"></div><hr><h1>クレジット</h1><b>原案</b>：<a href="https://mastodon.cloud/@SugaryAlice" target="_blank">ありす</a><br><b>プログラム</b>：<a href="https://mastodon.cloud/@cs3" target="_blank">せせせ</a><br><b>画像</b>：<a href="http://www.irasutoya.com/" target="_blank">いらすとや</a>, umezy12<br><b>楽曲</b>：<a href="https://mastodon.cloud/@hc85f" target="_blank">HC</a>, <a href="http://classical-sound.seesaa.net/" target="_blank">クラシック名曲サウンドライブラリー</a><br><b>効果音</b>：<a href="https://soundeffect-lab.info/" target="_blank">効果音ラボ</a><br><b>出演</b>：<a href="https://mastodon.cloud/@thethreegraces1" target="_blank">しまくま</a>, <a href="https://mastodon.cloud/@njp2" target="_blank">FUBAR</a>, <a href="https://mastodon.cloud/@awa" target="_blank">あじゃ</a><br><b>スペシャルサンクス</b>：<a href="https://mastodon.cloud" target="_blank">mastodon.cloud</a><br>(敬称略) <hr><h1>更新履歴</h1>●○ でかい更新<br>○● 細かい修正・バグ修正<br>○● ver.1.1.1β コード修正 (2018.01.31)<br>●○ ver.1.1β 実績削除 (2017.09.03)<br>●○ ver.1β ステータス表示を実装,新実績を実装,その他細かい修正 (2017.09.02)<br>●○ ver.0.11.0β 解除済実績の一覧表示を実装,新実績を実装,その他細かい修正 (2017.09.01～)<br>●○ ver.0.10.0β プレイ時間の測定を実装,新実績を実装,その他細かい修正<br>●○ ver.0.9.0β 新実績を実装 (～2017.09.01)<br>○● ver.0.8.1β 大漁が出ないバグを修正 (2017.08.30～)<br>●○ ver.0.8.0β 音設定を実装<br>○● ver.0.7.1β うさプリ救済措置の出現確率を調整<br>●○ ver.0.7.0β うさプリBGM差し替え,救済措置を実装 (～2017.08.30)<br>●○ ver.0.6.0β 設定を実装 (2017.08.25)<br>●○ ver.0.5.0β バージョン番号とクレジット表示を実装 (2017.08.24～)<br>●○ ver.0.4.0β うさプリを実装,うさプリ関連の実績を実装<br>●○ ver.0.3.0β 鳥関連の実績を実装<br>●○ ver.0.2.0β Twitterで共有ボタンを実装 (～2017.08.24)<br>●○ ~ver.0.1.0β バージョン記録開始 (～2017.08.21)</div><audio id="sound1" preload="auto"><source src="sound/carmen.mp3" type="audio/mp3"></audio><audio id="sound2" preload="auto"><source src="sound/usa.mp3" type="audio/mp3"></audio><audio id="sound3" preload="auto"><source src="sound/jupiter.mp3" type="audio/mp3"></audio><audio id="sound4" preload="auto"><source src="sound/alert.mp3" type="audio/mp3"></audio><audio id="sound5" preload="auto"><source src="sound/Коробейники.mp3" type="audio/mp3"></audio><audio id="sound6" preload="auto"><source src="sound/trumpet.mp3" type="audio/mp3"></audio><audio id="sound7" preload="auto"><source src="sound/dame.mp3" type="audio/mp3"></audio><audio id="sound8" preload="auto"><source src="sound/usapri.mp3" type="audio/mp3"></audio><script src="loading.js"></script><script src="usapyon_achievement.js"></script><script src="usapyon_ui.js"></script><script src="usapyon_data.js"></script><script src="usapri.js"></script></body></html>
