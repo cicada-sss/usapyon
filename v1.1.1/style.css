@@ -57,7 +57,6 @@ body {
   z-index: 999;
   text-align: center;
 }
-
 #loading #loader {
   position: absolute;
   top: 0;
@@ -98,3 +97,5 @@ a {
   color: #66f;
   text-decoration: none;
 }
+
+/*# sourceMappingURL=style.css.map */

@@ -13,6 +13,10 @@ body {
   background-image: url("image/sougen.png");
 }
 
+ul {
+  list-style: none;
+}
+
 #wrap {
   margin: 5px;
   width: 100%;
@@ -56,20 +60,20 @@ body {
   left: 0;
   z-index: 999;
   text-align: center;
+
+  #loader {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+  }
 }
 
-#loading #loader {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  width: 80px;
-  height: 80px;
-}
-
-#credit {
+#data-credits {
   display: none;
   position: absolute;
   top: 0;

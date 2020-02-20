@@ -1,0 +1,35 @@
+{
+  "name": "usapyon",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/cicada-sss/usapyon.git",
+  "author": "cicada_sss <sss.cicada@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "comp": "browserify --transform babelify",
+    "serve": "gulp && node_modules\\.bin\\http-server ./src -o",
+    "test": "eslint src/**/*.jsx"
+  },
+  "dependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babelify": "^10.0.0",
+    "browserify": "^16.2.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.13.0",
+    "gulp": "^4.0.2",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "http-server": "^0.11.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "run-sequence": "^2.2.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react",
+      "@babel/preset-env"
+    ]
+  }
+}
